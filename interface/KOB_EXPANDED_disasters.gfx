@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+	 name = "GFX_disaster_kob_expanded_great_yappering"
+	 texturefile = "gfx//interface//disasters//kob_expanded_yappering.dds"
+	 noOfFrames = 3
+	 loadType = "INGAME"
+	}
+   }

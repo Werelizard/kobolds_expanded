@@ -1,0 +1,164 @@
+############################################
+# KOBOLD GOVERMENTS - "Kobolds Expanded"   #
+# New Gov Reforms                          #
+#                                          #
+# By L. E. H.                              #
+############################################
+
+#Kobildzani Monarchy
+## This is the default monarchy for Kobildzan
+kob_expanded_kobold_monarchy = {
+	# government mechanics flags go here
+	icon = "kobold_kingdom"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy
+			have_had_reform = kob_expanded_kobold_monarchy
+		}
+		OR = {
+			tag = Z38
+			was_tag = Z38
+		}
+	}
+
+	trigger = {
+		culture_group = kobold
+	}
+
+	#Government attributes
+	heir = no #No heirs
+	republican_name = yes #No dynasties
+	fixed_rank = 2 #Kingdom only
+	allow_normal_conversion = yes #Yes
+	queen = no #Yes
+	valid_for_nation_designer = yes	#No, yopu cannot pick this reform
+	lock_level_when_selected = yes
+	allow_convert = no	
+	can_change_primary_culture = no #Hahaha no
+
+	custom_attributes = {
+		kob_expanded_unlock_clan_orgs = yes
+		#Has special elections on ruler death
+		kobold_factional_elections = yes
+		locked_government_type = yes
+	}
+	
+	#Modifiers
+	modifiers = {
+    	relation_with_other_culture = -50 #Isolationist
+		own_territory_dice_roll_bonus = 1
+		defensiveness = 0.15 #Extremely defensive
+		max_absolutism = -40 
+		governing_capacity = 50 #decentralised
+	}
+
+	#Mechanics
+	government_abilities = {
+		kob_expanded_interal_disorder #Funny chaos mechanic
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+#Reformed Kobildzani Monarchy
+## This is the reformed monarchy for Kobildzan - centralised, focused on concentration power in the hands of the ruler
+kob_expanded_kobold_monarchy_centralised_reform = {
+	# government mechanics flags go here
+	icon = "kobold_absolute_rule"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy_centralised_reform
+			have_had_reform = kob_expanded_kobold_monarchy_centralised_reform
+		}
+		OR = {
+			tag = Z38
+			was_tag = Z38
+		}
+	}
+
+	trigger = {
+		culture_group = kobold
+	}
+
+	#Government attributes
+	maintain_dynasty = yes #Yep, centralised
+	allow_normal_conversion = yes #Yes
+	valid_for_nation_designer = yes	#No, yopu cannot pick this reform
+	lock_level_when_selected = yes
+	allow_convert = no
+	can_change_primary_culture = no #Hahaha no
+
+	custom_attributes = {
+		kob_expanded_unlock_clan_orgs = yes
+		locked_government_type = yes
+	}
+
+	#Modifiers
+	modifiers = {
+		own_territory_dice_roll_bonus = 1
+		defensiveness = 0.15 #Still defensive
+		max_absolutism = 20
+		unjustified_demands = -0.1
+		yearly_absolutism = 1 #FAR more centralised
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+## This is the reformed monarchy for Kobildzan - decentralised, focused on decentralisation and integration
+kob_expanded_kobold_monarchy_decentralised_reform = {
+	# government mechanics flags go here
+	icon = "kobold_reformed_rule"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy_decentralised_reform
+			have_had_reform = kob_expanded_kobold_monarchy_decentralised_reform
+		}
+		OR = {
+			tag = Z38
+			was_tag = Z38
+		}
+	}
+
+	trigger = {
+		culture_group = kobold
+	}
+
+	#Government attributes
+	maintain_dynasty = yes #Yep, centralised
+	allow_normal_conversion = yes #Yes
+	valid_for_nation_designer = yes	#No, yopu cannot pick this reform
+	lock_level_when_selected = yes
+	allow_convert = no
+	can_change_primary_culture = no #Hahaha no
+
+	custom_attributes = {
+		kob_expanded_unlock_clan_orgs = yes
+		#Now there's a parliement
+		has_parliament = yes
+		locked_government_type = yes
+	}
+
+	#Modifiers
+	modifiers = {
+		own_territory_dice_roll_bonus = 1
+		defensiveness = 0.15 #Still defensive
+		parliament_backing_chance = 0.25
+		parliament_effect_duration = 10
+		governing_capacity_modifier = 0.1 #FAR more decentralised
+	}
+
+	ai = {
+		factor = 10000
+	}
+}

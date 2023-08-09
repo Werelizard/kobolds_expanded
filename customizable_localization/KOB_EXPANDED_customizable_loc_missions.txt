@@ -1,0 +1,141 @@
+#This the customisable localisation for the "Red Scales" mission - displays a different text whether the player is red-scale or not
+defined_text = {
+    name = Getkob_expanded_red_scales_mission_desc
+    random = no
+
+    text = {
+        localisation_key = kob_expanded_red_scales_mission_desc_not_red_scale
+        trigger = {
+            NOT = {
+				tag = A26
+			}
+			NOT = {
+				was_tag = A26
+			}
+        }
+    }
+    text = {
+        localisation_key = kob_expanded_reorganise_tribes_desc
+    }
+}
+
+defined_text = {
+    name = Getkob_expanded_red_scales_mission_title
+    random = no
+
+    text = {
+        localisation_key = kob_expanded_red_scales_mission_title_not_red_scale
+        trigger = {
+            NOT = {
+				tag = A26
+			}
+			NOT = {
+				was_tag = A26
+			}
+        }
+    }
+    text = {
+        localisation_key = kob_expanded_reorganise_tribes_title
+    }
+}
+
+#This the customisable localisation for the "Green Scales" mission - displays a different text whether the player is Green-scale or not
+defined_text = {
+    name = Getkob_expanded_green_scales_mission_desc
+    random = no
+
+    text = {
+        localisation_key = kob_expanded_green_scales_mission_desc_not_green_scale
+        trigger = {
+            NOT = {
+				tag = A28
+			}
+			NOT = {
+				was_tag = A28
+			}
+        }
+    }
+    text = {
+        localisation_key = kob_expanded_reorganise_tribes_desc
+    }
+}
+
+defined_text = {
+    name = Getkob_expanded_green_scales_mission_title
+    random = no
+
+    text = {
+        localisation_key = kob_expanded_green_scales_mission_title_not_green_scale
+        trigger = {
+            NOT = {
+				tag = A28
+			}
+			NOT = {
+				was_tag = A28
+			}
+        }
+    }
+    text = {
+        localisation_key = kob_expanded_reorganise_tribes_title
+    }
+}
+
+#This the customisable localisation for the "Blue Scales" mission - displays a different text whether the player is Blue-scale or not
+defined_text = {
+    name = Getkob_expanded_blue_scales_mission_desc
+    random = no
+
+    text = {
+        localisation_key = kob_expanded_blue_scales_mission_desc_not_blue_scale
+        trigger = {
+            NOT = {
+				tag = A27
+			}
+			NOT = {
+				was_tag = A27
+			}
+        }
+    }
+    text = {
+        localisation_key = kob_expanded_reorganise_tribes_desc
+    }
+}
+
+defined_text = {
+    name = Getkob_expanded_blue_scales_mission_title
+    random = no
+
+    text = {
+        localisation_key = kob_expanded_blue_scales_mission_title_not_blue_scale
+        trigger = {
+            NOT = {
+				tag = A27
+			}
+			NOT = {
+				was_tag = A27
+			}
+        }
+    }
+    text = {
+        localisation_key = kob_expanded_reorganise_tribes_title
+    }
+}
+
+#This the customisable localisation for the "Reorganize Tribes" mission - displays a different text whether the player has the mosntruoustribes or not
+defined_text = {
+    name = kob_expanded_has_monstruous_tribes_check
+    random = no
+
+    text = {
+        localisation_key = kob_has_tribes
+        trigger = {
+            has_estate = estate_monstrous_tribes
+            NOT = {
+                has_estate = estate_nobles
+            }
+        }
+    }
+    text = {
+        localisation_key = kob_has_nobility
+    }
+}

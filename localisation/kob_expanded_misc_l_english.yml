@@ -1,0 +1,18 @@
+﻿l_english:
+ #############################################
+ # Localisation for the Kobold Expanded Misc #
+ #############################################
+
+ ## Ruler traits
+ 
+ KOB_unifier_personality:0 "Great Unifier"
+
+ ## CBs and Wars
+
+ kob_expanded_cb_unification_wars:0 "Kobold Unification"
+ kob_expanded_unification_war_name:0 "Kobold Unification"
+
+ ##Disasters
+
+ kob_expanded_great_yappering:0 "The Great Yappering"
+ kob_expanded_completedYapperingMissions.tooltip:0 "Has completed the §YReforming the Kobildzani Monarchy§! mission."

@@ -1,0 +1,43 @@
+kob_expanded_unification_wars = {
+	type = take_province
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 1.0	
+		
+		allowed_provinces = {
+			OR = {
+				OR = {
+					culture = kobildzani_kobold
+					culture = redscale_kobold
+					culture = greenscale_kobold
+					culture = bluescale_kobold
+				}
+				area = westmoor_proper_area
+				area = moorhills_area
+				region = dragon_coast_region
+			}
+		}
+		allowed_provinces_are_eligible = yes
+
+		peace_options = {
+			po_return_cores
+			po_demand_provinces
+		}
+
+		prov_desc = KOBOLD_PROVINCES_DRAGONCOAST
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1.5
+		peace_cost_factor = 2
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = KOB_EXPANDED_UNIFICATION_WAR_NAME
+}

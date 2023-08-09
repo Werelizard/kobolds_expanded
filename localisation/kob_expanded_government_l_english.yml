@@ -1,0 +1,35 @@
+﻿l_english:
+ #############################################
+ # Localisation for the Kobold Expanded Govs #
+ #############################################
+
+ ## Reforms
+
+ kob_expanded_kobold_monarchy:0 "Kobildzani Kingdom"
+ kob_expanded_kobold_monarchy_desc:0 "A quasi-monarchy, where the ruler is elected amongst the three main Kobold clans of western Cannor: the Blue Scales, Green Scales and Red Scales. Its heavily decentralised nature lends itself quite well to defense, though its short-statured, aspiring Dragonic citizens are often known to quarrel and bicker amongst themselves."
+ kob_expanded_kobold_monarchy_centralised_reform:0 "Centralised Kobildzani Kingdom"
+ kob_expanded_kobold_monarchy_centralised_reform_desc:0 "Having done away with the troubles of the Great Yappering, the Kobildzani Kingdom was succesfully reformed, implementing a strong, centralised monarchy with Kobold elements of governance."
+ kob_expanded_kobold_monarchy_decentralised_reform:0 "Reformed Kobildzani Kingdom"
+ kob_expanded_kobold_monarchy_decentralised_reform_desc:0 "Having done away with the troubles of the Great Yappering, the Kobildzani Kingdom was succesfully reformed, implementing a revised decentralised monarchy with Kobold elements of governance."
+
+ ## Mechanics
+ 
+ ability_kob_expanded_interal_disorder:0 "§YInternal Disorder§!"
+ mechanic_kob_expanded_unlock_clan_orgs_yes:0 "Can appoint §YIzendatua Administrators§!."
+ mechanic_kobold_factional_elections_yes:0 "Enables §YBuruzagi§! elections."
+ kob_expanded_disorder:0 "Disorder"
+ kob_expanded_disorder_desc:0 "Internal Disorder represents how cohesive the realm is. The higher Disorder rises, the more challenging it will be to keep the Kingdom from tearing itself apart.\n\nDisorder is §Rincreased§! by the following factors:\n- At a Base rate of §R0.1§! monthly\n- Re-electing an Heir from the same Clan\n- Having less than 50 crown land\n- High average global autonomy\n- High overextension\n- Being over governing capacity\n- Less than 0 prestige\n- Being bankrupt\n- Less than 0 stability.\n\nDisorder is §Gdecreased§! by the following factors:\n- Power Projection above 0\n- Absolutism\n- More than 60 crown land\n- Being in a Golden Era\n- Appointing Izendatua Administrators\n- More than 0 prestige\n- Positive stability\n\nIf Disorder reaches §R100§! then the §RGreat Yappering§! disaster can fire!\n "
+ kob_expanded_interal_power:0 "Disorder"
+ kob_expanded_kobold_governor:0 "Izendatua"
+ kob_expanded_kobold_governor_desc:0 "Appointed directly by the Kobildzani court, the Izendatua Administrators manage the lands of Kobildzan, ensuring that their provinces are well-administered - though such individuals have been known to take a cut out of their domains' taxes as repayment for their services."
+ kob_expanded_kobold_governor_reformed:0 "Izendatua"
+ kob_expanded_kobold_governor_reformed_desc:0 "Appointed directly by the Kobildzani court, the Izendatua Administrators manage the lands of Kobildzan, ensuring that their provinces are well-administered - though such individuals have been known to take a cut out of their domains' taxes as repayment for their services."
+ koblold_clan:0 "Administrators"
+ koblold_clan_short:0 "Administrative Office"
+ monthly_kob_expanded_disorder:0 "Monthly Disorder"
+ kob_expanded_disorder_gain_modifier:0 "Disorder Gain Modifier"
+
+ ## Tooltips
+
+ kob_expanded_loseDisorderPerProvince.tooltip:0 "We will lose §G0.5§! §YDisorder§! per province assigned to the §YIzendatua Administrators§!."
+ 

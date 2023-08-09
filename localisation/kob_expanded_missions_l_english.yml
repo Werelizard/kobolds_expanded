@@ -1,0 +1,182 @@
+﻿l_english:
+ ############################################################
+ # Localisation for the Kobold Expanded Missions - Starters #
+ ############################################################
+
+ ## Mission titles
+
+ kob_starter_build_a_fleet_title:0 "Build the Dragon's Fleet"
+ kob_starter_fall_of_nimscodd_title:0 "The Fall of Nimscodd"
+ kob_starter_gnomes_undecided_1_title:0 "§YDynamic Mission§!"
+ kob_starter_gnomes_undecided_2_title:0 "§YDynamic Mission§!"
+ kob_starter_gnomes_purge_1_title:0 "Expel the Gnomes"
+ kob_starter_gnomes_purge_2_title:0 "Absolute Victory"
+ kob_starter_gnomes_tolerance_1_title:0 "A Place for Gnome-Kind"
+ kob_starter_gnomes_tolerance_2_title:0 "A Better Dragon Coast"
+ kob_starter_conquer_pass_title:0 "The Southern Den"
+ kob_starter_push_to_the_hills_title:0 "Recover the Dragon Hills"
+ kob_starter_push_south_title:0 "The March to Portnamm"
+ kob_starter_rally_the_clans_title:0 "Rally the Clans"
+ kob_conquer_red_scales_title:0 "[ROOT.Getkob_expanded_red_scales_mission_title]"
+ kob_starter_unify_kobolds_title:0 "Unify the Kobolds"
+ kob_starter_honour_forefathers_title:0 "Honouring Our Forefathers"
+ kob_starter_kobold_coast_title:0 "A Kobold Coast"
+ kob_conquer_blue_scales_title:0 "[ROOT.Getkob_expanded_blue_scales_mission_title]"
+ kob_starter_control_north_pass_title:0 "Retaking the Moors"
+ kob_starter_challenge_alenic_lords_title:0 "A Challenge to Gaweton"
+ kob_starter_skewer_eagle_title:0 "Skewer the Eagle"
+ kob_conquer_green_scales_title:0 "[ROOT.Getkob_expanded_green_scales_mission_title]"
+ kob_starter_push_along_coast_title:0 "The Fall of Celmaldor"
+ kob_starter_dominate_north_gulf_title:0 "The Northern Shores"
+
+ ## Mission descriptions
+
+ kob_starter_build_a_fleet_desc:0 ""
+ kob_starter_fall_of_nimscodd_desc:0 ""
+ kob_starter_gnomes_undecided_1_desc:0 "This mission's requirements and rewards are determined by the choices made through §YThe Fall of Nimscodd§! mission's event: §YThe End of the Gnomish Wars§!."
+ kob_starter_gnomes_undecided_2_desc:0 "This mission's requirements and rewards are determined by the choices made through §YThe Fall of Nimscodd§! mission's event: §YThe End of the Gnomish Wars§!."
+ kob_starter_gnomes_purge_1_desc:0 ""
+ kob_starter_gnomes_purge_2_desc:0 ""
+ kob_starter_gnomes_tolerance_1_desc:0 ""
+ kob_starter_gnomes_tolerance_2_desc:0 ""
+ kob_starter_conquer_pass_desc:0 ""
+ kob_starter_push_to_the_hills_desc:0 ""
+ kob_starter_push_south_desc:0 ""
+ kob_starter_rally_the_clans_desc:0 ""
+ kob_conquer_red_scales_desc:0 "[ROOT.Getkob_expanded_red_scales_mission_desc]"
+ kob_starter_unify_kobolds_desc:0 ""
+ kob_starter_honour_forefathers_desc:0 ""
+ kob_starter_kobold_coast_desc:0 ""
+ kob_conquer_blue_scales_desc:0 "[ROOT.Getkob_expanded_blue_scales_mission_desc]"
+ kob_starter_control_north_pass_desc:0 ""
+ kob_starter_challenge_alenic_lords_desc:0 ""
+ kob_starter_skewer_eagle_desc:0 ""
+ kob_conquer_green_scales_desc:0 "[ROOT.Getkob_expanded_green_scales_mission_desc]"
+ kob_starter_push_along_coast_desc:0 ""
+ kob_starter_dominate_north_gulf_desc:0 ""
+
+ ## Mission tooltips
+
+ kob_expanded_controlsGawedCapital.tooltip:0 "§Y[Root.GetName]§! controls §YGawed§!'s capital."
+ kob_expanded_permanentClainsOnAlenicRegionExceptFrontierCestirGoldenPlains.tooltip:0 "§Y[Root.GetName]§! gains permanent claims on the §YAlenic§! region except the §YGolden Plains§!, §YCestir§! and the §YAlenic Frontier§! areas."
+ kob_expanded_largerArmyThanTheOwnerOfCelmaldor.tooltip:0 "§Y[Root.GetName]§! has a larger army than §YCelmaldor§!'s owner."
+ kob_expanded_gainPermanentClaimOnSerpentPassAndFrozenPassCoast.tooltip:0 "§Y[Root.GetName]§! gains permanent claims on the §YFrostbridges§! area as well as §YColdmarket§!, §YEnvermarck§!, §YBayvic§! and §YOrdal§!."
+ kob_expanded_unlockKoboldUnificationCB.tooltip:0 "Unlocks the §YKobold Reclamation§! casus belli. This casus belli will allow us to press our claims against any other nations owing provinces in the §YDragoncoast§! region as well as the §YWestmoors§! and §YMoorhills§! areas."
+ kob_expanded_ControlSerpentPassAndFrozenPassCoast.tooltip:0 "§Y[Root.GetName]§! or its non-tributary subjects own all provinces in the §YFrostbridges§! area, as well as the provinces of §YColdmarket§!, §YEnvermarck§!, §YBayvic§! and §YOrdal§!."
+ kob_expanded_alenicChargeModifierLostOnDefeat.tooltip:0 "[Root.GetName] gets '§YThe Kobold Charge§!' until we §Olose a war§!, giving the following effects:\nPrestige from Land battles: §G+100.0%§!\nShock Damage: §G+5.0%§!\nFire Damage: §G+5.0%§!\n"
+ kob_expanded_purgingOrExpellingGnomes.tooltip:0 "Is §Ypurging§! or §Yexpelling§! the gnomes."
+ kob_expanded_allCoresWeOwnOfNimscoddDestroyed.tooltip:0 "All of §YNimscodd§!'s cores will be destroyed."
+ kob_expanded_allGnomeProvincesForcefullyConverted.tooltip:0 "All of §YNimscodd§'s cores will be destroyed."
+ kob_expanded_ownedByRootOrNonTributarySubject.tooltip:0 "Is owned by §Y[Root.GetName]§! or its non-tributary, non-gnomish subjects."
+ kob_expanded_gnomishProvincesGetUnrest.tooltip:0 "Every owned province in the §YDragon Coast§! region that are part of the §YGnomish§! culture group get '§YDisplaced Gnomes§!' for §Y10 years§!, giving the following effects:\nLocal Unrest: §R+4.00§!\nLocal Development Cost: §G-5.0%§!\n\nThe §YKobold§! minority size will be §GAdded/Increased§! in the same provinces."
+ kob_expanded_is_prosperous.tooltip:0 "Is prosperous."
+ kob_expanded_isNotMonstrous.tooltip:0 "§Y[Root.GetName]§! is not considered a monstrous nation."
+ kob_expanded_neitherOrExpellingGnomes.tooltip:0 "Is neither §Ypurging§! or §Yexpelling§! the gnomes."
+ kob_expanded_noGnomishProvinceHasADifferentReligionUnrestOrRecentUprising.tooltip:0 "Every owned province with §YCliff Gnome§! culture follows that §Y[Root.Religion.GetName]§!, has less than §Y1§! unrest and does not have the '§YRecent Uprising§!' modifier."
+
+ ## Mission-triggered events
+
+ kob_expanded_mission_events.1001.title:0 "The End of the Gnomish Wars"
+ kob_expanded_mission_events.1001.desc:0 ""
+ kob_expanded_mission_events.1001.a:0 ""
+ kob_expanded_mission_events.1001.b:0 ""
+ kob_expanded_unlockGnomishToleranceMissions.tooltip:0 ""
+ kob_expanded_unlockGnomishPurgeMissions.tooltip:0 ""
+ kob_expanded_gnomish_revolts.tooltip:0 ""
+
+ kob_expanded_mission_events.1002.title:0 "The Clan-Meet of Fetaginbaia"
+ kob_expanded_mission_events.1002.desc:0 ""
+ kob_expanded_mission_events.1002.a:0 ""
+ everyRedScaleProvinceLosesAllSeperatism.tooltip:0 ""
+ kob_expanded_mission_events.1002.b:0 ""
+
+ kob_expanded_mission_events.1003.title:0 "The Clan-Meet of Kobildzex"
+ kob_expanded_mission_events.1003.desc:0 ""
+ kob_expanded_mission_events.1003.a:0 ""
+ everyBlueScaleProvinceLosesAllSeperatism.tooltip:0 ""
+ kob_expanded_mission_events.1003.b:0 ""
+
+ kob_expanded_mission_events.1004.title:0 "The Clan-Meet of Iskalbaia"
+ kob_expanded_mission_events.1004.desc:0 ""
+ kob_expanded_mission_events.1004.a:0 ""
+ everyGreenScaleProvinceLosesAllSeperatism.tooltip:0 ""
+ kob_expanded_mission_events.1004.b:0 ""
+
+ kob_expanded_mission_events.1005.title:0 "The Clan-Meet of [Root.Capital.GetName]"
+ kob_expanded_mission_events.1005.desc:0 ""
+ kob_expanded_mission_events.1005.a:0 "We will rely on the [Root.kob_expanded_has_monstruous_tribes_check]."
+ kob_expanded_mission_events.1005.b:0 "No, our [Root.Monarch.GetTitle] will lead us into battle!"
+
+ kob_expanded_mission_events.1006.title:0 "Eaglecrest Falls"
+ kob_expanded_mission_events.1006.a:0 ""
+ kob_expanded_mission_events.1006.b:0 ""
+ kob_expanded_mission_events.1006.c:0 ""
+
+ kob_expanded_mission_events.1007.title:0 "Ashes over Celmaldor"
+ kob_expanded_mission_events.1007.desc:0 ""
+ kob_expanded_mission_events.1007.a:0 ""
+ kob_expanded_mission_events.1007.b:0 ""
+
+ ## Mission modifiers
+
+ kob_expanded_kob_fortress:0 "Kobold Fortifications"
+ kob_expanded_dragon_fleet:0 "The Dragon's Fleet"
+ kob_expanded_red_scale_military:0 "Red Scale Warriors"
+ kob_expanded_blue_scale_military:0 "Blue Scale Trappers"
+ kob_expanded_green_scale_military:0 "Green Scale Scouts"
+ kob_expanded_red_scale_military_lesser:0 "Red Scale Warriors"
+ kob_expanded_blue_scale_military_lesser:0 "Blue Scale Trappers"
+ kob_expanded_green_scale_military_lesser:0 "Green Scale Scouts"
+ kob_expanded_rely_on_clans:0 "Reliance on the Tribes"
+ kob_expanded_against_winelords:0 "Kobold Defiance"
+ kob_expanded_forefathers_pleased:0 "Honouring the Dragons"
+ kob_expanded_conquerors_of_alen:0 "The Alenic Yip"
+ kob_expanded_kobold_coast:0 "A Kobold Coast"
+ kob_expanded_challenged_alenic_lords:0 "The Kobold Charge"
+ kob_expanded_serpenthead_master:0 "Crafty Kobold Tradesmanship"
+ kob_expanded_nimscodd_sacked:0 "The Great Scarring"
+ kob_expanded_our_land_our_coast:0 "Kobold Supremacy"
+ kob_expanded_persecuted_gnomes:0 "Persecuting the Gnomes"
+ kob_expanded_displaced_gnomes:0 "Displaced Gnomes"
+ kob_expanded_mended_wounds:0 "Mended Wounds"
+
+ ## Custom Localisation
+
+ kob_expanded_reorganise_tribes_desc:0 ""
+ kob_expanded_reorganise_tribes_title:0 "Reorganise the Tribes"
+ kob_expanded_red_scales_mission_desc_not_red_scale:0 ""
+ kob_expanded_red_scales_mission_title_not_red_scale:0 "Subjugate the Red Scales"
+ kob_expanded_green_scales_mission_desc_not_green_scale:0 ""
+ kob_expanded_green_scales_mission_title_not_green_scale:0 "Subjugate the Green Scales"
+ kob_expanded_blue_scales_mission_desc_not_blue_scale:0 ""
+ kob_expanded_blue_scales_mission_title_not_blue_scale:0 "Subjugate the Blue Scales"
+ kob_has_tribes:0 "[Root.GetMonstrous TribesName]"
+ kob_has_nobility:0 "[Root.GetNobilityName]"
+
+ ############################################################
+ # Localisation for the Kobold Expanded Missions - Kobildz. #
+ ############################################################
+
+ ## Titles
+
+ kobildzan_develop_crafts_title:0 "Patronize Artisans"
+ kobildzan_sponsor_kobold_culture_title:0 "Sponsor Kobold Culture"
+ kobildzan_develop_underground_title:0 "Expand the Dens"
+ kobildzan_education_reform_title:0 "Scrolls For All!"
+ kobildzan_centralise_government_title:0 "General Land Reform"
+ kobildzan_determine_our_future_title:0 "§YDetermine Our Future§!"
+ kobildzan_keep_order_title:0 "Maintain Order"
+ kobildzan_new_golden_age_title:0 "A Kobold Golden Age"
+ kobildzan_organise_military_drills_title:0 "Wild Gunnery"
+
+ ##Descriptions
+
+ kobildzan_develop_crafts_desc:0 ""
+ kobildzan_sponsor_kobold_culture_desc:0 ""
+ kobildzan_develop_underground_desc:0 ""
+ kobildzan_education_reform_desc:0 ""
+ kobildzan_centralise_government_desc:0 ""
+ kobildzan_determine_our_future_desc:0 ""
+ kobildzan_keep_order_desc:0 ""
+ kobildzan_new_golden_age_desc:0 ""
+ kobildzan_organise_military_drills_desc:0 ""

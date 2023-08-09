@@ -1,0 +1,78 @@
+#Pre-reformation administrators
+kob_expanded_kobold_governor = {
+	icon = GFX_holy_order_kobold_governor
+	trigger = {
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy
+		}
+	}
+	color = {
+		70
+		35
+		130
+	}
+	cost = 100
+	cost_type = adm_power
+	per_province_effect = {
+		custom_tooltip = kob_expanded_loseDisorderPerProvince.tooltip
+		owner = {
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = -0.5
+			}
+		}
+	}
+	per_province_abandon_effect = {
+		custom_tooltip = kob_expanded_loseDisorderPerProvince.tooltip
+		owner = {
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = -0.5
+			}
+		}
+	}
+	modifier = {
+		local_unrest = -2
+		local_governing_cost = -0.2
+		local_tax_modifier = -0.4
+	}
+	ai_priority = {
+		factor = 1
+	}
+	localization = koblold_clan
+}
+
+#Post
+kob_expanded_kobold_governor_reformed = {
+	icon = GFX_holy_order_kobold_governor
+	trigger = {
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy_decentralised_reform
+			has_reform = kob_expanded_kobold_monarchy_centralised_reform
+		}
+	}
+	color = {
+		70
+		35
+		130
+	}
+	cost = 100
+	cost_type = adm_power
+	per_province_effect = {
+		add_nationalism = -5
+	}
+	per_province_abandon_effect = {
+		add_nationalism = 5
+	}
+	modifier = {
+		local_unrest = -2
+		local_governing_cost = -0.2
+		local_tax_modifier = -0.4
+	}
+	ai_priority = {
+		factor = 1
+	}
+	localization = koblold_clan
+}

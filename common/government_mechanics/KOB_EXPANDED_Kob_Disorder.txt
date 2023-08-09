@@ -1,0 +1,69 @@
+############################################
+# KOBOLD GOVERMENTS - "Kobolds Expanded"   #
+# Disorder mechanic                        #
+#                                          #
+# By L. E. H.                              #
+############################################
+
+kob_expanded_interal_disorder = {
+	powers = {
+		kob_expanded_disorder = {
+			max = 100
+			min = 0
+			is_good = no
+			base_monthly_growth = 0.1
+			scaled_modifier = {
+				trigger = {
+					has_government_power = { 
+						mechanic_type = kob_expanded_interal_disorder
+						power_type = kob_expanded_disorder
+						value = 0
+					}
+				}
+				modifier = {
+					stability_cost_modifier = 1
+					manpower_recovery_speed = -0.5
+					defensiveness = -0.3
+					monthly_reform_progress_modifier = -0.5
+					expand_administration_cost = 1
+			
+				}
+			}
+		}
+	}
+}
+
+##########################################
+# Factors that change the disorder value #
+##########################################
+
+## Increased by:
+
+# Passive: 0.1 every month
+# Re-electing from the same family: 5
+# Crown-Land under 20: 0.2 every month [x]
+# Crown-Land under 30: 0.1 every month [x]
+# Crown-Land under 50: 0.05 every month [x]
+# Corruption: 1 every month at 100 corruption [x]
+# High autonomy: 0.5 every month at 100 average autonomy [x]
+# High overextension: 0.5 every month at 100 overextension [x]
+# Over Governing Capacity: 1 every month at 100 over cap [x]
+# Low prestige:  0.5 every month at -100 prestige [x]
+# Bankruptcy: 0.5 every month [x]
+# Low Stability: +0.025 per point every month [x]
+
+## Decreased by:
+
+# Power projection: -0.2 every month, at 100 power projection [x]
+# Absolutism: -0.2 every month, at 100 absolutism [x]
+# At least 60 crown land: -0.05  every month [x]
+# At least 70 crown land: -0.1  every month [x]
+# In a golden era: -0.1 every month [x]
+# High prestige: -0.5 every month at 100 prestige [x]
+# Appointing Governords: -0.5 per province [x]
+# High Stability: -0.03 per point every month [x]
+
+## The gain from events is modified by
+
+# High legitimacy: -50% disorder gain
+# Low legitimacy: +50% disorder gain

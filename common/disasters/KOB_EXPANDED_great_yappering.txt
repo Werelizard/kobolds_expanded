@@ -1,0 +1,35 @@
+kob_expanded_great_yappering = {
+	potential = {
+		has_government_power = { 
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = 100
+		}
+		has_goverment_mechanic = kob_expanded_interal_disorder
+	}
+	can_start = {
+        always = yes
+	}
+	can_stop = {
+        has_any_disaster = yes
+	}
+	progress = {
+        modifier = {
+            factor = 100
+        }
+	}
+
+	#Actual disaster
+	on_start = {
+
+	}
+	on_end = {
+		
+	}
+	can_end = {
+		custom_tooltip = {
+			tooltip = kob_expanded_completedYapperingMissions.tooltip
+			has_country_flag = kob_expanded_completedYapperingMissions_flag
+		}
+	}
+}

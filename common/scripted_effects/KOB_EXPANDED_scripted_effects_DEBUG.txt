@@ -1,0 +1,16 @@
+#Debug effect to test if the purge / tolerance missions work
+kob_swap_purge_tolerance_missions = {
+	if = {
+		limit = {
+			has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		}
+		set_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		clr_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+	}
+	else = {
+		set_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		clr_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+	}
+	
+	swap_non_generic_missions = yes	
+}

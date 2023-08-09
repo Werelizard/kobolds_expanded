@@ -1,0 +1,44 @@
+kob_expanded_cb_unification_wars = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		OR = {
+			has_country_flag = kob_expanded_unlock_unification_cb_flag
+			mission_completed = kob_starter_rally_the_clans
+		}
+	}
+
+	prerequisites = {
+		NOT = {
+			truce_with = FROM
+		}
+		OR = {
+			is_neighbor_of = FROM
+			FROM = {
+				culture_group = kobold
+			}
+		}
+		FROM = {
+			any_owned_province = {
+				OR = {
+					AND = {
+						superregion = western_cannor_superregion
+						culture = kobildzani_kobold
+						culture = redscale_kobold
+						culture = greenscale_kobold
+						culture = bluescale_kobold
+					}
+					area = westmoor_proper_area
+					area = moorhills_area
+					region = dragon_coast_region
+				}
+			}
+		}
+	}
+
+	attacker_disabled_po = {
+		
+	}
+
+	war_goal = kob_expanded_unification_wars
+}

@@ -1,0 +1,15 @@
+kob_expanded_kob_fortress = {
+	potential = {
+		owner = {
+			culture_group = kobold
+		}
+	}
+
+	trigger = {	
+		has_fort_building_trigger = yes
+	}
+
+	local_defensiveness = 0.33
+	local_hostile_attrition = 1
+	local_assault_fort_ability = -0.75
+}

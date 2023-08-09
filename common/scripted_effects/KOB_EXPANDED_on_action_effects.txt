@@ -1,0 +1,18 @@
+#######################################################
+# KOBOLD 'on actions' EFFECTS' - "Kobolds Expanded"   #
+# These effects should be added to the on_action file #
+#                                                     #
+# By L. E. H.                                         #
+#######################################################
+
+#This should be placed into the "on_war_lost" on_action for every update
+kob_expanded_war_lost = {
+	if = {
+		limit = {
+			ROOT = {
+				has_country_modifier = kob_expanded_challenged_alenic_lords
+			}
+		}
+		remove_country_modifier = kob_expanded_challenged_alenic_lords
+	}
+}

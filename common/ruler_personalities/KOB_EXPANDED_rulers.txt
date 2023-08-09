@@ -1,0 +1,43 @@
+#################################################
+# KOBOLD PERSONALITIES - "Kobolds Expanded"     #
+# For all Kobold nations in the Dragoncoast     #
+#                                               #
+# By L. E. H.                                   #
+#################################################
+
+
+#"Statesman" Traits
+KOB_unifier_personality = {
+	ruler_allow = {
+		allow = {
+			NOT = {
+				always = no #Never available naturally
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			NOT = {
+				always = no #Never available naturally	
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			NOT = {
+				always = no #Never available naturally
+			}
+		}
+	}
+
+	nation_designer_cost = 1000
+
+	easy_war_chance_multiplier = 1
+	
+	manpower_in_own_culture_provinces = 0.25
+	manpower_in_culture_group_provinces = 0.15
+	land_morale = 0.05
+	global_unrest = -2
+}

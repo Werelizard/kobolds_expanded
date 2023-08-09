@@ -1,0 +1,169 @@
+#################################################
+# KOBOLD MISSIONS ICONS - "mission_kobolds Expanded"    #
+# For all Kobold nations in the Dragoncoast     #
+#                                               #
+# By L. E. H.                                   #
+#################################################
+
+# Image origin is ALWAYS specified and MUST BE
+
+spriteTypes = {
+	
+	####################################
+	# Starter Missions - General Icons #
+	####################################
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_build_a_fleet" 
+		texturefile = "gfx//interface//missions//mission_kob_starter_build_a_fleet.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_fall_of_nimscodd"
+		texturefile = "gfx//interface//missions//mission_kob_starter_fall_of_nimscodd.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_gnomes_purge_1"
+		texturefile = "gfx//interface//missions//mission_kob_starter_gnomes_purge_1.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive - customised
+		name = "mission_kob_starter_gnomes_purge_2"
+		texturefile = "gfx//interface//missions//mission_kob_starter_gnomes_purge_2.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_gnomes_tolerance_1"
+		texturefile = "gfx//interface//missions//mission_kob_starter_gnomes_tolerance_1.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_gnomes_tolerance_2"
+		texturefile = "gfx//interface//missions//mission_kob_starter_gnomes_tolerance_2.dds"
+	}
+
+	spriteType = { # By Thomas Cole "Italian Coast Scene with Ruined Tower"
+		name = "mission_kob_starter_conquer_pass"
+		texturefile = "gfx//interface//missions//mission_kob_starter_conquer_pass.dds"
+	}
+
+	spriteType = { # From The Witcher 2's Concept Art
+		name = "mission_kob_starter_push_to_the_hills"
+		texturefile = "gfx//interface//missions//mission_kob_starter_push_to_the_hills.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_push_south"
+		texturefile = "gfx//interface//missions//mission_kob_starter_push_south.dds"
+	}
+
+	spriteType = { # From MAGIC: THE GATHERING
+		name = "mission_kob_starter_rally_the_clans"
+		texturefile = "gfx//interface//missions//mission_kob_starter_rally_the_clans.dds"
+	}
+
+	spriteType = { # From Forgotten Realms
+		name = "mission_kob_conquer_red_scales"
+		texturefile = "gfx//interface//missions//mission_kob_conquer_red_scales.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_unify_kobolds"
+		texturefile = "gfx//interface//missions//mission_kob_starter_unify_kobolds.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive - Customised
+		name = "mission_kob_starter_honour_forefathers"
+		texturefile = "gfx//interface//missions//mission_kob_starter_honour_forefathers.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive - Edited
+		name = "mission_kob_starter_kobold_coast"
+		texturefile = "gfx//interface//missions//mission_kob_starter_kobold_coast.dds"
+	}
+
+	spriteType = { # By JJ Canvas
+		name = "mission_kob_conquer_blue_scales"
+		texturefile = "gfx//interface//missions//mission_kob_conquer_blue_scales.dds"
+	}
+
+	spriteType = { # From creativeuncut.com
+		name = "mission_kob_starter_control_north_pass"
+		texturefile = "gfx//interface//missions//mission_kob_starter_control_north_pass.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_challenge_alenic_lords"
+		texturefile = "gfx//interface//missions//mission_kob_starter_challenge_alenic_lords.dds"
+	}
+
+	spriteType = { # Custom Made
+		name = "mission_kob_starter_skewer_eagle"
+		texturefile = "gfx//interface//missions//mission_kob_starter_skewer_eagle.dds"
+	}
+
+	spriteType = { # From Anbennar
+		name = "mission_kob_conquer_green_scales"
+		texturefile = "gfx//interface//missions//mission_kob_conquer_green_scales.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_push_along_coast"
+		texturefile = "gfx//interface//missions//mission_kob_starter_push_along_coast.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kob_starter_dominate_north_gulf"
+		texturefile = "gfx//interface//missions//mission_kob_starter_dominate_north_gulf.dds"
+	}
+
+	####################################
+	# Kobildz Missions - General Icons #
+	####################################
+
+	spriteType = { # From ParadoxInteractive - Edited with Abennar Assets
+		name = "mission_kobildzan_determine_our_future"
+		texturefile = "gfx//interface//missions//mission_kobildzan_determine_our_future.dds"
+	}
+
+	spriteType = { # From ParadoxInteractive
+		name = "mission_kobildzan_centralise_government"
+		texturefile = "gfx//interface//missions//mission_kobildzan_centralise_government.dds"
+	}
+
+	spriteType = {  # From ParadoxInteractive
+		name = "mission_kobildzan_develop_crafts"
+		texturefile = "gfx//interface//missions//mission_kobildzan_develop_crafts.dds"
+	}
+
+	spriteType = { #Edited Anbennar
+		name = "mission_kobildzan_develop_underground"
+		texturefile = "gfx//interface//missions//mission_kobildzan_develop_underground.dds"
+	}
+
+	spriteType = { #From paradox Internative
+		name = "mission_kobildzan_education_reform"
+		texturefile = "gfx//interface//missions//mission_kobildzan_education_reform.dds"
+	}
+
+	spriteType = {  # From Paradxox Interactive
+		name = "mission_kobildzan_sponsor_kobold_culture"
+		texturefile = "gfx//interface//missions//mission_kobildzan_sponsor_kobold_culture.dds"
+	}
+
+	spriteType = { # From Paradxox Interactive
+		name = "mission_kobildzan_keep_order"
+		texturefile = "gfx//interface//missions//mission_kobildzan_keep_order.dds"
+	}
+
+	spriteType = { # From Paradxox Interactive
+		name = "mission_kobildzan_new_golden_age"
+		texturefile = "gfx//interface//missions//mission_kobildzan_new_golden_age.dds"
+	}
+
+	spriteType = { # From Paradxox Interactive
+		name = "mission_kobildzan_organise_military_drills"
+		texturefile = "gfx//interface//missions//mission_kobildzan_organise_military_drills.dds"
+	}
+}

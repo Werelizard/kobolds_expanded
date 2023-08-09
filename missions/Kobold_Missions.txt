@@ -1,0 +1,1619 @@
+#################################################
+# KOBOLD MISSIONS REPLACER - "Kobolds Expanded" #
+# For all Kobold nations in the Dragoncoast     #
+#                                               #
+# By L. E. H.                                   #
+#################################################
+
+#################################################
+# All Common Missions                           #
+#################################################
+
+#Far Left
+KOBOLD_STARTER_EXPANDED_1 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+	}
+
+	slot = 1
+
+	kob_starter_build_a_fleet = {
+		icon = mission_kob_starter_build_a_fleet 
+
+		position = 1
+
+		required_missions = {
+			
+		}
+
+		trigger = {
+			num_of_admirals = 1
+			if = {
+				limit = {
+					NOT = {
+						169 = {
+							owned_by = ROOT
+						}
+					}
+				}
+				navy_size = A06
+			}
+			else = {
+				has_flagship = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = kob_expanded_dragon_fleet
+				duration = 3650
+			}
+		}
+	}
+
+	kob_starter_fall_of_nimscodd = {
+		icon = mission_kob_starter_fall_of_nimscodd
+
+		position = 3
+
+		required_missions = {
+			kob_starter_build_a_fleet
+			kob_starter_conquer_pass
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 169
+				owned_by = A06
+			}	
+		}
+
+		trigger = {
+			169 = {
+				owner = {
+					culture_group = kobold
+				}
+			}
+			OR = {
+				NOT = {
+					exists = A06
+				}
+				A06 = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+			country_event = {
+				id = kob_expanded_mission_events.1001
+			}
+		}
+	}
+}
+
+KOBOLD_STARTER_GNOMES_UNDECIDED = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		}
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		}
+	}
+
+	kob_starter_gnomes_undecided_1 = {
+		icon = mission_unknown_mission
+
+		position = 4
+
+		required_missions = {
+			kob_starter_fall_of_nimscodd
+		}
+
+		trigger = {
+			always = no
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_starter_gnomes_undecided_2 = {
+		icon = mission_unknown_mission
+
+		position = 5
+
+		required_missions = {
+			kob_starter_gnomes_undecided_1
+		}
+
+		trigger = {
+			always = no
+		}
+
+		effect = {
+			
+		}
+	}
+
+	slot = 1
+}
+
+KOBOLD_STARTER_GNOMES_PURGE = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	slot = 1
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		}
+		has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+	}
+
+	kob_starter_gnomes_purge_1 = {
+		icon = mission_kob_starter_gnomes_purge_1
+
+		position = 4
+
+		required_missions = {
+			kob_starter_fall_of_nimscodd
+		}
+
+		provinces_to_highlight = {
+			region = dragon_coast_region
+			culture_group = gnomish
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_purgingOrExpellingGnomes.tooltip
+				OR = {
+					has_country_modifier = racial_pop_gnomish_purge 
+					has_country_modifier = racial_pop_gnomish_expulsion
+				}
+			}
+			NOT = {
+				exists = A06
+			}
+			dragon_coast_region = {
+				type = all
+				culture_group = gnomish
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_ownedByRootOrNonTributarySubject.tooltip
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+							NOT = {
+								culture_group = gnomish
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = kob_expanded_gnomishProvincesGetUnrest.tooltip
+			custom_tooltip = empty_line_tt
+			custom_tooltip = kob_expanded_allCoresWeOwnOfNimscoddDestroyed.tooltip
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = kob_expanded_persecuted_gnomes
+				duration = 3650
+			}
+			if = {
+				limit = {
+					169 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				169 = {
+					change_culture = ROOT
+					add_base_tax = -4
+					add_base_production = -4
+					add_base_manpower = -6
+					remove_all_buildings = yes
+					add_devastation = 100
+					add_province_modifier = {
+						name = kob_expanded_nimscodd_sacked
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = gnomish
+					}
+					add_province_modifier = {
+						name = kob_expanded_displaced_gnomes
+						duration = 3650
+					}
+					add_kobold_minority_size_effect = yes
+				}
+				every_province = {
+					limit = {
+						is_core = A06
+					}
+					remove_core = A06
+				}
+			}
+		}
+	}
+
+	kob_starter_gnomes_purge_2  = {
+		icon = mission_kob_starter_gnomes_purge_2 
+
+		position = 5
+
+		required_missions = {
+			kob_starter_gnomes_purge_1
+		}
+
+		trigger = {
+			stability = 2
+			OR = {
+				NOT = {
+					has_country_modifier = kob_expanded_persecuted_gnomes
+				}
+				AND = {
+					NOT = {
+						average_unrest = 1
+					}
+					has_spawned_rebels = nationalist_rebels
+				}
+			}
+			NOT = {
+				any_province = {
+					region = dragon_coast_region
+					culture_group = gnomish
+				}
+			}
+			126 = {
+				OR = {
+					controlled_by = ROOT
+					owner = {
+						NOT = {
+							culture_group = gnomish
+						}
+					}
+					NOT = {
+						culture_group = gnomish
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = kob_expanded_our_land_our_coast
+				duration = -1
+			}
+		}
+	}
+
+}
+
+KOBOLD_STARTER_GNOMES_TOLERANCE = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+		has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		}
+	}
+
+	kob_starter_gnomes_tolerance_1 = {
+		icon = mission_kob_starter_gnomes_tolerance_1
+
+		position = 4
+
+		required_missions = {
+			kob_starter_fall_of_nimscodd
+		}
+
+		trigger = {
+			NOT = {
+				exists = A06
+			}
+			169 = {
+				owned_by = ROOT
+				has_owner_accepted_culture = yes
+			}
+			dragon_coast_region = {
+				type = all
+				owned_by = ROOT
+				culture_group = gnomish
+				has_owner_accepted_culture = yes
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = kob_expanded_is_prosperous.tooltip
+						is_prosperous = yes
+					}
+					num_of_times_improved_by_owner = 5
+				}
+			}
+		}
+
+		effect = {
+			medium_increase_of_gnomish_tolerance_effect = yes
+			capital_scope = {
+				add_gnomish_minority_size_effect = yes
+			}
+			define_advisor = {
+				type = diplomat
+				culture = cliff_gnome
+				cost_multiplier = 0.25
+				skill = 3
+			}
+		}
+	}
+
+	kob_starter_gnomes_tolerance_2  = {
+		icon = mission_kob_starter_gnomes_tolerance_2
+
+		position = 5
+
+		required_missions = {
+			kob_starter_gnomes_tolerance_1
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_isNotMonstrous.tooltip
+				NOT = { has_country_modifier = monstrous_nation }
+			}
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_neitherOrExpellingGnomes.tooltip
+				NOT = {
+					has_country_modifier = racial_pop_gnomish_purge 
+				}
+				NOT = {
+					has_country_modifier = racial_pop_gnomish_expulsion
+				}
+			}
+			if = {
+				limit = {
+					culture_group = kobold
+				}
+				high_tolerance_gnomish_race_trigger = yes
+			}
+			else = {
+				high_tolerance_kobold_race_trigger = yes
+				high_tolerance_gnomish_race_trigger = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_noGnomishProvinceHasADifferentReligionUnrestOrRecentUprising.tooltip
+				NOT = {
+					any_owned_province = {
+						culture = cliff_gnome
+						NOT = {
+							has_owner_religion = ROOT
+						}
+						has_province_modifier = recent_uprising
+						unrest = 1
+					}
+				}
+			}
+			accepted_culture = cliff_gnome
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = kob_expanded_mended_wounds
+				duration = -1
+			}
+		}
+	}
+
+	slot = 1
+}
+
+#Middle Left
+KOBOLD_STARTER_EXPANDED_2 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+	}
+
+	slot = 2
+
+	kob_starter_conquer_pass = {
+		icon = mission_kob_starter_conquer_pass
+
+		position = 2
+
+		provinces_to_highlight = {
+			province_id = 167
+		}
+
+		required_missions = {
+			kob_starter_rally_the_clans
+		}
+
+		trigger = {
+			167 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+		}
+
+		effect = {
+			167 = {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_province_triggered_modifier = kob_expanded_kob_fortress
+			}
+		}
+	}
+
+	kob_starter_push_to_the_hills = {
+		icon = mission_kob_starter_push_to_the_hills
+
+		position = 4
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				area = dragonhills_area
+				area = gnomish_pass_area
+				owned_by = A52
+			}
+		}
+
+		required_missions = {
+			kob_starter_unify_kobolds
+			kob_starter_conquer_pass
+		}
+
+		trigger = {
+			NOT = {
+				exists = A52
+			}
+			dragonhills_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gnomish_pass_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = kob_expanded_mission_events.1006
+			}
+		}
+	}
+
+	kob_starter_push_south = {
+		icon = mission_kob_starter_push_south
+
+		position = 5
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				area = reaver_coast_area
+				area = iochand_area
+			}
+		}
+
+		required_missions = {
+			kob_starter_push_to_the_hills
+		}
+
+		trigger = {
+			reaver_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			iochand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = kob_expanded_against_winelords
+				duration = 3650
+			}
+			southroy_area = {
+				add_claim = ROOT
+			}
+			deranne_area = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+#Middle
+KOBOLD_STARTER_EXPANDED_3 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+	}
+
+	slot = 3
+
+	kob_starter_rally_the_clans = {
+		icon = mission_kob_starter_rally_the_clans
+
+		position = 1
+
+		provinces_to_highlight = {
+			
+		}
+
+		required_missions = {
+			
+		}
+
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+		}
+
+		effect = {
+			custom_tooltip = kob_expanded_unlockKoboldUnificationCB.tooltip
+			hidden_effect = {
+				set_country_flag = kob_expanded_unlock_unification_cb_flag
+			}
+			add_yearly_manpower = 2
+		}
+	}
+
+	kob_conquer_red_scales = {
+		icon = mission_kob_conquer_red_scales
+
+		position = 2
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				area = dragondowns_area
+				area = dragonpoint_area
+			}
+		}
+
+		required_missions = {
+			kob_starter_rally_the_clans
+		}
+
+		trigger = {
+			#Requirements if is Red scales
+			if = {
+				limit = {
+					OR = {
+						tag = A26
+						was_tag = A26
+					}
+				}
+				grown_by_development = 50
+				OR = {
+					NOT = {
+						average_autonomy = 10
+					}
+					NOT = {
+						average_unrest = 1
+					}
+				}
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+			}
+			#Requirements if is other kobold
+			else = {
+				OR = {
+					NOT = {
+						exists = A26
+					}
+					A26 = {
+						is_subject_of = ROOT
+					}
+				}
+				dragondowns_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				dragonpoint_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT 
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = A26
+						was_tag = A26
+					}
+				}
+				country_event = {
+					id = kob_expanded_mission_events.1005
+				}
+			}
+			else = {
+				country_event = {
+					id = kob_expanded_mission_events.1002
+				}
+			}
+		}
+	}
+
+	kob_starter_unify_kobolds = {
+		icon = mission_kob_starter_unify_kobolds
+
+		position = 3
+
+		required_missions = {
+			kob_conquer_red_scales
+			kob_conquer_blue_scales
+			kob_conquer_green_scales
+		}
+
+		provinces_to_highlight = {
+			superregion = western_cannor_superregion
+			culture_group = kobold
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			stability = 1
+			NOT = {
+				is_at_war = yes
+			}
+			owns_all_provinces = {
+				culture_group = kobold
+				superregion = western_cannor_superregion
+			}
+		}
+
+		effect = {
+			add_ruler_personality = KOB_unifier_personality
+			if = {
+				limit = {
+					government_rank = 1
+				}
+				set_government_rank = 2
+				add_prestige_or_monarch_power = {
+					amount = 50
+				}
+			}
+			else = {
+				add_prestige_or_monarch_power = {
+					amount = 100
+				}
+			}
+		}
+	}
+
+	kob_starter_honour_forefathers = {
+		icon = mission_kob_starter_honour_forefathers
+
+		position = 4
+
+		trigger = {
+			religion = kobold_dragon_cult
+			treasury = 1500
+			num_of_owned_provinces_with = {
+				value = 8
+				has_owner_religion = yes
+				culture_group = kobold
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+
+		effect = {
+			add_treasury = -1500
+			add_country_modifier = {
+				name = kob_expanded_forefathers_pleased
+				duration = 10950
+			}
+		}
+	}
+
+	kob_starter_kobold_coast = {
+		icon = mission_kob_starter_kobold_coast
+
+		position = 4
+
+		provinces_to_highlight = {
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					religion = ROOT
+				}
+				AND = {
+					NOT = {
+						has_owner_accepted_culture = yes
+					}
+					NOT = {
+						culture_group = kobold
+					}
+				}
+			}
+			region = dragon_coast_region
+		}
+
+		required_missions = {
+			kob_starter_honour_forefathers
+			kob_starter_push_to_the_hills
+		}
+
+		trigger = {
+			NOT = {
+				is_at_war = yes
+			}
+			dragon_coast_region = {
+				type = all
+				owned_by = ROOT
+				religion = ROOT
+				OR = {
+					culture_group = kobold
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = kob_expanded_kobold_coast
+				duration = -1
+			}
+		}
+	}
+}
+
+#Middle Right
+KOBOLD_STARTER_EXPANDED_4 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+	}
+
+	slot = 4
+
+	kob_conquer_blue_scales = {
+		icon = mission_kob_conquer_blue_scales
+
+		position = 2
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				area = dragonspine_area
+				area = dragonheights_area
+				area = dragondepth_area
+			}
+		}
+
+		required_missions = {
+			kob_starter_rally_the_clans
+		}
+
+		trigger = {
+			#Requirements if is Blue scales
+			if = {
+				limit = {
+					OR = {
+						tag = A27
+						was_tag = A27
+					}
+				}
+				grown_by_development = 50
+				OR = {
+					NOT = {
+						average_autonomy = 10
+					}
+					NOT = {
+						average_unrest = 1
+					}
+				}
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+			}
+			#Requirements if is other kobold
+			else = {
+				OR = {
+					NOT = {
+						exists = A27
+					}
+					A27 = {
+						is_subject_of = ROOT
+					}
+				}
+				dragondepth_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				dragonheights_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				dragonspine_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = A27
+						was_tag = A27
+					}
+				}
+				country_event = {
+					id = kob_expanded_mission_events.1005
+				}
+			}
+			else = {
+				country_event = {
+					id = kob_expanded_mission_events.1003
+				}
+			}
+		}
+	}
+
+	kob_starter_control_north_pass = {
+		icon = mission_kob_starter_control_north_pass
+
+		position = 3
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				area = westmoor_proper_area
+				area = moorhills_area
+			}
+		}
+
+		trigger = {
+			196 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
+			westmoor_proper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moorhills_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			196 = {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_province_triggered_modifier = kob_expanded_kob_fortress
+			}
+			beronmoor_area = {
+				add_permanent_claim = ROOT
+			}
+			695 = {
+				add_permanent_claim = ROOT
+			}
+			serpentshead_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	kob_starter_challenge_alenic_lords = {
+		icon = mission_kob_starter_challenge_alenic_lords
+
+		position = 4
+
+		required_missions = {
+			kob_starter_control_north_pass
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			army_size = 40
+			if = {
+				limit = {
+					exists = A13
+				}
+				OR = {
+					has_won_war_against = {
+						who = A13
+					}
+					custom_trigger_tooltip = {
+						tooltip = kob_expanded_controlsGawedCapital.tooltip
+						any_province = {
+							is_capital_of = A13
+							controlled_by = ROOT
+						}
+					}
+					beronmoor_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			else = {
+				OR = {
+					any_known_country = {
+						culture_group = alenic
+						army_strength = {
+							who = ROOT
+							value = 0.5
+						}
+						OR = {
+							has_opinion_modifier = {
+								who = root
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = root
+								modifier = scornfully_insulted
+							}
+						}
+					}
+					beronmoor_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = kob_expanded_alenicChargeModifierLostOnDefeat.tooltip
+			custom_tooltip = kob_expanded_permanentClainsOnAlenicRegionExceptFrontierCestirGoldenPlains.tooltip
+			hidden_effect = {
+				add_country_modifier = {
+					name = kob_expanded_challenged_alenic_lords
+					duration = 3650
+				}
+				gawed_area = {
+					add_permanent_claim = ROOT
+				}
+				south_alen_area = {
+					add_permanent_claim = ROOT
+				}
+				alenic_expanse_area = {
+					add_permanent_claim = ROOT
+				}
+				balvord_area = {
+					add_permanent_claim = ROOT
+				}
+				jonsway_area = {
+					add_permanent_claim = ROOT
+				}
+				westmounts_area = {
+					add_permanent_claim = ROOT
+				}
+				alenvord_area = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	kob_starter_skewer_eagle = {
+		icon = mission_kob_starter_skewer_eagle
+
+		position = 5
+
+		required_missions = {
+			kob_starter_challenge_alenic_lords
+		}
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				area = gawed_area
+				area = south_alen_area
+				area = alenic_expanse_area
+				area = balvord_area
+				area = jonsway_area
+				area = alenvord_area
+				area = westmounts_area
+			}
+		}
+
+		trigger = {
+			alenvord_area = {
+				type = all
+				owned_by = ROOT
+			}
+			gawed_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_alen_area = {
+				type = all
+				owned_by = ROOT
+			}
+			alenic_expanse_area = {
+				type = all
+				owned_by = ROOT
+			}
+			balvord_area = {
+				type = all
+				owned_by = ROOT
+			}
+			jonsway_area = {
+				type = all
+				owned_by = ROOT
+			}
+			westmounts_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = kob_expanded_conquerors_of_alen
+				duration = -1
+			}
+		}
+	}
+}
+
+#Right
+KOBOLD_STARTER_EXPANDED_5 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
+	}
+
+	slot = 5
+
+	kob_conquer_green_scales = {
+		icon = mission_kob_conquer_green_scales
+
+		position = 2
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				area = coddorran_heights_area
+				province_id = 694
+			}
+		}
+
+		required_missions = {
+			kob_starter_rally_the_clans
+		}
+
+		trigger = {
+			#Requirements if is Green scales
+			if = {
+				limit = {
+					OR = {
+						tag = A28
+						was_tag = A28
+					}
+				}
+				grown_by_development = 50
+				OR = {
+					NOT = {
+						average_autonomy = 10
+					}
+					NOT = {
+						average_unrest = 1
+					}
+				}
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+			}
+			#Requirements if is other kobold
+			else = {
+				OR = {
+					NOT = {
+						exists = A28
+					}
+					A28 = {
+						is_subject_of = ROOT
+					}
+				}
+				coddorran_heights_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				694 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = A28
+						was_tag = A28
+					}
+				}
+				country_event = {
+					id = kob_expanded_mission_events.1005
+				}
+			}
+			else = {
+				country_event = {
+					id = kob_expanded_mission_events.1004
+				}
+			}
+		}
+	}
+
+	kob_starter_push_along_coast = {
+		icon = mission_kob_starter_push_along_coast
+
+		position = 4
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			OR = {
+				province_id = 695
+				area = serpentshead_area
+			}
+		}
+
+		required_missions = {
+			kob_conquer_green_scales
+			kob_starter_control_north_pass
+		}
+
+		trigger = {
+			NOT = {
+				exists = Z22
+			}
+			695 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			serpentshead_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = kob_expanded_mission_events.1007
+			}
+			custom_tooltip = kob_expanded_gainPermanentClaimOnSerpentPassAndFrozenPassCoast.tooltip
+			hidden_effect = {
+				frostbridges_area = {
+					add_permanent_claim = ROOT
+				}
+				northern_greatwoods_area = {
+					add_permanent_claim = ROOT
+					has_port = yes
+				}
+				dinesck_area = {
+					add_permanent_claim = ROOT
+					has_port = yes
+				}
+			}
+		}
+	}
+
+	kob_starter_dominate_north_gulf = {
+		icon = mission_kob_starter_dominate_north_gulf
+
+		position = 5
+
+		provinces_to_highlight = {
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			has_port = yes
+			OR = {
+				area = northern_greatwoods_area
+				area = frostbridges_area	
+				area = dinesck_area
+			}
+		}
+
+		required_missions = {
+			kob_starter_push_along_coast
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_ControlSerpentPassAndFrozenPassCoast.tooltip
+				frostbridges_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				northern_greatwoods_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+					has_port = yes
+				}
+				dinesck_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+					has_port = yes
+				}
+			}
+			OR = {
+				AND = {
+					723 = {
+						country_or_non_sovereign_subject_holds = ROOT
+						province_has_center_of_trade_of_level = 2
+						has_trade_building_trigger = yes
+					}
+					696 = {
+						country_or_non_sovereign_subject_holds = ROOT
+						province_has_center_of_trade_of_level = 2
+						has_trade_building_trigger = yes
+					}
+				}
+				1322 = {
+					is_strongest_trade_power = ROOT
+				}
+			}
+		}
+
+		effect = {
+			723 = {
+				add_kobold_minority_size_effect = yes
+			}
+			696 = {
+				add_kobold_minority_size_effect = yes
+			}
+			add_country_modifier = {
+				name = kob_expanded_serpenthead_master
+				duration = 7300
+			}
+			define_advisor = {
+				type = trader
+				cost_multiplier = 0.25
+				skill = 3
+				culture = ROOT
+			}
+		}
+	}
+}
+
+#################################################
+# Kobildzani Missions                           #
+#################################################
+
+KOBILDZAN_1 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+	}
+
+	slot = 1
+
+	kobildzan_develop_crafts = {
+		icon = mission_kobildzan_develop_crafts
+
+		position = 7
+
+		required_missions = {
+			kobildzan_develop_underground
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kobildzan_sponsor_kobold_culture = {
+		icon = mission_kobildzan_sponsor_kobold_culture
+
+		position = 8
+
+		required_missions = {
+			kobildzan_develop_crafts
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+KOBILDZAN_2 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+	}
+
+	slot = 2
+
+	kobildzan_develop_underground = {
+		icon = mission_kobildzan_develop_underground 
+
+		position = 6
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kobildzan_education_reform = {
+		icon = mission_kobildzan_education_reform
+
+		position = 7
+
+		required_missions = {
+			kobildzan_develop_underground
+			kobildzan_centralise_government
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+KOBILDZAN_3 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+	}
+
+	slot = 3
+
+	kobildzan_centralise_government= {
+		icon = mission_kobildzan_centralise_government
+
+		position = 6
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kobildzan_determine_our_future = {
+		icon = mission_kobildzan_determine_our_future
+
+		position = 7
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+KOBILDZAN_4 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+	}
+
+	slot = 4
+
+	kobildzan_keep_order = {
+		icon = mission_kobildzan_keep_order
+
+		position = 7
+
+		required_missions = {
+			kobildzan_centralise_government
+			kobildzan_organise_military_drills
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kobildzan_new_golden_age = {
+		icon = mission_kobildzan_new_golden_age
+
+		position = 8
+
+		required_missions = {
+			kobildzan_keep_order
+			kobildzan_determine_our_future
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+KOBILDZAN_5 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+	}
+
+	slot = 5
+
+	kobildzan_organise_military_drills = {
+		icon = mission_kobildzan_organise_military_drills
+
+		position = 6
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
