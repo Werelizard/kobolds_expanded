@@ -8,6 +8,7 @@
 kob_expanded_interal_disorder = {
 	powers = {
 		kob_expanded_disorder = {
+			gui = kob_expanded_disorder_gui
 			max = 100
 			min = 0
 			is_good = no

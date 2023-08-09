@@ -150,7 +150,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_red_scale_military
-			duration = 7300
+			duration = 5475
 		}
 
 		if = {
@@ -201,7 +201,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_red_scale_military_lesser
-			duration = -1
+			duration = 5475
 		}
 
 		if = {
@@ -273,7 +273,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_blue_scale_military
-			duration = 7300
+			duration = 5475
 		}
 
 		if = {
@@ -324,7 +324,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_blue_scale_military_lesser
-			duration =-1
+			duration = 5475
 		}
 
 		if = {
@@ -396,7 +396,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_green_scale_military
-			duration = -1
+			duration = 5475
 		}
 
 		if = {
@@ -447,7 +447,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_green_scale_military_lesser
-			duration = -1
+			duration = 5475
 		}
 
 		if = {
@@ -514,7 +514,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_rely_on_clans
-			duration = 9125
+			duration = 5475
 		}
 	}
 

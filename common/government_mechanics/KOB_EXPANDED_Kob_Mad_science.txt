@@ -1,0 +1,84 @@
+############################################
+# KOBOLD GOVERMENTS - "Kobolds Expanded"   #
+# Recklessness mechanic                    #
+#                                          #
+# By L. E. H.                              #
+############################################
+
+kob_expanded_mad_science= {
+	powers = {
+		kob_expanded_recklessness = {
+			gui = russian_modernization_gov_mech
+			max = 100
+			min = 0
+			is_good = yes
+			base_monthly_growth = -0.35
+			scaled_modifier = {
+				trigger = {
+					has_government_power = { 
+						mechanic_type = kob_expanded_mad_science
+						power_type = kob_expanded_recklessness
+						value = 0
+					}
+				}
+				modifier = {
+					embracement_cost = -0.5
+					administrative_efficiency = -0.05
+				}
+			}
+		}
+	}
+	interactions = { # All have 10 years cooldown
+		#Sponsor Researchers (Get a cheap advisor + 1 possible advisor)
+		KOBOLD_TECHNOCRACY_SPONSOR_RESEARCH = {
+			cost_type = kob_expanded_recklessness
+			cost = 50
+			trigger = {
+				
+			}
+			effect = {
+				
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+
+		#Sponsor Project Breakthrough (Lower tech in one area and slightly increse it everywhere else + idea cost)
+		KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH = {
+			cost_type = kob_expanded_recklessness
+			cost = 50
+			trigger = {
+				
+			}
+			effect = {
+				
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+
+		#Sponsor Public Lectures (Gives a +0.1 Global Instituon growth in capital area + dev discount in provinces that do NOT have the latest institution)
+		KOBOLD_TECHNOCRACY_PUBLIC_LECTURES = {
+			cost_type = kob_expanded_recklessness
+			cost = 50
+			trigger = {
+				
+			}
+			effect = {
+				
+			}
+			cooldown_years = 10
+			ai_chance = {
+				factor = 1
+			}
+		}
+	}
+}
+
+##########################################
+# Factors that change Recklessness value #
+##########################################

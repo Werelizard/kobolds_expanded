@@ -146,12 +146,6 @@ spriteTypes = {
 		name = "mission_kobildzan_education_reform"
 		texturefile = "gfx//interface//missions//mission_kobildzan_education_reform.dds"
 	}
-
-	spriteType = {  # From Paradxox Interactive
-		name = "mission_kobildzan_sponsor_kobold_culture"
-		texturefile = "gfx//interface//missions//mission_kobildzan_sponsor_kobold_culture.dds"
-	}
-
 	spriteType = { # From Paradxox Interactive
 		name = "mission_kobildzan_keep_order"
 		texturefile = "gfx//interface//missions//mission_kobildzan_keep_order.dds"
@@ -165,5 +159,10 @@ spriteTypes = {
 	spriteType = { # From Paradxox Interactive
 		name = "mission_kobildzan_organise_military_drills"
 		texturefile = "gfx//interface//missions//mission_kobildzan_organise_military_drills.dds"
+	}
+
+	spriteType = { # From Paradxox Interactive
+		name = "mission_kobildzan_reform_our_military"
+		texturefile = "gfx//interface//missions//mission_kobildzan_reform_our_military.dds"
 	}
 }

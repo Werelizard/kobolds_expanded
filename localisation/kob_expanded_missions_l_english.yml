@@ -63,7 +63,7 @@
  kob_expanded_gainPermanentClaimOnSerpentPassAndFrozenPassCoast.tooltip:0 "§Y[Root.GetName]§! gains permanent claims on the §YFrostbridges§! area as well as §YColdmarket§!, §YEnvermarck§!, §YBayvic§! and §YOrdal§!."
  kob_expanded_unlockKoboldUnificationCB.tooltip:0 "Unlocks the §YKobold Reclamation§! casus belli. This casus belli will allow us to press our claims against any other nations owing provinces in the §YDragoncoast§! region as well as the §YWestmoors§! and §YMoorhills§! areas."
  kob_expanded_ControlSerpentPassAndFrozenPassCoast.tooltip:0 "§Y[Root.GetName]§! or its non-tributary subjects own all provinces in the §YFrostbridges§! area, as well as the provinces of §YColdmarket§!, §YEnvermarck§!, §YBayvic§! and §YOrdal§!."
- kob_expanded_alenicChargeModifierLostOnDefeat.tooltip:0 "[Root.GetName] gets '§YThe Kobold Charge§!' until we §Olose a war§!, giving the following effects:\nPrestige from Land battles: §G+100.0%§!\nShock Damage: §G+5.0%§!\nFire Damage: §G+5.0%§!\n"
+ kob_expanded_alenicChargeModifierLostOnDefeat.tooltip:0 "[Root.GetName] gets '§YThe Kobold Charge§!' until we §Olose a war§!, giving the following effects:\nPrestige from Land battles: §G+100.0%§!\nShock Damage: §G+5.0%§!\nFire Damage Received: §G-5.0%§!\n"
  kob_expanded_purgingOrExpellingGnomes.tooltip:0 "Is §Ypurging§! or §Yexpelling§! the gnomes."
  kob_expanded_allCoresWeOwnOfNimscoddDestroyed.tooltip:0 "All of §YNimscodd§!'s cores will be destroyed."
  kob_expanded_allGnomeProvincesForcefullyConverted.tooltip:0 "All of §YNimscodd§'s cores will be destroyed."
@@ -128,7 +128,7 @@
  kob_expanded_blue_scale_military_lesser:0 "Blue Scale Trappers"
  kob_expanded_green_scale_military_lesser:0 "Green Scale Scouts"
  kob_expanded_rely_on_clans:0 "Reliance on the Tribes"
- kob_expanded_against_winelords:0 "Kobold Defiance"
+ kob_expanded_against_winelords:0 "Crossing the Portroy"
  kob_expanded_forefathers_pleased:0 "Honouring the Dragons"
  kob_expanded_conquerors_of_alen:0 "The Alenic Yip"
  kob_expanded_kobold_coast:0 "A Kobold Coast"
@@ -160,7 +160,6 @@
  ## Titles
 
  kobildzan_develop_crafts_title:0 "Patronize Artisans"
- kobildzan_sponsor_kobold_culture_title:0 "Sponsor Kobold Culture"
  kobildzan_develop_underground_title:0 "Expand the Dens"
  kobildzan_education_reform_title:0 "Scrolls For All!"
  kobildzan_centralise_government_title:0 "General Land Reform"
@@ -168,11 +167,11 @@
  kobildzan_keep_order_title:0 "Maintain Order"
  kobildzan_new_golden_age_title:0 "A Kobold Golden Age"
  kobildzan_organise_military_drills_title:0 "Wild Gunnery"
+ kobildzan_reform_our_military_title:0 "A New Kobold Swarm"
 
  ##Descriptions
 
  kobildzan_develop_crafts_desc:0 ""
- kobildzan_sponsor_kobold_culture_desc:0 ""
  kobildzan_develop_underground_desc:0 ""
  kobildzan_education_reform_desc:0 ""
  kobildzan_centralise_government_desc:0 ""
@@ -180,3 +179,4 @@
  kobildzan_keep_order_desc:0 ""
  kobildzan_new_golden_age_desc:0 ""
  kobildzan_organise_military_drills_desc:0 ""
+ kobildzan_reform_our_military_desc:0 ""

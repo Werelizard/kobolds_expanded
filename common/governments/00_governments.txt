@@ -315,6 +315,9 @@ monarchy = {
 				arverynnic_administration_reform
 				chien_ancestral_council_reform
 				orldhum_highlords_retinue
+
+				#Kobolds expanded
+				kob_expanded_kobold_mad_science
 			}
 		}
 		state_and_religion = { #Tier 4

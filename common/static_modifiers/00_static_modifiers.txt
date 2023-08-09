@@ -1082,7 +1082,7 @@ legitimacy = {
 	sh_mother_influence = 0.1
 
 	#Kobolds Expanded
-	kob_expanded_disorder_gain_modifier = 0.5
+	kob_expanded_disorder_gain_modifier = -0.5
 }
 
 #Multiplied by current Horde Unity - 50

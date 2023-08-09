@@ -94,6 +94,7 @@ KOBOLD_STARTER_EXPANDED_1 = {
 				type = mission_rewards_power_projection
 				amount = 25
 			}
+			custom_tooltip = empty_line_tt
 			country_event = {
 				id = kob_expanded_mission_events.1001
 			}
@@ -602,6 +603,7 @@ KOBOLD_STARTER_EXPANDED_3 = {
 
 		effect = {
 			custom_tooltip = kob_expanded_unlockKoboldUnificationCB.tooltip
+			custom_tooltip = empty_line_tt
 			hidden_effect = {
 				set_country_flag = kob_expanded_unlock_unification_cb_flag
 			}
@@ -1260,6 +1262,7 @@ KOBOLD_STARTER_EXPANDED_5 = {
 			country_event = {
 				id = kob_expanded_mission_events.1007
 			}
+			custom_tooltip = empty_line_tt
 			custom_tooltip = kob_expanded_gainPermanentClaimOnSerpentPassAndFrozenPassCoast.tooltip
 			hidden_effect = {
 				frostbridges_area = {
@@ -1393,17 +1396,18 @@ KOBILDZAN_1 = {
 		}
 	}
 
-	kobildzan_sponsor_kobold_culture = {
-		icon = mission_kobildzan_sponsor_kobold_culture
+	kobildzan_new_golden_age = {
+		icon = mission_kobildzan_new_golden_age
 
 		position = 8
 
 		required_missions = {
 			kobildzan_develop_crafts
+			kobildzan_education_reform
+			kobildzan_determine_our_future
 		}
 
 		provinces_to_highlight = {
-			
 		}
 
 		trigger = {
@@ -1547,29 +1551,6 @@ KOBILDZAN_4 = {
 
 		required_missions = {
 			kobildzan_centralise_government
-			kobildzan_organise_military_drills
-		}
-
-		provinces_to_highlight = {
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kobildzan_new_golden_age = {
-		icon = mission_kobildzan_new_golden_age
-
-		position = 8
-
-		required_missions = {
-			kobildzan_keep_order
-			kobildzan_determine_our_future
 		}
 
 		provinces_to_highlight = {
@@ -1606,6 +1587,336 @@ KOBILDZAN_5 = {
 		}
 
 		provinces_to_highlight = {
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kobildzan_reform_our_military = {
+		icon = mission_kobildzan_reform_our_military
+
+		position = 8
+
+		required_missions = {
+			kobildzan_keep_order
+			kobildzan_organise_military_drills
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+#################################################
+# Great Yappering Missions                      #
+#################################################
+
+GREAT_YAPPRING_1 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		OR = {
+			tag = Z38
+			has_reform = kob_expanded_kobold_monarchy
+			have_had_reform = kob_expanded_kobold_monarchy
+		}
+		OR = {
+			has_country_flag = kob_expanded_great_yappering_DEBUG_YAPPERING_flag
+			has_disaster = kob_expanded_great_yappering
+		}
+	}
+
+	slot = 1
+
+	great_yappering_reactionaries_1 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	great_yappering_reactionaries_2 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			great_yappering_reactionaries_1
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+GREAT_YAPPRING_2 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		OR = {
+			tag = Z38
+			has_reform = kob_expanded_kobold_monarchy
+			have_had_reform = kob_expanded_kobold_monarchy
+		}
+		OR = {
+			has_country_flag = kob_expanded_great_yappering_DEBUG_YAPPERING_flag
+			has_disaster = kob_expanded_great_yappering
+		}
+	}
+
+	slot = 2
+
+	great_yappering_culture_crisis_1 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	great_yappering_culture_crisis_2 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			great_yappering_culture_crisis_1
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+GREAT_YAPPRING_3 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		OR = {
+			tag = Z38
+			has_reform = kob_expanded_kobold_monarchy
+			have_had_reform = kob_expanded_kobold_monarchy
+		}
+		OR = {
+			has_country_flag = kob_expanded_great_yappering_DEBUG_YAPPERING_flag
+			has_disaster = kob_expanded_great_yappering
+		}
+	}
+
+	slot = 3
+
+	great_yappering_stabilise_nation = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	great_yappering_end_the_crisis = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			great_yappering_reactionaries_2
+			great_yappering_culture_crisis_2
+			great_yappering_administrators_2
+			great_yappering_hoarding_2
+			great_yappering_stabilise_nation
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+GREAT_YAPPRING_4 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		OR = {
+			tag = Z38
+			has_reform = kob_expanded_kobold_monarchy
+			have_had_reform = kob_expanded_kobold_monarchy
+		}
+		OR = {
+			has_country_flag = kob_expanded_great_yappering_DEBUG_YAPPERING_flag
+			has_disaster = kob_expanded_great_yappering
+		}
+	}
+
+	slot = 4
+
+	great_yappering_administrators_1 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	great_yappering_administrators_2 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			great_yappering_administrators_1
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+GREAT_YAPPRING_5 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		OR = {
+			tag = Z38
+			has_reform = kob_expanded_kobold_monarchy
+			have_had_reform = kob_expanded_kobold_monarchy
+		}
+		OR = {
+			has_country_flag = kob_expanded_great_yappering_DEBUG_YAPPERING_flag
+			has_disaster = kob_expanded_great_yappering
+		}
+	}
+
+	slot = 5
+
+	great_yappering_hoarding_1 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	great_yappering_hoarding_2 = {
+		icon = mission_unknown_mission
+
+		required_missions = {
+			great_yappering_hoarding_1
+		}
+
+		provinces_to_highlight = {
+			
 		}
 
 		trigger = {
