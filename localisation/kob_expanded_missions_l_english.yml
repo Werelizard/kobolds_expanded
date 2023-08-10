@@ -76,6 +76,7 @@
  kob_expanded_rewards_affected_by_number_of_provinces_matching_requirements.tooltip:0 "Every province matching the requirements will gain a modifier of our choice in the triggered event."
  kob_expanded_great_fair_every_province_meeting_requirements_gets_these.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Production Efficiency: §G10.0%§!\nLocal Trade Power: §G25.0%§!"
  kob_expanded_great_fair_get_inno_per_province.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Monthly Institution Growth: §G+1.0§!\nLocal Build Cost: §G-10.0%§!"
+ kob_expanded_hasCompletedGreatYappingDisaster.tooltip:0 "We've gone through §YThe Great Yappering§! disaster."
 
  ## Mission-triggered events
 

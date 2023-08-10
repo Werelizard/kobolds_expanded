@@ -150,7 +150,7 @@ kobildzani_ideas = {
 	}
 
 	bonus = {
-		defensiveness = 0.5
+		defensiveness = 0.25
 	}
 
 	trigger = {

@@ -90,7 +90,6 @@ kob_expanded_litteracy_reform = {
 kob_expanded_reform_military = {
 	mil_tech_cost_modifier = -0.05
 	infantry_power = 0.1
-	reinforce_cost_modifier = 0.33
 }
 
 kob_expanded_ordered_vixaria = {
@@ -98,6 +97,7 @@ kob_expanded_ordered_vixaria = {
 }
 
 kob_expanded_modern_kobold_swarm = {
+	fire_damage_received = -0.1
 	fire_damage = 0.1
 	is_rajput_modifier = yes
 }
