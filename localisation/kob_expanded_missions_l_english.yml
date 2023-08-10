@@ -73,34 +73,37 @@
  kob_expanded_isNotMonstrous.tooltip:0 "§Y[Root.GetName]§! is not considered a monstrous nation."
  kob_expanded_neitherOrExpellingGnomes.tooltip:0 "Is neither §Ypurging§! or §Yexpelling§! the gnomes."
  kob_expanded_noGnomishProvinceHasADifferentReligionUnrestOrRecentUprising.tooltip:0 "Every owned province with §YCliff Gnome§! culture follows that §Y[Root.Religion.GetName]§!, has less than §Y1§! unrest and does not have the '§YRecent Uprising§!' modifier."
+ kob_expanded_rewards_affected_by_number_of_provinces_matching_requirements.tooltip:0 "Every province matching the requirements will gain a modifier of our choice in the triggered event."
+ kob_expanded_great_fair_every_province_meeting_requirements_gets_these.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Production Efficiency: §G10.0%§!\nLocal Trade Power: §G25.0%§!"
+ kob_expanded_great_fair_get_inno_per_province.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Monthly Institution Growth: §G+1.0§!\nLocal Build Cost: §G-10.0%§!"
 
  ## Mission-triggered events
 
  kob_expanded_mission_events.1001.title:0 "The End of the Gnomish Wars"
  kob_expanded_mission_events.1001.desc:0 ""
- kob_expanded_mission_events.1001.a:0 ""
- kob_expanded_mission_events.1001.b:0 ""
- kob_expanded_unlockGnomishToleranceMissions.tooltip:0 ""
- kob_expanded_unlockGnomishPurgeMissions.tooltip:0 ""
- kob_expanded_gnomish_revolts.tooltip:0 ""
+ kob_expanded_mission_events.1001.a:0 "We shall be merciful."
+ kob_expanded_mission_events.1001.b:0 "Let the Gnomes cower before the children of the Dragons."
+ kob_expanded_unlockGnomishToleranceMissions.tooltip:0 "§YUnlocks the Gnomish tolerance missions.§!"
+ kob_expanded_unlockGnomishPurgeMissions.tooltip:0 "§YUnlocks the Gnomish purge missions.§!"
+ kob_expanded_gnomish_revolts.tooltip:0 "§RGnomes living under our rule will rise up against us!§!"
 
  kob_expanded_mission_events.1002.title:0 "The Clan-Meet of Fetaginbaia"
- kob_expanded_mission_events.1002.desc:0 ""
- kob_expanded_mission_events.1002.a:0 ""
- everyRedScaleProvinceLosesAllSeperatism.tooltip:0 ""
- kob_expanded_mission_events.1002.b:0 ""
+ kob_expanded_mission_events.1002.desc:0 "."
+ kob_expanded_mission_events.1002.a:0 "The Redscales are our equals"
+ everyRedScaleProvinceLosesAllSeperatism.tooltip:0 "Every §YRedscale§! province loses all seperatism but gain §Y100.0%§! autonomy."
+ kob_expanded_mission_events.1002.b:0 "No, they serve us!"
 
  kob_expanded_mission_events.1003.title:0 "The Clan-Meet of Kobildzex"
  kob_expanded_mission_events.1003.desc:0 ""
- kob_expanded_mission_events.1003.a:0 ""
- everyBlueScaleProvinceLosesAllSeperatism.tooltip:0 ""
- kob_expanded_mission_events.1003.b:0 ""
+ kob_expanded_mission_events.1003.a:0 "The Bluescales are our equals."
+ everyBlueScaleProvinceLosesAllSeperatism.tooltip:0 "Every §YBluescale§! province loses all seperatism but gain §Y100.0%§! autonomy."
+ kob_expanded_mission_events.1003.b:0 "No, they serve us!"
 
  kob_expanded_mission_events.1004.title:0 "The Clan-Meet of Iskalbaia"
  kob_expanded_mission_events.1004.desc:0 ""
- kob_expanded_mission_events.1004.a:0 ""
- everyGreenScaleProvinceLosesAllSeperatism.tooltip:0 ""
- kob_expanded_mission_events.1004.b:0 ""
+ kob_expanded_mission_events.1004.a:0 "The Greenscales are our equals."
+ everyGreenScaleProvinceLosesAllSeperatism.tooltip:0 "Every §YGreenscale§! province loses all seperatism but gain §Y100.0%§! autonomy."
+ kob_expanded_mission_events.1004.b:0 "No, they serve us!"
 
  kob_expanded_mission_events.1005.title:0 "The Clan-Meet of [Root.Capital.GetName]"
  kob_expanded_mission_events.1005.desc:0 ""
@@ -108,14 +111,20 @@
  kob_expanded_mission_events.1005.b:0 "No, our [Root.Monarch.GetTitle] will lead us into battle!"
 
  kob_expanded_mission_events.1006.title:0 "Eaglecrest Falls"
- kob_expanded_mission_events.1006.a:0 ""
- kob_expanded_mission_events.1006.b:0 ""
- kob_expanded_mission_events.1006.c:0 ""
+ kob_expanded_mission_events.1006.desc:0 ""
+ kob_expanded_mission_events.1006.a:0 "All Talk-Folk are our enemies. Let us set an example."
+ kob_expanded_mission_events.1006.b:0 "The people of Eaglecrest can serve us - in chains."
+ kob_expanded_mission_events.1006.c:0 "We should not make an enemy out of Humans."
 
  kob_expanded_mission_events.1007.title:0 "Ashes over Celmaldor"
  kob_expanded_mission_events.1007.desc:0 ""
- kob_expanded_mission_events.1007.a:0 ""
- kob_expanded_mission_events.1007.b:0 ""
+ kob_expanded_mission_events.1007.a:0 "There is nothing here for us. Raze the city."
+ kob_expanded_mission_events.1007.b:0 "We should resettle it instead."
+
+ kob_expanded_mission_events.1008.title:0 "The Great [Root.Capital.GetName] Fair"
+ kob_expanded_mission_events.1008.desc:0 ""
+ kob_expanded_mission_events.1008.a:0 "Our patronage shall go to the Merchants!"
+ kob_expanded_mission_events.1008.b:0 "Our patronage shall go to the Artificiers!"
 
  ## Mission modifiers
 
@@ -124,9 +133,6 @@
  kob_expanded_red_scale_military:0 "Red Scale Warriors"
  kob_expanded_blue_scale_military:0 "Blue Scale Trappers"
  kob_expanded_green_scale_military:0 "Green Scale Scouts"
- kob_expanded_red_scale_military_lesser:0 "Red Scale Warriors"
- kob_expanded_blue_scale_military_lesser:0 "Blue Scale Trappers"
- kob_expanded_green_scale_military_lesser:0 "Green Scale Scouts"
  kob_expanded_rely_on_clans:0 "Reliance on the Tribes"
  kob_expanded_against_winelords:0 "Crossing the Portroy"
  kob_expanded_forefathers_pleased:0 "Honouring the Dragons"
@@ -139,6 +145,13 @@
  kob_expanded_persecuted_gnomes:0 "Persecuting the Gnomes"
  kob_expanded_displaced_gnomes:0 "Displaced Gnomes"
  kob_expanded_mended_wounds:0 "Mended Wounds"
+ kob_expanded_artisan_reward:0 "Kobildzani Patronage"
+ kob_expanded_artisan_reward_artificiers:0 "Kobildzani Grants"
+ kob_expanded_artisan_reward_local:0 "Bolstered Kobold Guilds"
+ kob_expanded_artisan_reward_artificiers_local:0 "Artificier Laboratory"
+ kob_expanded_ordered_vixaria:0 "An Ordered Society"
+ kob_expanded_modern_kobold_swarm:0 "Kobildzani Flame-Rifles"
+ kob_expanded_reform_military:0 "Early Rifle Prototypes"
 
  ## Custom Localisation
 

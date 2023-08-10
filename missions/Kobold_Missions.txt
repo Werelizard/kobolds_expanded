@@ -1392,15 +1392,63 @@ KOBILDZAN_1 = {
 		}
 
 		provinces_to_highlight = {
-			
+			owned_by = ROOT
+			has_kobold_minority_trigger = yes
+			OR = {
+				NOT = {
+					has_manufactory_trigger = yes
+				}
+				NOT = {
+					has_production_building_trigger = yes
+				}
+				AND = {
+					NOT = {
+						trade_goods = copper
+					}
+					NOT = {
+						trade_goods = mithril 
+					}
+					NOT = {
+						trade_goods = gems
+					}
+					NOT = {
+						trade_goods = glass
+					}
+					NOT = {
+						trade_goods = precursor_relics
+					} 
+					development = 30
+				}
+			}
 		}
 
 		trigger = {
-			
+			treasury = 2500
+			OR = {
+				mercantilism = 40
+				full_idea_group = trade_ideas
+				full_idea_group = economic_ideas
+			}
+			any_owned_province = {
+				has_manufactory_trigger = yes
+				has_kobold_minority_trigger = yes
+				has_production_building_trigger = yes
+				OR = {
+					trade_goods = mithril 
+					trade_goods = gems
+					trade_goods = glass
+					trade_goods = precursor_relics 
+					development = 30
+				}
+			}
 		}
 
 		effect = {
-			
+			custom_tooltip = kob_expanded_rewards_affected_by_number_of_provinces_matching_requirements.tooltip
+			custom_tooltip = empty_line_tt
+			country_event = {
+				id = kob_expanded_mission_events.1008 
+			}
 		}
 	}
 
@@ -1419,11 +1467,26 @@ KOBILDZAN_1 = {
 		}
 
 		trigger = {
-			
+			NOT = {
+				great_power_rank = 6
+			}
+			is_at_war = no
+			OR = {
+				NOT = {
+					has_reform = kob_expanded_kobold_monarchy
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = kob_expanded_interal_disorder
+						power_type = kob_expanded_disorder
+						value = 10
+					}
+				}
+			}
 		}
 
 		effect = {
-			
+			custom_tooltip = kob_expanded_extendGoldenAgeOrNewOneOrNextAgeWillBeLonger.tooltip
 		}
 	}
 }
@@ -1449,15 +1512,83 @@ KOBILDZAN_2 = {
 		}
 
 		provinces_to_highlight = {
-			
+			region = dragon_coast_region
+			has_terrain = cavern 
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 8
+				}
+				NOT = {
+					culture_group = kobold
+				}
+			}
+			AND = {
+				NOT = {
+					has_trade_building_trigger = yes
+				}
+				NOT = {
+					has_tax_building_trigger = yes	
+				}
+				NOT = {
+					has_production_building_trigger = yes
+				}
+			}
 		}
 
 		trigger = {
-			
+			owns_all_provinces = {
+				region = dragon_coast_region
+				has_terrain = cavern 
+			}
+			all_owned_province = {
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_cavern_and_Dragoncoast.tooltip
+					AND = {
+						region = dragon_coast_region
+						has_terrain = cavern 
+					}
+				}
+				development = 8
+				culture_group = kobold
+				OR = {
+					has_manpower_building_trigger = yes
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+			}
 		}
 
 		effect = {
-			
+			custom_tooltip = kob_expanded_dens_give_dev_rewards.tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = dragon_coast_region
+						has_terrain = cavern 
+						has_tax_building_trigger = yes
+					}
+					add_base_tax = 2
+				}
+				every_owned_province = {
+					limit = {
+						region = dragon_coast_region
+						has_terrain = cavern 
+						has_manpower_building_trigger = yes
+					}
+					add_base_manpower = 2
+				}
+				every_owned_province = {
+					limit = {
+						region = dragon_coast_region
+						has_terrain = cavern 
+						has_production_building_trigger = yes
+					}
+					add_base_production = 1
+				}
+			}
 		}
 	}
 
@@ -1476,11 +1607,73 @@ KOBILDZAN_2 = {
 		}
 
 		trigger = {
-			
+			OR = {
+				innovativeness = 50
+				has_institution = printing_press
+				full_idea_group = innovativeness_ideas
+			}
+			OR = {
+				any_owned_province = {
+					trade_goods = paper
+				}
+				any_subject_country = {
+					any_owned_province = {
+						trade_goods = paper
+					}
+				}
+				any_ally = {
+					any_owned_province = {
+						trade_goods = paper
+					}
+				}
+			}
 		}
 
 		effect = {
+			custom_tooltip = kob_expanded_monarch_will_get_a_random_stat_bonus.tooltip
 			
+			add_country_modifier = {
+				name = kob_expanded_litteracy_reform
+				duration = 3650
+			}
+
+			hidden_effect = {
+				random_list = {
+					33 = {
+						if = {
+							limit = {
+								adm = 6
+							}
+							add_adm_power = 100
+						}
+						else = {
+							change_adm = 1
+						}
+					}
+					33 = {
+						if = {
+							limit = {
+								dip = 6
+							}
+							add_dip_power = 100
+						}
+						else = {
+							change_dip = 1
+						}
+					}
+					33 = {
+						if = {
+							limit = {
+								mil = 6
+							}
+							add_mil_power = 100
+						}
+						else = {
+							change_mil = 1
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -1510,11 +1703,17 @@ KOBILDZAN_3 = {
 		}
 
 		trigger = {
-			
+			crown_land_share = 50
+			num_of_owned_states_with = {
+				value = 15
+				NOT = {
+					local_autonomy_above_min = 5
+				}
+			}
 		}
 
 		effect = {
-			
+			change_government_reform_progress = 100
 		}
 	}
 
@@ -1532,11 +1731,14 @@ KOBILDZAN_3 = {
 		}
 
 		trigger = {
-			
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_isNotMonstrous.tooltip
+				NOT = { has_country_modifier = monstrous_nation }
+			}
 		}
 
 		effect = {
-			
+			custom_tooltip = KOB_EXPANDED_TODO.tooltip
 		}
 	}
 }
@@ -1565,11 +1767,82 @@ KOBILDZAN_4 = {
 		}
 
 		trigger = {
-			
+			OR = {
+				AND = {
+					OR = {
+						current_age = age_of_absolutism 
+						current_age = age_of_revolutions
+					}
+					NOT = {
+						has_disaster = kob_expanded_great_yappering_disaster
+					}
+					NOT = {
+						has_government_power = {
+							mechanic_type = kob_expanded_interal_disorder
+							power_type = kob_expanded_disorder
+							value = 25
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_hasCompletedGreatYappingDisaster.tooltip
+					has_country_flag = kob_expanded_yappering_disaster_complete
+				}
+			}
 		}
 
 		effect = {
-			
+			if = {
+				limit = {
+					AND = {
+						OR = {
+							current_age = age_of_discovery
+							current_age = age_of_reformation
+							has_disaster = kob_expanded_great_yappering_disaster
+							has_government_power = {
+								mechanic_type = kob_expanded_interal_disorder
+								power_type = kob_expanded_disorder
+								value = 25
+							}
+						}
+						NOT = {
+							has_country_flag = kob_expanded_yappering_disaster_complete
+						}
+					}
+				}
+				custom_tooltip = kobildzan_keep_order_no_rewards.tooltip
+			}
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_absolutism 
+						current_age = age_of_revolutions
+					}
+					NOT = {
+						has_disaster = kob_expanded_great_yappering_disaster
+					}
+					NOT = {
+						has_government_power = {
+							mechanic_type = kob_expanded_interal_disorder
+							power_type = kob_expanded_disorder
+							value = 25
+						}
+					}
+				}
+				custom_tooltip = kobildzan_keep_order_disorder_reward.tooltip
+				hidden_effect = {
+					add_country_modifier = {
+						name = kob_expanded_ordered_vixaria
+						duration = 7300
+					}
+				}
+			}
+			else = {
+				custom_tooltip = kobildzan_keep_order_splendor_reward.tooltip
+				hidden_effect = {
+					add_splendor = 100
+				}
+			}
 		}
 	}
 }
@@ -1598,11 +1871,18 @@ KOBILDZAN_5 = {
 		}
 
 		trigger = {
-			
+			mil_tech = 6
+			OR = {
+				army_professionalism = 0.25
+				army_tradition = 50
+			}
 		}
 
 		effect = {
-			
+			add_country_modifier = {
+				name = kob_expanded_reform_military
+				duration = 7300
+			}
 		}
 	}
 
@@ -1620,11 +1900,25 @@ KOBILDZAN_5 = {
 		}
 
 		trigger = {
-			
+			num_of_regiments_at_full_drill = 80
+			num_of_rajput = 20
+			OR = {
+				has_idea = kob_expanded_kobildzan_7
+				num_of_artillery = 40
+			}
+			calc_true_if = {
+				amount = 2
+				has_completed_idea_group_of_category = {
+					mil_ideas = yes
+				}
+			}
 		}
 
 		effect = {
-			
+			add_country_modifier = {
+				name = kob_expanded_modern_kobold_swarm
+				duration = -1
+			}
 		}
 	}
 }

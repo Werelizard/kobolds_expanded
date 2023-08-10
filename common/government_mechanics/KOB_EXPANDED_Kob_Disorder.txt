@@ -27,7 +27,6 @@ kob_expanded_interal_disorder = {
 					defensiveness = -0.3
 					monthly_reform_progress_modifier = -0.5
 					expand_administration_cost = 1
-			
 				}
 			}
 			reverse_scaled_modifier = {

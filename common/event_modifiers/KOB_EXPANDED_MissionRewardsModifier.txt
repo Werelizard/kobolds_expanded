@@ -14,19 +14,7 @@ kob_expanded_blue_scale_military = {
 }
 
 kob_expanded_green_scale_military = {
-	infantry_fire = 0.1
-}
-
-kob_expanded_red_scale_military_lesser = {
-	shock_damage = 0.05
-}
-
-kob_expanded_blue_scale_military_lesser = {
-	shock_damage_received = -0.05
-}
-
-kob_expanded_green_scale_military_lesser = {
-	movement_speed = 0.1
+	infantry_power = 0.1
 }
 
 kob_expanded_rely_on_clans = {
@@ -84,6 +72,36 @@ kob_expanded_mended_wounds = {
 	improve_relation_modifier = 0.15
 }
 
+kob_expanded_artisan_reward = {
+	global_trade_power = 0.1
+	global_trade_goods_size = 0.05
+	global_prosperity_growth = 1
+}
+
+kob_expanded_artisan_reward_artificiers = {
+	innovativeness_gain = 0.2
+	technology_cost = -0.05
+}
+
+kob_expanded_litteracy_reform = {
+	advisor_pool = 1
+}
+
+kob_expanded_reform_military = {
+	mil_tech_cost_modifier = -0.05
+	infantry_power = 0.1
+	reinforce_cost_modifier = 0.33
+}
+
+kob_expanded_ordered_vixaria = {
+	monthly_kob_expanded_disorder = -0.15
+}
+
+kob_expanded_modern_kobold_swarm = {
+	fire_damage = 0.1
+	is_rajput_modifier = yes
+}
+
 
 # PROVINCE MODIFIERS
 
@@ -96,4 +114,14 @@ kob_expanded_nimscodd_sacked = {
 kob_expanded_displaced_gnomes = {
 	local_development_cost = -0.05
 	local_unrest = 4
+}
+
+kob_expanded_artisan_reward_local = {
+	local_production_efficiency = 0.1
+	province_trade_power_modifier = 0.25
+}
+
+kob_expanded_artisan_reward_artificiers_local = {
+	institution_growth = 0.5
+	local_build_cost = -0.1
 }

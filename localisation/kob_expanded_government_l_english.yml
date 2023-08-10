@@ -41,22 +41,14 @@
  kob_expanded_loseDisorderPerProvince.tooltip:0 "We will lose §G0.5§! §YDisorder§! per province assigned to the §YIzendatua Administrators§!."
  
  # Events
-
+ 
+ kob_expanded_keepingRulerIncreasesDisorder.tooltip:0 "§ROpting to maintain the current clan in power will increase our disorder!§!"
  kob_expanded_government_events.1001.title:0 "Electing a [Root.Monarch.GetTitle]"
  kob_expanded_government_events.1001.desc:0 "TO DO"
- kob_expanded_government_events.1001.a:0 "[ROOT.isRedScaleRuler]"
- kob_expanded_government_events.1001.b:0 "[ROOT.isBlueScaleRuler]"
- kob_expanded_government_events.1001.c:0 "[ROOT.isGeenScaleRuler]"
- kob_expanded_government_events.1001.d:0 "[ROOT.isGoldScaleRuler]"
- kob_expanded_government_events.1001.e:0 "[ROOT.isDarkScaleRuler]"
- kob_expanded_government_events.1001.f:0 "[ROOT.isSteelScaleRuler]"
-
- #Customisable location
-
- kob_keep_current_ruler:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] will not stand down!"
- kob_ruler_is_not_red_scale:0 "The Redscale candidate will do nicely."
- kob_ruler_is_not_blue_scale:0 "The Bluescale candidate is our favourit."
- kob_ruler_is_not_green_scale:0 "The Greenscale candidate, for we can rely on them."
- kob_ruler_is_not_gold_scale:0 "The good-natured Goldscale candidate has our blessing."
- kob_ruler_is_not_dark_scale:0 "The Darkscale candidate impresses us greatly."
- kob_ruler_is_not_steel_scale:0 "The Steelscale candidate has earned their place."
+ kob_expanded_government_events.1001.a:0 "The Redscales will assume leadership"
+ kob_expanded_government_events.1001.b:0 "The Bluescales will assume leadership"
+ kob_expanded_government_events.1001.c:0 "The Grenscales will assume leadership"
+ kob_expanded_government_events.1001.d:0 "The Goldscales will assume leadership"
+ kob_expanded_government_events.1001.e:0 "The Darkscales will assume leadership"
+ kob_expanded_government_events.1001.f:0 "The Steelscales will assume leadership"
+ kob_expanded_government_events.1001.g:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] will not stand down!"

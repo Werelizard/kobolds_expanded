@@ -192,17 +192,13 @@ country_event = {
 					culture = redscale_kobold
 				}
 				add_nationalism = -15
+				add_local_autonomy = 100
 			}
 		}
 	}
 
 	option = { #No, they serve us
 		name = kob_expanded_mission_events.1002.b
-
-		add_country_modifier = {
-			name = kob_expanded_red_scale_military_lesser
-			duration = 5475
-		}
 
 		if = {
 			limit = {
@@ -315,17 +311,13 @@ country_event = {
 					culture = bluescale_kobold
 				}
 				add_nationalism = -15
+				add_local_autonomy = 100
 			}
 		}
 	}
 
 	option = { #No, they serve us
 		name = kob_expanded_mission_events.1003.b
-
-		add_country_modifier = {
-			name = kob_expanded_blue_scale_military_lesser
-			duration = 5475
-		}
 
 		if = {
 			limit = {
@@ -438,18 +430,14 @@ country_event = {
 					culture = greenscale_kobold
 				}
 				add_nationalism = -15
+				add_local_autonomy = 100
 			}
 		}
 	}
 
 	option = { #No, they serve us
 		name = kob_expanded_mission_events.1004.b
-
-		add_country_modifier = {
-			name = kob_expanded_green_scale_military_lesser
-			duration = 5475
-		}
-
+		
 		if = {
 			limit = {
 				has_estate = estate_monstrous_tribes
@@ -622,9 +610,29 @@ country_event = {
 
 		large_decrease_of_human_tolerance_effect = yes
 
-		capital_scope = {
-			change_trade_goods = slaves
-			add_human_minority_size_effect = yes
+		if = {
+			limit = {
+				capital_scope = {
+					NOT = {
+						trade_goods = gold
+					}
+				}
+			}
+			capital_scope = {
+				change_trade_goods = slaves
+				add_human_minority_size_effect = yes
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						trade_goods = gold
+					}
+				}
+				change_trade_goods = slaves
+				add_human_minority_size_effect = yes
+			}
 		}
 
 		213 = {
@@ -699,5 +707,86 @@ country_event = {
 			add_nationalism = -15
 			add_local_autonomy = -100
 		}	
+	}
+}
+
+#Artisans / Artificiers Patronage
+country_event = {
+	id = kob_expanded_mission_events.1008
+	title = kob_expanded_mission_events.1008.title
+	desc = kob_expanded_mission_events.1008.desc
+
+	picture = FEAST_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Patronize the local guilds
+		name = kob_expanded_mission_events.1008.a
+
+		add_treasury = -2500
+		
+		add_country_modifier = {
+			name = kob_expanded_artisan_reward
+			duration = 18250
+		}
+
+		custom_tooltip = kob_expanded_great_fair_every_province_meeting_requirements_gets_these.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_manufactory_trigger = yes
+					has_kobold_minority_trigger = yes
+					has_production_building_trigger = yes
+					OR = {
+						trade_goods = mithril 
+						trade_goods = gems
+						trade_goods = glass
+						trade_goods = precursor_relics 
+						development = 30
+					}
+				}
+				add_province_modifier = {
+					name = kob_expanded_artisan_reward_local
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	option = { #Patronize the Artificiers
+		name = kob_expanded_mission_events.1008.b
+			
+		trigger = {
+			has_estate = estate_artificers 
+		}
+
+		add_treasury = -2500
+
+		add_country_modifier = {
+			name = kob_expanded_artisan_reward_artificiers
+			duration = 18250
+		}
+
+		custom_tooltip = kob_expanded_great_fair_get_inno_per_province.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_manufactory_trigger = yes
+					has_kobold_minority_trigger = yes
+					has_production_building_trigger = yes
+					OR = {
+						trade_goods = mithril 
+						trade_goods = gems
+						trade_goods = glass
+						trade_goods = precursor_relics 
+						development = 30
+					}
+				}
+				add_province_modifier = {
+					name = kob_expanded_artisan_reward_artificiers_local
+					duration = 18250
+				}
+			}
+		}
 	}
 }
