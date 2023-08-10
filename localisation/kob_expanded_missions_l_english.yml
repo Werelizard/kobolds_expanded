@@ -180,3 +180,33 @@
  kobildzan_new_golden_age_desc:0 ""
  kobildzan_organise_military_drills_desc:0 ""
  kobildzan_reform_our_military_desc:0 ""
+
+ ############################################################
+ # Localisation for the Kobold Expanded Missions - Yapper.  #
+ ############################################################
+
+ #Titles
+
+ great_yappering_reactionaries_1_title:0 "Shackled by the Past"
+ great_yappering_reactionaries_2_title:0 "The Dragon of Tomorrow"
+ great_yappering_culture_crisis_1_title:0 "Scale Against Scale"
+ great_yappering_culture_crisis_2_title:0 "Kobildzani Kobolds"
+ great_yappering_stabilise_nation_title:0 "Stabilise the Nation"
+ great_yappering_end_the_crisis_title:0 "§YKobildzan Reborn§!"
+ great_yappering_administrators_1_title:0 "The Izendatua Plot"
+ great_yappering_administrators_2_title:0 "A Scheme Undone"
+ great_yappering_hoarding_1_title:0 "The Dragon Sickness"
+ great_yappering_hoarding_2_title:0 "Hoarders, not Thieves"
+
+ #Descriptions
+
+ great_yappering_reactionaries_1_desc:0 ""
+ great_yappering_reactionaries_2_desc:0 ""
+ great_yappering_culture_crisis_1_desc:0 ""
+ great_yappering_culture_crisis_2_desc:0 ""
+ great_yappering_stabilise_nation_desc:0 ""
+ great_yappering_end_the_crisis_desc:0 ""
+ great_yappering_administrators_1_desc:0 ""
+ great_yappering_administrators_2_desc:0 ""
+ great_yappering_hoarding_1_desc:0 ""
+ great_yappering_hoarding_2_desc:0 ""

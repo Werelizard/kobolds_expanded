@@ -165,4 +165,58 @@ spriteTypes = {
 		name = "mission_kobildzan_reform_our_military"
 		texturefile = "gfx//interface//missions//mission_kobildzan_reform_our_military.dds"
 	}
+
+	####################################
+	# The Great Yapping                #
+	####################################
+
+	spriteType = {  # ParadoxInteractive
+		name = "mission_great_yappering_reactionaries_1"
+		texturefile = "gfx//interface//missions//mission_great_yappering_reactionaries_1.dds"
+	}
+
+	spriteType = { # Age of Ashes
+		name = "mission_great_yappering_reactionaries_2"
+		texturefile = "gfx//interface//missions//mission_great_yappering_reactionaries_2.dds"
+	}
+
+	spriteType = { # Custom made
+		name = "mission_great_yappering_culture_crisis_1"
+		texturefile = "gfx//interface//missions//mission_great_yappering_culture_crisis_1.dds"
+	}
+
+	spriteType = { # From Paradox Interactive
+		name = "mission_great_yappering_culture_crisis_2"
+		texturefile = "gfx//interface//missions//mission_great_yappering_culture_crisis_2.dds"
+	}
+
+	spriteType = { # From Paradox Interactive
+		name = "mission_great_yappering_stabilise_nation"
+		texturefile = "gfx//interface//missions//mission_great_yappering_stabilise_nation.dds"
+	}
+
+	spriteType = { # From Paradox Interactive - CK3
+		name = "mission_great_yappering_administrators_1"
+		texturefile = "gfx//interface//missions//mission_great_yappering_administrators_1.dds"
+	}
+
+	spriteType = { # From Paradox Interactive
+		name = "mission_great_yappering_administrators_2"
+		texturefile = "gfx//interface//missions//mission_great_yappering_administrators_2.dds"
+	}
+
+	spriteType = {  # From Paradox Interactive - CK3
+		name = "mission_great_yappering_hoarding_1"
+		texturefile = "gfx//interface//missions//mission_great_yappering_hoarding_1.dds"
+	}
+
+	spriteType = {  # Customised Paradox
+		name = "mission_great_yappering_hoarding_2"
+		texturefile = "gfx//interface//missions//mission_great_yappering_hoarding_2.dds"
+	}
+
+	spriteType = { # From WOTC
+		name = "mission_great_yappering_end_the_crisis"
+		texturefile = "gfx//interface//missions//mission_great_yappering_end_the_crisis.dds"
+	}
 }

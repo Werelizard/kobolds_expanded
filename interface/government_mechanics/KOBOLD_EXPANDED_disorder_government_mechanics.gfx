@@ -11,10 +11,10 @@ spriteTypes = {
 	progressbartype = {
 		name = "GFX_single_government_power_bar_kob_expanded_disorder"
 		color = { 1.0 0.0 0.0 }
-		colortwo = { 1.0 1.0 1.0 }
+		colortwo = { 255.0 255.0 255.0 }
 		textureFile1 = "gfx/interface/government_mechanics/kobold_disorder/kobold_disorder_active.dds"
 		textureFile2 = "gfx/interface/government_mechanics/kobold_disorder/kobold_disorder_passive.dds"
 		size = { x = 274 y = 110 }
-		effectFile = "gfx/FX/progress.lua"
+		effectFile = "gfx/FX/progress.shader"
 	}
 }

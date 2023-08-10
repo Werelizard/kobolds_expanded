@@ -1645,7 +1645,9 @@ GREAT_YAPPRING_1 = {
 	slot = 1
 
 	great_yappering_reactionaries_1 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_reactionaries_1
+
+		position = 9
 
 		required_missions = {
 			
@@ -1665,7 +1667,9 @@ GREAT_YAPPRING_1 = {
 	}
 
 	great_yappering_reactionaries_2 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_reactionaries_2
+
+		position = 10
 
 		required_missions = {
 			great_yappering_reactionaries_1
@@ -1705,7 +1709,9 @@ GREAT_YAPPRING_2 = {
 	slot = 2
 
 	great_yappering_culture_crisis_1 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_culture_crisis_1
+
+		position = 9
 
 		required_missions = {
 			
@@ -1725,7 +1731,9 @@ GREAT_YAPPRING_2 = {
 	}
 
 	great_yappering_culture_crisis_2 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_culture_crisis_2
+
+		position = 10
 
 		required_missions = {
 			great_yappering_culture_crisis_1
@@ -1765,7 +1773,9 @@ GREAT_YAPPRING_3 = {
 	slot = 3
 
 	great_yappering_stabilise_nation = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_stabilise_nation
+
+		position = 10
 
 		required_missions = {
 			
@@ -1785,7 +1795,8 @@ GREAT_YAPPRING_3 = {
 	}
 
 	great_yappering_end_the_crisis = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_end_the_crisis
+		position = 11
 
 		required_missions = {
 			great_yappering_reactionaries_2
@@ -1829,7 +1840,9 @@ GREAT_YAPPRING_4 = {
 	slot = 4
 
 	great_yappering_administrators_1 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_administrators_1
+
+		position = 9
 
 		required_missions = {
 			
@@ -1849,7 +1862,9 @@ GREAT_YAPPRING_4 = {
 	}
 
 	great_yappering_administrators_2 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_administrators_2
+
+		position = 10
 
 		required_missions = {
 			great_yappering_administrators_1
@@ -1889,7 +1904,9 @@ GREAT_YAPPRING_5 = {
 	slot = 5
 
 	great_yappering_hoarding_1 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_hoarding_1
+
+		position = 9
 
 		required_missions = {
 			
@@ -1909,7 +1926,9 @@ GREAT_YAPPRING_5 = {
 	}
 
 	great_yappering_hoarding_2 = {
-		icon = mission_unknown_mission
+		icon = mission_great_yappering_hoarding_2
+
+		position = 10
 
 		required_missions = {
 			great_yappering_hoarding_1
