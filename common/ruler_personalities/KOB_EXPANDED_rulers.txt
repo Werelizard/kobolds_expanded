@@ -5,8 +5,6 @@
 # By L. E. H.                                   #
 #################################################
 
-
-#"Statesman" Traits
 KOB_unifier_personality = {
 	ruler_allow = {
 		allow = {
@@ -36,8 +34,6 @@ KOB_unifier_personality = {
 
 	easy_war_chance_multiplier = 1
 	
-	manpower_in_own_culture_provinces = 0.25
-	manpower_in_culture_group_provinces = 0.15
 	land_morale = 0.05
 	global_unrest = -2
 }

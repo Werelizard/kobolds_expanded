@@ -123,6 +123,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+			country_event = {
+				id = kob_expanded_misc_events.1001
+			}
 			#Move this to the "Three Yips For Kobildzan" event
 			## Changes to capital, tooltip for mechanics, changes government
 

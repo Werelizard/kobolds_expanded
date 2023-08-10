@@ -1,0 +1,330 @@
+###############################################
+# KOBOLD GOVERN. EVENTS - "Kobolds Expanded"  #
+#                                             #
+# By L. E. H.                                 #
+###############################################
+
+namespace = kob_expanded_government_events
+
+###############################################
+# Buruzagi Elections                          #
+###############################################
+
+#Event to elect a leader
+country_event = {
+	id = kob_expanded_government_events.1001
+	title = kob_expanded_government_events.1001.title
+	desc = kob_expanded_government_events.1001.desc
+
+	picture = kob_expanded_event_kobold_election
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			# Changes your new ruler culture to the actual culture they're supposed to have, and give them a small boost to stats
+			kob_expanded_change_ruler_culture = yes
+			random_list = {
+				33 = {
+					change_mil = 1
+				}
+				33 = {
+					change_dip = 1
+				}
+				33 = {
+					change_adm = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		# Keep / Appoint Red Scale
+		name = kob_expanded_government_events.1001.a
+
+		if = {
+			limit = {
+				has_country_modifier = kob_expanded_redscale_kobold_ruler
+			}
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 5
+			}
+			add_legitimacy = -15
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		else = {
+			define_ruler = {
+				culture = redscale_kobold
+				max_random_adm = 3
+				max_random_dip = 4
+				max_random_mil = 5
+				min_age = 25
+				max_age = 35
+			}
+			hidden_effect = {
+				add_stability = 1
+				kob_expanded_remove_kobold_ruler_modifier = yes
+				add_country_modifier = {
+					name = kob_expanded_redscale_kobold_ruler
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		# Keep / Appoint Blue Scale
+		name = kob_expanded_government_events.1001.b
+
+		if = {
+			limit = {
+				has_country_modifier = kob_expanded_bluescale_kobold_ruler
+			}
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 5
+			}
+			add_legitimacy = -15
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		else = {
+			define_ruler = {
+				culture = bluescale_kobold
+				max_random_adm = 4
+				max_random_dip = 4
+				max_random_mil = 2
+				min_age = 25
+				max_age = 35
+			}
+			hidden_effect = {
+				add_stability = 1
+				kob_expanded_remove_kobold_ruler_modifier = yes
+				add_country_modifier = {
+					name = kob_expanded_bluescale_kobold_ruler
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		# Keep / Appoint Green Scale
+		name = kob_expanded_government_events.1001.c
+
+		if = {
+			limit = {
+				has_country_modifier = kob_expanded_greenscale_kobold_ruler
+			}
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 5
+			}
+			add_legitimacy = -15
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		else = {
+			define_ruler = {
+				culture = greenscale_kobold
+				max_random_adm = 4
+				max_random_dip = 6
+				max_random_mil = 2
+				min_age = 25
+				max_age = 35
+			}
+			hidden_effect = {
+				add_stability = 1
+				kob_expanded_remove_kobold_ruler_modifier = yes
+				add_country_modifier = {
+					name = kob_expanded_greenscale_kobold_ruler
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		# Keep / Appoint Gold Scale
+		name = kob_expanded_government_events.1001.d
+
+		trigger = {
+			any_owned_province = {
+				culture = goldscale_kobold
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = kob_expanded_goldscale_kobold_ruler
+			}
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 5
+			}
+			add_legitimacy = -15
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		else = {
+			define_ruler = {
+				culture = goldscale_kobold
+				max_random_adm = 4
+				max_random_dip = 5
+				max_random_mil = 2
+				min_age = 25
+				max_age = 35
+			}
+			hidden_effect = {
+				add_stability = 1
+				kob_expanded_remove_kobold_ruler_modifier = yes
+				add_country_modifier = {
+					name = kob_expanded_goldscale_kobold_ruler
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		# Keep / Appoint Dark Scale
+		name = kob_expanded_government_events.1001.e
+
+		trigger = {
+			any_owned_province = {
+				culture = darkscale_kobold  
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = kob_expanded_darkscale_kobold_ruler
+			}
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 5
+			}
+			add_legitimacy = -15
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		else = {
+			define_ruler = {
+				culture = darkscale_kobold
+				max_random_adm = 2
+				max_random_dip = 5
+				max_random_mil = 3
+				min_age = 25
+				max_age = 35
+			}
+			hidden_effect = {
+				add_stability = 1
+				kob_expanded_remove_kobold_ruler_modifier = yes
+				add_country_modifier = {
+					name = kob_expanded_darkscale_kobold_ruler
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		# Keep / Appoint Steel
+		name = kob_expanded_government_events.1001.f
+
+		trigger = {
+			any_owned_province = {
+				culture = steelscale_kobold   
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = kob_expanded_steelscale_kobold_ruler
+			}
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 5
+			}
+			add_legitimacy = -15
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		else = {
+			define_ruler = {
+				culture = steelscale_kobold 
+				max_random_adm = 5
+				max_random_dip = 1
+				max_random_mil = 4
+				min_age = 25
+				max_age = 35
+			}
+			hidden_effect = {
+				add_stability = 1
+				kob_expanded_remove_kobold_ruler_modifier = yes
+				add_country_modifier = {
+					name = kob_expanded_steelscale_kobold_ruler
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+}
+
+###############################################
+# Events for the Mad Science mechanic         #
+###############################################
+
+## Free Advisor
+country_event = {
+	id = kob_expanded_government_events.1010
+	title = kob_expanded_government_events.1010.title
+	desc = kob_expanded_government_events.1010.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {
+		#We will show them mercy
+		name = kob_expanded_government_events.1010.a
+
+	
+	}
+
+	option = {
+		#We will purge the Gnomes
+		name = kob_expanded_government_events.1010.b
+
+	}
+}

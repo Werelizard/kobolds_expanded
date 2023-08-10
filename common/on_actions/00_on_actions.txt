@@ -3891,6 +3891,9 @@ on_new_consort = {
 
 # country
 on_monarch_death = {
+	#Kobolds expanded
+	kob_expanded_on_new_monarch = yes
+	
 	#Anbennar
 	events = {
 		witch_king.1		#Death of a Witch King

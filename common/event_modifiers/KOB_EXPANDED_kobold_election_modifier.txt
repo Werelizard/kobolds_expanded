@@ -1,0 +1,23 @@
+kob_expanded_redscale_kobold_ruler = {
+
+}
+
+kob_expanded_bluescale_kobold_ruler = {
+
+}
+
+kob_expanded_greenscale_kobold_ruler = {
+
+}
+
+kob_expanded_darkscale_kobold_ruler = {
+
+}
+
+kob_expanded_goldscale_kobold_ruler = {
+
+}
+
+kob_expanded_steelscale_kobold_ruler = {
+
+}

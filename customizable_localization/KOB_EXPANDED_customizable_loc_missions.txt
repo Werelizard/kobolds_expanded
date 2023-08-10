@@ -139,3 +139,94 @@ defined_text = {
         localisation_key = kob_has_nobility
     }
 }
+
+#Customisable localisaitons for the kobold election
+defined_text = {
+    name = isRedScaleRuler
+    random = no
+
+    text = {
+        trigger = {
+            has_country_modifier = kob_expanded_redscale_kobold_ruler
+        }
+        localisation_key = kob_keep_current_ruler
+    }
+    text = {
+        localisation_key = kob_ruler_is_not_red_scale
+    }
+}
+
+defined_text = {
+    name = isBlueScaleRuler
+    random = no
+
+    text = {
+        trigger = {
+            has_country_modifier = kob_expanded_bluescale_kobold_ruler
+        }
+        localisation_key = kob_keep_current_ruler
+    }
+    text = {
+        localisation_key = kob_ruler_is_not_blue_scale
+    }
+}
+
+defined_text = {
+    name = isGeenScaleRuler
+    random = no
+
+    text = {
+        trigger = {
+            has_country_modifier = kob_expanded_greenscale_kobold_ruler
+        }
+        localisation_key = kob_keep_current_ruler
+    }
+    text = {
+        localisation_key = kob_ruler_is_not_green_scale
+    }
+}
+
+defined_text = {
+    name = isGoldScaleRuler
+    random = no
+
+    text = {
+        trigger = {
+            has_country_modifier = kob_expanded_goldscale_kobold_ruler
+        }
+        localisation_key = kob_keep_current_ruler
+    }
+    text = {
+        localisation_key = kob_ruler_is_not_gold_scale
+    }
+}
+
+defined_text = {
+    name = isDarkScaleRuler
+    random = no
+
+    text = {
+        trigger = {
+            has_country_modifier = kob_expanded_darkscale_kobold_ruler
+        }
+        localisation_key = kob_keep_current_ruler
+    }
+    text = {
+        localisation_key = kob_ruler_is_not_dark_scale
+    }
+}
+
+defined_text = {
+    name = isSteelScaleRuler
+    random = no
+
+    text = {
+        trigger = {
+            has_country_modifier = kob_expanded_steelscale_kobold_ruler
+        }
+        localisation_key = kob_keep_current_ruler
+    }
+    text = {
+        localisation_key = kob_ruler_is_not_steel_scale
+    }
+}

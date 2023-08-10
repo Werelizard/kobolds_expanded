@@ -16,9 +16,9 @@
  
  ability_kob_expanded_interal_disorder:0 "§YInternal Disorder§!"
  mechanic_kob_expanded_unlock_clan_orgs_yes:0 "Can appoint §YIzendatua Administrators§!."
- mechanic_kobold_factional_elections_yes:0 "Enables §YBuruzagi§! elections."
+ mechanic_kobold_factional_elections_yes:0 "Enables §YViraxia§! elections."
  kob_expanded_disorder:0 "Disorder"
- kob_expanded_disorder_desc:0 "Internal Disorder represents how cohesive the realm is. The higher Disorder rises, the more challenging it will be to keep the Kingdom from tearing itself apart.\n\nDisorder is §Rincreased§! by the following factors:\n- At a Base rate of §R0.1§! monthly\n- Re-electing an Heir from the same Clan\n- Having less than 50 crown land\n- High average global autonomy\n- High overextension\n- Being over governing capacity\n- Less than 0 prestige\n- Being bankrupt\n- Less than 0 stability.\n\nDisorder is §Gdecreased§! by the following factors:\n- Power Projection above 0\n- Absolutism\n- More than 60 crown land\n- Being in a Golden Era\n- Appointing Izendatua Administrators\n- More than 0 prestige\n- Positive stability\n\nIf Disorder reaches §R100§! then the §RGreat Yappering§! disaster can fire!\n "
+ kob_expanded_disorder_desc:0 "Internal Disorder represents how cohesive the realm is. The higher Disorder rises, the more challenging it will be to keep our country from tearing itself apart.\n\nDisorder is §Rincreased§! by the following factors:\n- At a Base rate of §R0.1§! monthly\n- Re-electing an Heir from the same Clan\n- Having less than 50 crown land\n- High average global autonomy\n- High overextension\n- Being over governing capacity\n- Less than 0 prestige\n- Being bankrupt\n- Less than 0 stability.\n\nDisorder is §Gdecreased§! by the following factors:\n- Power Projection above 0\n- Absolutism\n- More than 60 crown land\n- Being in a Golden Era\n- Appointing Izendatua Administrators\n- More than 0 prestige\n- Positive stability\n\nIf Disorder reaches §R100§! then the §RGreat Yappering§! disaster can fire!\n "
  kob_expanded_interal_power:0 "Disorder"
  kob_expanded_kobold_governor:0 "Izendatua"
  kob_expanded_kobold_governor_desc:0 "Appointed directly by the Kobildzani court, the Izendatua Administrators manage the lands of Kobildzan, ensuring that their provinces are well-administered - though such individuals have been known to take a cut out of their domains' taxes as repayment for their services."
@@ -29,7 +29,34 @@
  monthly_kob_expanded_disorder:0 "Monthly Disorder"
  kob_expanded_disorder_gain_modifier:0 "Disorder Gain Modifier"
 
+ # Government Names
+ 
+ KOB_EXPANDED_BURUZAGI:0 "Bazgradzen Buruzagi"
+ KOB_EXPANDED_Kobildzan_Empire:0 "Great Viraxia"
+ KOB_EXPANDED_Kobildzan_Kingdom:0 "Viraxia"
+ KOB_EXPANDED_Kobildzan_Duchy:0 "Zendia"
+
  ## Tooltips
 
  kob_expanded_loseDisorderPerProvince.tooltip:0 "We will lose §G0.5§! §YDisorder§! per province assigned to the §YIzendatua Administrators§!."
  
+ # Events
+
+ kob_expanded_government_events.1001.title:0 "Electing a [Root.Monarch.GetTitle]"
+ kob_expanded_government_events.1001.desc:0 "TO DO"
+ kob_expanded_government_events.1001.a:0 "[ROOT.isRedScaleRuler]"
+ kob_expanded_government_events.1001.b:0 "[ROOT.isBlueScaleRuler]"
+ kob_expanded_government_events.1001.c:0 "[ROOT.isGeenScaleRuler]"
+ kob_expanded_government_events.1001.d:0 "[ROOT.isGoldScaleRuler]"
+ kob_expanded_government_events.1001.e:0 "[ROOT.isDarkScaleRuler]"
+ kob_expanded_government_events.1001.f:0 "[ROOT.isSteelScaleRuler]"
+
+ #Customisable location
+
+ kob_keep_current_ruler:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] will not stand down!"
+ kob_ruler_is_not_red_scale:0 "The Redscale candidate will do nicely."
+ kob_ruler_is_not_blue_scale:0 "The Bluescale candidate is our favourit."
+ kob_ruler_is_not_green_scale:0 "The Greenscale candidate, for we can rely on them."
+ kob_ruler_is_not_gold_scale:0 "The good-natured Goldscale candidate has our blessing."
+ kob_ruler_is_not_dark_scale:0 "The Darkscale candidate impresses us greatly."
+ kob_ruler_is_not_steel_scale:0 "The Steelscale candidate has earned their place."

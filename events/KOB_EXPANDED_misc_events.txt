@@ -1,0 +1,59 @@
+###############################################
+# KOBOLD Misc. EVENTS - "Kobolds Expanded"    #
+#                                             #
+# By L. E. H.                                 #
+###############################################
+
+namespace = kob_expanded_misc_events
+
+## "Three Yips For Kobildzan"
+country_event = {
+	id = kob_expanded_misc_events.1001
+	title = kob_expanded_misc_events.1001.title
+	desc = kob_expanded_misc_events.1001.desc
+
+	picture = kob_expanded_event_kobildzan_picture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			restore_country_name = yes
+			restore_country_color = yes
+		}
+	}
+
+	option = {
+		#We are united at last!
+		name = kob_expanded_misc_events.1001.a
+
+		change_tag = Z38
+		swap_free_idea_group = yes
+		lock_racial_admin = yes
+
+		189 = {
+			move_capital_effect = yes
+			add_base_manpower = 4
+		}
+
+		custom_tooltip = empty_line_tt
+		custom_tooltip = kob_expanded_KobildzanMechanics.tooltip
+
+		if = {
+			limit = {
+				NOT = {
+					government = monarchy
+				}
+			}
+			change_government = monarchy
+		}
+
+		add_government_reform = kob_expanded_kobold_monarchy
+
+		hidden_effect = {
+			swap_non_generic_missions = yes
+			set_country_flag = formed_kobildzan_flag
+			kob_expanded_set_kobold_ruler_modifier = yes
+		}
+	}
+}

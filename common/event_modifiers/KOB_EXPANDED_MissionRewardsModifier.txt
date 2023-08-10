@@ -14,7 +14,7 @@ kob_expanded_blue_scale_military = {
 }
 
 kob_expanded_green_scale_military = {
-	infantry_fire = 0.5
+	infantry_fire = 0.1
 }
 
 kob_expanded_red_scale_military_lesser = {
@@ -26,7 +26,7 @@ kob_expanded_blue_scale_military_lesser = {
 }
 
 kob_expanded_green_scale_military_lesser = {
-	infantry_power = 0.1
+	movement_speed = 0.1
 }
 
 kob_expanded_rely_on_clans = {

@@ -21,10 +21,6 @@ kob_expanded_kobold_monarchy = {
 			has_reform = kob_expanded_kobold_monarchy
 			have_had_reform = kob_expanded_kobold_monarchy
 		}
-		OR = {
-			tag = Z38
-			was_tag = Z38
-		}
 	}
 
 	trigger = {
@@ -80,10 +76,6 @@ kob_expanded_kobold_monarchy_centralised_reform = {
 			has_reform = kob_expanded_kobold_monarchy_centralised_reform
 			have_had_reform = kob_expanded_kobold_monarchy_centralised_reform
 		}
-		OR = {
-			tag = Z38
-			was_tag = Z38
-		}
 	}
 
 	trigger = {
@@ -128,10 +120,6 @@ kob_expanded_kobold_monarchy_decentralised_reform = {
 			has_reform = kob_expanded_kobold_monarchy_decentralised_reform
 			have_had_reform = kob_expanded_kobold_monarchy_decentralised_reform
 		}
-		OR = {
-			tag = Z38
-			was_tag = Z38
-		}
 	}
 
 	trigger = {
@@ -145,6 +133,7 @@ kob_expanded_kobold_monarchy_decentralised_reform = {
 	lock_level_when_selected = yes
 	allow_convert = no
 	can_change_primary_culture = no #Hahaha no
+	republican_name = yes
 
 	custom_attributes = {
 		kob_expanded_unlock_clan_orgs = yes
@@ -158,7 +147,7 @@ kob_expanded_kobold_monarchy_decentralised_reform = {
 		own_territory_dice_roll_bonus = 1
 		defensiveness = 0.15 #Still defensive
 		parliament_backing_chance = 0.25
-		parliament_effect_duration = 10
+		parliament_effect_duration = 5
 		governing_capacity_modifier = 0.1 #FAR more decentralised
 	}
 

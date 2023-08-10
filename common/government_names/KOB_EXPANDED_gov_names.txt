@@ -1,0 +1,39 @@
+KOB_EXPANDED_gov_names = {
+	rank = {
+		1 = KOB_EXPANDED_Kobildzan_Empire
+		2 = KOB_EXPANDED_Kobildzan_Kingdom
+		3 = KOB_EXPANDED_Kobildzan_Duchy
+	}
+
+	ruler_male = {
+		1 = KOB_EXPANDED_BURUZAGI
+		2 = KOB_EXPANDED_BURUZAGI
+		3 = KOB_EXPANDED_BURUZAGI
+	}
+
+	ruler_female = {
+		1 = KOB_EXPANDED_BURUZAGI
+		2 = KOB_EXPANDED_BURUZAGI
+		3 = KOB_EXPANDED_BURUZAGI
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy
+			has_reform = kob_expanded_kobold_monarchy_centralised_reform
+			has_reform = kob_expanded_kobold_monarchy_decentralised_reform
+		}
+	}
+}

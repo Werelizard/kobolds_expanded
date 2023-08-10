@@ -1,8 +1,32 @@
 spriteTypes = {
 	spriteType = {
-	 name = "GFX_disaster_kob_expanded_great_yappering"
-	 texturefile = "gfx//interface//disasters//kob_expanded_yappering.dds"
-	 noOfFrames = 3
-	 loadType = "INGAME"
+		name = "GFX_disaster_kob_expanded_great_yappering_disaster"
+		texturefile = "gfx//interface//disasters//kob_expanded_yappering.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
 	}
-   }
+	spriteType = {
+		name = "GFX_disaster_kob_expanded_great_yappering_reactionaries_pushback_disaster"
+		texturefile = "gfx//interface//disasters//kob_expanded_great_yappering_reactionaries_pushback.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_kob_expanded_great_yappering_"
+		texturefile = "gfx//interface//disasters//kob_expanded_yappering.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_kob_expanded_great_yappering"
+		texturefile = "gfx//interface//disasters//kob_expanded_yappering.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_kob_expanded_great_yappering"
+		texturefile = "gfx//interface//disasters//kob_expanded_yappering.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+}

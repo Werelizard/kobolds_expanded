@@ -1,0 +1,117 @@
+kob_expanded_set_kobold_ruler_modifier = {
+	if = {
+		limit = {
+			ruler_culture = redscale_kobold
+		}
+		add_country_modifier = {
+			name = kob_expanded_redscale_kobold_ruler
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_culture = bluescale_kobold
+		}
+		add_country_modifier = {
+			name = kob_expanded_bluescale_kobold_ruler
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_culture = greenscale_kobold
+		}
+		add_country_modifier = {
+			name = kob_expanded_greenscale_kobold_ruler
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_culture = goldscale_kobold
+		}
+		add_country_modifier = {
+			name = kob_expanded_goldscale_kobold_ruler
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_culture = darkscale_kobold
+		}
+		add_country_modifier = {
+			name = kob_expanded_darkscale_kobold_ruler
+			duration = -1
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			ruler_culture = steelscale_kobold
+		}
+		add_country_modifier = {
+			name = kob_expanded_steelscale_kobold_ruler
+			duration = -1
+			hidden = yes
+		}
+	}
+	else = {
+
+	}
+}
+
+kob_expanded_remove_kobold_ruler_modifier = {
+	remove_country_modifier = kob_expanded_redscale_kobold_ruler
+	remove_country_modifier = kob_expanded_redscale_kobold_ruler
+	remove_country_modifier = kob_expanded_bluescale_kobold_ruler
+	remove_country_modifier = kob_expanded_greenscale_kobold_ruler
+	remove_country_modifier = kob_expanded_darkscale_kobold_ruler
+	remove_country_modifier = kob_expanded_goldscale_kobold_ruler
+	remove_country_modifier = kob_expanded_steelscale_kobold_ruler
+}
+
+kob_expanded_change_ruler_culture = {
+	if = {
+		limit = {
+			has_country_modifier = kob_expanded_redscale_kobold_ruler
+		}
+		set_ruler_culture = redscale_kobold
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = kob_expanded_bluescale_kobold_ruler
+		}
+		set_ruler_culture = bluescale_kobold 
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = kob_expanded_greenscale_kobold_ruler
+		}
+		set_ruler_culture = greenscale_kobold
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = kob_expanded_darkscale_kobold_ruler
+		}
+		set_ruler_culture = darkscale_kobold
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = kob_expanded_goldscale_kobold_ruler
+		}
+		set_ruler_culture = goldscale_kobold
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = kob_expanded_steelscale_kobold_ruler
+		}
+		set_ruler_culture = steelscale_kobold
+	}
+	else = {
+
+	}
+}

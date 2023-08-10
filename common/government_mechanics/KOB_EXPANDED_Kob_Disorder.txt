@@ -30,6 +30,18 @@ kob_expanded_interal_disorder = {
 			
 				}
 			}
+			reverse_scaled_modifier = {
+				trigger = {
+					has_government_power = { 
+						mechanic_type = kob_expanded_interal_disorder
+						power_type = kob_expanded_disorder
+						value = 0
+					}
+				}
+				modifier = {
+					same_culture_advisor_cost = -0.1
+				}
+			}
 		}
 	}
 }

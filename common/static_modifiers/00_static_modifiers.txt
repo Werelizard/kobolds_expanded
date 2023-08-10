@@ -1080,9 +1080,6 @@ legitimacy = {
 	yearly_authority = 0.5
 	#anbennar
 	sh_mother_influence = 0.1
-
-	#Kobolds Expanded
-	kob_expanded_disorder_gain_modifier = -0.5
 }
 
 #Multiplied by current Horde Unity - 50

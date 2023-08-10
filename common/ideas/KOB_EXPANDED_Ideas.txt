@@ -1,0 +1,192 @@
+# Raiders, pillagers, the more "trigger happy" kobolds
+redscale_ideas = {
+	start = {
+		galley_power = 0.15
+		siege_ability = 0.1
+	}
+
+	bonus = {
+		ae_impact = -0.1
+	}
+
+	trigger = {
+		tag = A26
+	}
+	
+	free = yes
+
+	kob_expanded_redscale_1 = { # Yipping Raiders
+		may_perform_slave_raid_on_same_religion = yes
+		available_province_loot = 1
+	}
+
+	kob_expanded_redscale_2 = { # Terroriser Kobolds
+		discipline = 0.025
+	}
+
+	kob_expanded_redscale_3 = { # Re-claiming portnamm
+		unjustified_demands = -0.15
+	}
+
+	kob_expanded_redscale_4 = { # Always war
+		war_exhaustion_cost = -0.25
+	}
+
+	kob_expanded_redscale_5 = { # Fire Squads 
+		manpower_in_own_culture_provinces = 0.15
+		infantry_power = 0.1
+	}
+
+	kob_expanded_redscale_6 = { # Coastal dominaton
+		global_trade_power = 0.1
+	}
+
+	kob_expanded_redscale_7 = { # Population boom
+		manpower_recovery_speed = 0.15
+	}
+}
+
+# Trap masters and hoarders
+bluescale_ideas = {
+	start = {
+		defensiveness = 0.15
+		hostile_attrition = 1
+	}
+
+	bonus = {
+		global_tax_modifier = 0.25
+	}
+
+	trigger = {
+		tag = A27
+	}
+	
+	free = yes
+
+	kob_expanded_bluescale_1 = { # The Cavern Kingdom
+		garrison_size = 1.5
+		fort_maintenance_modifier = -0.45
+	}
+
+	kob_expanded_bluescale_2 = { # Safe from the outside world
+		global_unrest = -1
+	}
+
+	kob_expanded_bluescale_3 = { # Protectors of the hoard
+		development_cost_in_primary_culture = -0.1
+	}
+
+	kob_expanded_bluescale_4 = { # Fighting Unequally
+		max_hostile_attrition = 2
+	}
+
+	kob_expanded_bluescale_5 = { # Gem market
+		global_own_trade_power = 0.15
+	}
+
+	kob_expanded_bluescale_6 = { # The Kobold Priesthood
+		missionaries = 1		
+	}
+
+	kob_expanded_bluescale_7 = { #The kobold guard
+		shock_damage_received = -0.15
+	}
+}
+
+# Scouters and harassers
+greenscale_ideas = {
+	start = {
+		land_morale = 0.1
+		movement_speed = 0.1
+	}
+
+	bonus = {
+		idea_cost = -0.1
+	}
+
+	trigger = {
+		tag = A28
+	}
+	
+	free = yes
+
+	kob_expanded_greenscale_1 = { # Flxible tactics
+		leader_land_manuever = 1
+		recover_army_morale_speed = 0.1
+	}
+
+	kob_expanded_greenscale_2 = { # Fast thinkers
+		global_regiment_recruit_speed = -0.35
+	}
+
+	kob_expanded_greenscale_3 = { # Reconnect with the south
+		diplomats = 1
+	}
+
+	kob_expanded_greenscale_4 = { # The green navy
+		naval_forcelimit_modifier = 0.2
+		navy_tradition_decay = -0.01
+	}
+
+	kob_expanded_greenscale_5 = { # Foreign ventures
+		may_explore = yes
+		colonists = 1
+	}
+
+	kob_expanded_greenscale_6 = { # Survivors
+		stability_cost_modifier = -0.2
+	}
+
+	kob_expanded_greenscale_7 = { # New Traders
+		merchants = 1
+	}
+}
+
+#United kobolds
+kobildzani_ideas = {
+	start = {
+		land_morale = 0.1
+		hostile_attrition = 2
+	}
+
+	bonus = {
+		defensiveness = 0.5
+	}
+
+	trigger = {
+		tag = Z38
+	}
+
+	free = yes
+
+	kob_expanded_kobildzan_1 = { # United and in peace
+		war_exhaustion = -0.1
+		manpower_in_culture_group_provinces = 0.25
+	}
+
+	kob_expanded_kobildzan_2 = { # Regulate the adminsitrators
+		establish_order_cost = -0.1
+		yearly_corruption = -0.05
+	}
+
+	kob_expanded_kobildzan_3 = { # New Dens
+		build_cost = -0.1
+	}
+
+	kob_expanded_kobildzan_4 = { # Kobold Craftmanship
+		global_trade_power = 0.1
+	}
+
+	kob_expanded_kobildzan_5 = { # The Birthplace of Dragonsteel
+		fire_damage_received = -0.05
+		production_efficiency = 0.1
+	}
+
+	kob_expanded_kobildzan_6 = { # The Great Academy
+		global_institution_spread = 0.25
+	}
+
+	kob_expanded_kobildzan_7 = { # The Cannorian Dragon
+		artillery_power = 0.1
+	}
+}

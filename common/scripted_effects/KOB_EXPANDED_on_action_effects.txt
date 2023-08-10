@@ -16,3 +16,16 @@ kob_expanded_war_lost = {
 		remove_country_modifier = kob_expanded_challenged_alenic_lords
 	}
 }
+
+#This should be placed into the "on_new_monarch"  on_action for every update
+
+kob_expanded_on_new_monarch = {
+	if = {
+		limit = {
+			has_government_attribute = kobold_factional_elections
+		}
+		country_event = {
+			id = kob_expanded_government_events.1001
+		}
+	}
+}

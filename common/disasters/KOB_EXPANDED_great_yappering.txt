@@ -1,35 +1,42 @@
-kob_expanded_great_yappering = {
+kob_expanded_great_yappering_disaster = {
 	potential = {
 		has_government_power = { 
 			mechanic_type = kob_expanded_interal_disorder
 			power_type = kob_expanded_disorder
 			value = 100
 		}
-		has_goverment_mechanic = kob_expanded_interal_disorder
+		has_reform = kob_expanded_kobold_monarchy
 	}
+	
 	can_start = {
-        always = yes
+		always = yes
 	}
+	
 	can_stop = {
-        has_any_disaster = yes
+		has_any_disaster = yes
 	}
+	
 	progress = {
-        modifier = {
-            factor = 100
-        }
+		modifier = {
+			factor = 100
+		}
 	}
-
-	#Actual disaster
-	on_start = {
-
-	}
-	on_end = {
-		
-	}
+	
 	can_end = {
-		custom_tooltip = {
+		custom_trigger_tooltip = {
 			tooltip = kob_expanded_completedYapperingMissions.tooltip
 			has_country_flag = kob_expanded_completedYapperingMissions_flag
 		}
+	}
+	
+	modifier = {
+		
+	}
+	
+	# on_start = 
+	# on_end = 
+	
+	on_monthly = {
+		
 	}
 }

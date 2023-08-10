@@ -1,0 +1,23 @@
+#################################################
+# KOBOLD EVENT PICTURES                         #
+# For all Kobold nations in the Dragoncoast     #
+#                                               #
+# By L. E. H.                                   #
+#################################################
+
+spriteTypes = {
+	spriteType = { # Custom Made
+		name = "kob_expanded_event_kobildzan_picture"
+		texturefile = "gfx//event_pictures//kob_expanded_kobold_flag.dds"
+	}
+
+	spriteType = { # Custom Made
+		name = "kob_expanded_event_kobold_in_cave"
+		texturefile = "gfx//event_pictures//kob_expanded_kob_event.dds"
+	}
+
+	spriteType = { # from paradox itneractive
+		name = "kob_expanded_event_kobold_election"
+		texturefile = "gfx//event_pictures//kob_expanded_kob_election.dds"
+	}
+}
