@@ -24,17 +24,6 @@ country_event = {
 		hidden_effect = {
 			# Changes your new ruler culture to the actual culture they're supposed to have, and give them a small boost to stats
 			kob_expanded_change_ruler_culture = yes
-			random_list = {
-				33 = {
-					change_mil = 1
-				}
-				33 = {
-					change_dip = 1
-				}
-				33 = {
-					change_adm = 1
-				}
-			}
 		}
 	}
 
@@ -79,7 +68,6 @@ country_event = {
 		}
 
 		hidden_effect = {
-			add_stability = 1
 			kob_expanded_remove_kobold_ruler_modifier = yes
 			add_country_modifier = {
 				name = kob_expanded_redscale_kobold_ruler
@@ -109,7 +97,6 @@ country_event = {
 			max_age = 35
 		}
 		hidden_effect = {
-			add_stability = 1
 			kob_expanded_remove_kobold_ruler_modifier = yes
 			add_country_modifier = {
 				name = kob_expanded_bluescale_kobold_ruler
@@ -139,7 +126,6 @@ country_event = {
 			max_age = 35
 		}
 		hidden_effect = {
-			add_stability = 1
 			kob_expanded_remove_kobold_ruler_modifier = yes
 			add_country_modifier = {
 				name = kob_expanded_greenscale_kobold_ruler
@@ -172,7 +158,6 @@ country_event = {
 			max_age = 35
 		}
 		hidden_effect = {
-			add_stability = 1
 			kob_expanded_remove_kobold_ruler_modifier = yes
 			add_country_modifier = {
 				name = kob_expanded_goldscale_kobold_ruler
@@ -205,7 +190,6 @@ country_event = {
 			max_age = 35
 		}
 		hidden_effect = {
-			add_stability = 1
 			kob_expanded_remove_kobold_ruler_modifier = yes
 			add_country_modifier = {
 				name = kob_expanded_darkscale_kobold_ruler
@@ -238,7 +222,6 @@ country_event = {
 			max_age = 35
 		}
 		hidden_effect = {
-			add_stability = 1
 			kob_expanded_remove_kobold_ruler_modifier = yes
 			add_country_modifier = {
 				name = kob_expanded_steelscale_kobold_ruler

@@ -93,7 +93,7 @@ kob_expanded_reform_military = {
 }
 
 kob_expanded_ordered_vixaria = {
-	monthly_kob_expanded_disorder = -0.15
+	monthly_kob_expanded_disorder = -0.2
 }
 
 kob_expanded_modern_kobold_swarm = {

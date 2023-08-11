@@ -1,0 +1,21 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_text_kob_expanded_base_tax"
+		texturefile = "gfx/interface/text_icons/kob_expanded_base_tax.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_kob_expanded_base_production"
+		texturefile = "gfx/interface/text_icons/kob_expanded_base_production.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_kob_expanded_base_manpower"
+		texturefile = "gfx/interface/text_icons/kob_expanded_base_manpower.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_kob_bookmark_text"
+		texturefile = "gfx/interface/text_icons/GFX_text_kob_bookmark_text.dds"
+	}
+}

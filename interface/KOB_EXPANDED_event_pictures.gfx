@@ -11,7 +11,7 @@ spriteTypes = {
 		texturefile = "gfx//event_pictures//kob_expanded_kobold_flag.dds"
 	}
 
-	spriteType = { # Custom Made
+	spriteType = { # Forgotten Realms / WOTC
 		name = "kob_expanded_event_kobold_in_cave"
 		texturefile = "gfx//event_pictures//kob_expanded_kob_event.dds"
 	}

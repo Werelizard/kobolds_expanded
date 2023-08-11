@@ -36,7 +36,7 @@ kob_expanded_kobold_governor = {
 	modifier = {
 		local_unrest = -2
 		local_governing_cost = -0.2
-		local_tax_modifier = -0.4
+		local_tax_modifier = -0.3
 	}
 	ai_priority = {
 		factor = 1
@@ -69,7 +69,7 @@ kob_expanded_kobold_governor_reformed = {
 	modifier = {
 		local_unrest = -2
 		local_governing_cost = -0.2
-		local_tax_modifier = -0.4
+		local_tax_modifier = -0.3
 	}
 	ai_priority = {
 		factor = 1

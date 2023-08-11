@@ -1,7 +1,7 @@
 # Raiders, pillagers, the more "trigger happy" kobolds
 redscale_ideas = {
 	start = {
-		galley_power = 0.15
+		galley_power = 0.1
 		siege_ability = 0.1
 	}
 
@@ -165,7 +165,7 @@ kobildzani_ideas = {
 	}
 
 	kob_expanded_kobildzan_2 = { # Regulate the adminsitrators
-		establish_order_cost = -0.1
+		establish_order_cost = -0.25
 		yearly_corruption = -0.05
 	}
 

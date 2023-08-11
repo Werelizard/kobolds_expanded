@@ -73,10 +73,20 @@
  kob_expanded_isNotMonstrous.tooltip:0 "§Y[Root.GetName]§! is not considered a monstrous nation."
  kob_expanded_neitherOrExpellingGnomes.tooltip:0 "Is neither §Ypurging§! or §Yexpelling§! the gnomes."
  kob_expanded_noGnomishProvinceHasADifferentReligionUnrestOrRecentUprising.tooltip:0 "Every owned province with §YCliff Gnome§! culture follows that §Y[Root.Religion.GetName]§!, has less than §Y1§! unrest and does not have the '§YRecent Uprising§!' modifier."
- kob_expanded_rewards_affected_by_number_of_provinces_matching_requirements.tooltip:0 "Every province matching the requirements will gain a modifier of our choice in the triggered event."
+ kob_expanded_rewards_affected_by_number_of_provinces_matching_requirements.tooltip:0 "§YEvery province§! matching the requirements will gain a modifier of our choice in the triggered event - as well as a permanent country-wide reward of our chosing."
  kob_expanded_great_fair_every_province_meeting_requirements_gets_these.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Production Efficiency: §G10.0%§!\nLocal Trade Power: §G25.0%§!"
  kob_expanded_great_fair_get_inno_per_province.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Monthly Institution Growth: §G+1.0§!\nLocal Build Cost: §G-10.0%§!"
- kob_expanded_hasCompletedGreatYappingDisaster.tooltip:0 "We've gone through §YThe Great Yappering§! disaster."
+ kob_expanded_hasCompletedGreatYappingDisaster.tooltip:0 "§Y[Root.GetName]§! has had §YThe Great Yappering§! disaster."
+ kob_expanded_extendGoldenAgeOrNewOneOrNextAgeWillBeLonger.tooltip:0 "If we are in a golden age, it will be extended by §Y25 years§!. If we had our golden age, we will be able to have a second one. Otherwise, our next golden age will last an additional §Y25 years§!."
+ kob_expanded_cavern_and_Dragoncoast.tooltip:0 "Has the §YCavern§! terrain and is in the §YDragoncoast§! region."
+ kob_expanded_dens_give_dev_rewards.tooltip:0 "Every owned province that has the §YCavern§! terrain and is in the §YDragoncoast§! will get development depending on what buildings are present:\n\n§Y2 £kob_expanded_base_tax£ base tax§! if they have a tax building.\n§Y2 £kob_expanded_base_production§£ base production§! if they have a production building.\n§Y2 £kob_expanded_base_manpower§£ base manpower§! if they have a manpower building."
+ kobildzan_keep_order_no_reward.tooltip:0 "£no£ If we complete this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, we will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, we will gain §Y200§! splendor instead."
+ kobildzan_keep_order_into_absolutism_age.tooltip:0 "£yes£ Since we completed this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, we will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, we will gain §Y200§! splendor instead."
+ kob_expanded_hasCompletedGreatYappingDisaster_reward.tooltip:0 "£no£ If we complete this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, we will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£yes£ Since we completed this mission by surviving §YThe Great Yappering§! disaster, we will gain §Y200§! splendor."
+ kob_expanded_future.tooltip:0 "§YWe will determine what path [Root.GetName] will follow§!"
+ kob_expanded_unlock_great_hoard_missions.tooltip:0 "Unlocks the §YGreat Hoard§! missions.\n\nOur country will turn towards the new world, and the accumulation of wealth."
+ kob_expanded_unlock_dragon_empire_missions.tooltip:0 "Unlocks the §YDragon Empire§! missions.\n\nOur country will make preparations to return the Dragons to Cannor and bring about a second Dragonwake."
+ kob_expanded_unlock_mad_science_missions.tooltip:0 "Unlocks the §YMad Science§! missions.\n\nOur country will focus inward and towards techno-magic as we will strive to push Artificery to its limits."
 
  ## Mission-triggered events
 
@@ -127,6 +137,12 @@
  kob_expanded_mission_events.1008.a:0 "Our patronage shall go to the Merchants!"
  kob_expanded_mission_events.1008.b:0 "Our patronage shall go to the Artificiers!"
 
+ kob_expanded_mission_events.1009.title:0 "The Future of [Root.GetName]"
+ kob_expanded_mission_events.1009.desc:0 ""
+ kob_expanded_mission_events.1009.a:0 "The wealth of the world calls to us!"
+ kob_expanded_mission_events.1009.b:0 "Our Draconic ancestry beckons us."
+  kob_expanded_mission_events.1009.c:0 "Artificery is the future!"
+
  ## Mission modifiers
 
  kob_expanded_kob_fortress:0 "Kobold Fortifications"
@@ -153,6 +169,7 @@
  kob_expanded_ordered_vixaria:0 "An Ordered Society"
  kob_expanded_modern_kobold_swarm:0 "Kobildzani Flame-Rifles"
  kob_expanded_reform_military:0 "Early Rifle Prototypes"
+ kob_expanded_litteracy_reform:0 "Education Programs"
 
  ## Custom Localisation
 

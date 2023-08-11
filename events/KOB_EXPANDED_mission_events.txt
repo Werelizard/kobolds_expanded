@@ -790,3 +790,54 @@ country_event = {
 		}
 	}
 }
+
+
+# Decide Our Fate
+country_event = {
+	id = kob_expanded_mission_events.1009
+	title = kob_expanded_mission_events.1009.title
+	desc = kob_expanded_mission_events.1009.desc
+
+	picture = kob_expanded_event_kobold_in_cave
+
+	is_triggered_only = yes
+
+	option = { #The Great Hoard Path
+		name = kob_expanded_mission_events.1009.a
+
+		custom_tooltip = kob_expanded_unlock_great_hoard_missions.tooltip
+		custom_tooltip = empty_line_tt
+
+		hidden_effect = {
+			set_country_flag = kob_expanded_great_hoard_path_flag
+		}
+
+		swap_non_generic_missions = yes
+	}
+
+	option = { #The Dragon-Empire Path
+		name = kob_expanded_mission_events.1009.b
+
+		custom_tooltip = kob_expanded_unlock_dragon_empire_missions.tooltip
+		custom_tooltip = empty_line_tt
+			
+		hidden_effect = {
+			set_country_flag = kob_expanded_dragon_empire_path_flag
+		}
+		
+		swap_non_generic_missions = yes
+	}
+
+	option = { #The Mad Science Path
+		name = kob_expanded_mission_events.1009.c
+
+		custom_tooltip = kob_expanded_unlock_mad_science_missions.tooltip
+		custom_tooltip = empty_line_tt
+			
+		hidden_effect = {
+			set_country_flag = kob_expanded_mad_science_path_flag
+		}
+
+		swap_non_generic_missions = yes
+	}
+}

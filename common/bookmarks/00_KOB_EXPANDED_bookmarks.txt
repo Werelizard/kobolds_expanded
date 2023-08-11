@@ -1,0 +1,13 @@
+
+bookmark = {
+	name = "KOB_EXPANDED_BOOKMARK"
+	desc = "KOB_EXPANDED_BOOKMARK_DESC"
+	date = 1444.11.11
+	
+	center = 189
+	default = yes
+	
+	country = A26	#RedScales
+	country = A27   #Bluescales
+	country = A28   #Greenscales
+}

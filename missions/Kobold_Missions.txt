@@ -1425,7 +1425,7 @@ KOBILDZAN_1 = {
 		trigger = {
 			treasury = 2500
 			OR = {
-				mercantilism = 40
+				mercantilism = 35
 				full_idea_group = trade_ideas
 				full_idea_group = economic_ideas
 			}
@@ -1607,21 +1607,30 @@ KOBILDZAN_2 = {
 		}
 
 		trigger = {
+			has_institution = printing_press
 			OR = {
-				innovativeness = 50
-				has_institution = printing_press
+				num_of_owned_provinces_with = {
+					value = 10
+					has_building = university
+				}
 				full_idea_group = innovativeness_ideas
 			}
 			OR = {
 				any_owned_province = {
 					trade_goods = paper
+					has_production_building_trigger = yes
 				}
 				any_subject_country = {
 					any_owned_province = {
 						trade_goods = paper
+						has_production_building_trigger = yes
 					}
 				}
 				any_ally = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
 					any_owned_province = {
 						trade_goods = paper
 					}
@@ -1630,50 +1639,40 @@ KOBILDZAN_2 = {
 		}
 
 		effect = {
-			custom_tooltip = kob_expanded_monarch_will_get_a_random_stat_bonus.tooltip
+			if = {
+				limit = {
+					adm = 6
+				}
+				add_adm_power = 50
+			}
+			else = {
+				change_adm = 1
+			}
+			if = {
+				limit = {
+					dip = 6
+				}
+				add_dip_power = 50
+			}
+			else = {
+				change_dip = 1
+			}
+			if = {
+				limit = {
+					mil = 6
+				}
+				add_mil_power = 50
+			}
+			else = {
+				change_mil = 1
+			}
+			custom_tooltip = empty_line_tt
 			
 			add_country_modifier = {
 				name = kob_expanded_litteracy_reform
-				duration = 3650
+				duration = 7300
 			}
 
-			hidden_effect = {
-				random_list = {
-					33 = {
-						if = {
-							limit = {
-								adm = 6
-							}
-							add_adm_power = 100
-						}
-						else = {
-							change_adm = 1
-						}
-					}
-					33 = {
-						if = {
-							limit = {
-								dip = 6
-							}
-							add_dip_power = 100
-						}
-						else = {
-							change_dip = 1
-						}
-					}
-					33 = {
-						if = {
-							limit = {
-								mil = 6
-							}
-							add_mil_power = 100
-						}
-						else = {
-							change_mil = 1
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -1704,16 +1703,37 @@ KOBILDZAN_3 = {
 
 		trigger = {
 			crown_land_share = 50
-			num_of_owned_states_with = {
-				value = 15
-				NOT = {
-					local_autonomy_above_min = 5
+			if = {
+				limit = {
+					OR = {
+						has_reform = kob_expanded_kobold_monarchy
+						has_reform = kob_expanded_kobold_monarchy_centralised_reform
+						has_reform = kob_expanded_kobold_monarchy_decentralised_reform
+					}
+				}
+				num_of_owned_states_with = {
+					value = 4
+					custom_trigger_tooltip = {
+						tooltip = kob_expanded_has_adminsitrators.tooltip
+						OR = {
+							holy_order = kob_expanded_kobold_governor
+							holy_order = kob_expanded_kobold_governor_reformed
+						}
+					}
+				}
+			}
+			else = {
+				num_of_owned_states_with = {
+					value = 10
+					NOT = {
+						local_autonomy_above_min = 1
+					}
 				}
 			}
 		}
 
 		effect = {
-			change_government_reform_progress = 100
+			change_government_reform_progress = 150
 		}
 	}
 
@@ -1738,7 +1758,7 @@ KOBILDZAN_3 = {
 		}
 
 		effect = {
-			custom_tooltip = KOB_EXPANDED_TODO.tooltip
+			custom_tooltip = kob_expanded_future.tooltip
 		}
 	}
 }
@@ -1767,6 +1787,16 @@ KOBILDZAN_4 = {
 		}
 
 		trigger = {
+			stability = 3
+			NOT = {
+				rebel_progress_at_least = {
+					value = 20
+				}
+			}
+			estate_loyalty = {
+				estate = all
+				loyalty = 50
+			}
 			OR = {
 				AND = {
 					OR = {
@@ -1774,13 +1804,10 @@ KOBILDZAN_4 = {
 						current_age = age_of_revolutions
 					}
 					NOT = {
-						has_disaster = kob_expanded_great_yappering_disaster
-					}
-					NOT = {
 						has_government_power = {
 							mechanic_type = kob_expanded_interal_disorder
 							power_type = kob_expanded_disorder
-							value = 25
+							value = 20
 						}
 					}
 				}
@@ -1795,53 +1822,40 @@ KOBILDZAN_4 = {
 			if = {
 				limit = {
 					AND = {
-						OR = {
-							current_age = age_of_discovery
-							current_age = age_of_reformation
-							has_disaster = kob_expanded_great_yappering_disaster
-							has_government_power = {
-								mechanic_type = kob_expanded_interal_disorder
-								power_type = kob_expanded_disorder
-								value = 25
-							}
-						}
 						NOT = {
 							has_country_flag = kob_expanded_yappering_disaster_complete
 						}
-					}
-				}
-				custom_tooltip = kobildzan_keep_order_no_rewards.tooltip
-			}
-			if = {
-				limit = {
-					OR = {
-						current_age = age_of_absolutism 
-						current_age = age_of_revolutions
-					}
-					NOT = {
-						has_disaster = kob_expanded_great_yappering_disaster
-					}
-					NOT = {
-						has_government_power = {
-							mechanic_type = kob_expanded_interal_disorder
-							power_type = kob_expanded_disorder
-							value = 25
+						OR = {
+							current_age = age_of_absolutism 
+							current_age = age_of_revolutions
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = kob_expanded_interal_disorder
+								power_type = kob_expanded_disorder
+								value = 20
+							}
 						}
 					}
 				}
-				custom_tooltip = kobildzan_keep_order_disorder_reward.tooltip
-				hidden_effect = {
-					add_country_modifier = {
-						name = kob_expanded_ordered_vixaria
-						duration = 7300
-					}
+				custom_tooltip = kobildzan_keep_order_into_absolutism_age.tooltip
+				custom_tooltip = empty_line_tt
+				add_country_modifier = {
+					name = kob_expanded_ordered_vixaria
+					duration = 7300
 				}
 			}
-			else = {
-				custom_tooltip = kobildzan_keep_order_splendor_reward.tooltip
-				hidden_effect = {
-					add_splendor = 100
+			#You've done the disaster (So no disorder, ergo no need to make the effects too complicated)
+			else_if = {
+				limit = {
+					has_country_flag = kob_expanded_yappering_disaster_complete
 				}
+				custom_tooltip = kob_expanded_hasCompletedGreatYappingDisaster_reward.tooltip
+				custom_tooltip = empty_line_tt
+				add_splendor = 200
+			}
+			else = {
+				custom_tooltip = kobildzan_keep_order_no_reward.tooltip
 			}
 		}
 	}
@@ -1900,10 +1914,9 @@ KOBILDZAN_5 = {
 		}
 
 		trigger = {
-			num_of_regiments_at_full_drill = 80
-			num_of_rajput = 20
+			num_of_rajput = 40
 			OR = {
-				has_idea = kob_expanded_kobildzan_7
+				artillery_fraction = 0.25
 				num_of_artillery = 40
 			}
 			calc_true_if = {
