@@ -46,7 +46,6 @@ kob_expanded_kobold_coast = {
 
 kob_expanded_challenged_alenic_lords = {
 	shock_damage = 0.05
-	fire_damage_received = -0.05
 	prestige_from_land = 1
 }
 

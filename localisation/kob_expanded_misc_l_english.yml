@@ -29,6 +29,10 @@
  kob_expanded_misc_events.1001.a:0 "For our Bazgradzen [Root.Monarch.GetTitle]!"
  kob_expanded_KobildzanMechanics.tooltip:0 "§RWe will have to contend with the Disorder mechanic. Though unified, our people may fracture at any moment shall we fail to keep our new realm internally stable!§!\n"
 
+ kob_expanded_misc_events.1002.alternate1.desc:0 "One"
+ kob_expanded_misc_events.1002.alternate2.desc:0 "Two"
+ kob_expanded_misc_events.1002.alternate3.desc:0 "Three"
+
  ## Estate Loc
 
  kob_expanded_estate_kobold_clans:0 "Kobold Clans"

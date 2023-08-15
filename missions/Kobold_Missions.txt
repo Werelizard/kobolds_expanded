@@ -452,6 +452,114 @@ KOBOLD_STARTER_GNOMES_TOLERANCE = {
 	slot = 1
 }
 
+# Kobildzan Small COuntry
+KOBILDZAN_HALFLINGS_UNDECIDED = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		}
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		}
+	}
+
+	kobildzan_halfling_undecided = {
+		icon = mission_unknown_mission
+
+		position = 6
+
+		required_missions = {
+			kob_starter_gnomes_undecided_2
+			kob_starter_push_south
+		}
+
+		trigger = {
+			always = no
+		}
+
+		effect = {
+			
+		}
+	}
+
+	slot = 1
+}
+
+KOBILDZAN_HALFLINGS_TOLERANCE = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		}
+		has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+	}
+
+	kobildzan_halfling_tolerance_1 = {
+		icon = mission_unknown_mission
+
+		position = 6
+
+		required_missions = {
+			kob_starter_gnomes_tolerance_2
+			kob_starter_push_south
+		}
+
+		trigger = {
+			always = no
+		}
+
+		effect = {
+			
+		}
+	}
+
+	slot = 1
+}
+
+KOBILDZAN_HALFLINGS_INTOLERANCE = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		NOT = {
+			has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		}
+	}
+
+	kobildzan_halfling_intolerance_1 = {
+		icon = mission_unknown_mission
+
+		position = 6
+
+		required_missions = {
+			kob_starter_gnomes_purge_2
+			kob_starter_push_south
+		}
+
+		trigger = {
+			always = no
+		}
+
+		effect = {
+			
+		}
+	}
+
+	slot = 1
+}
+
 #Middle Left
 KOBOLD_STARTER_EXPANDED_2 = {
 	generic = no
@@ -1005,50 +1113,19 @@ KOBOLD_STARTER_EXPANDED_4 = {
 
 		trigger = {
 			army_size = 40
-			if = {
-				limit = {
+			OR = {
+				has_won_war_against = {
+					who = A13
+				}
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_controlsGawedCapital.tooltip
+					any_province = {
+						is_capital_of = A13
+						controlled_by = ROOT
+					}
+				}
+				NOT = {
 					exists = A13
-				}
-				OR = {
-					has_won_war_against = {
-						who = A13
-					}
-					custom_trigger_tooltip = {
-						tooltip = kob_expanded_controlsGawedCapital.tooltip
-						any_province = {
-							is_capital_of = A13
-							controlled_by = ROOT
-						}
-					}
-					beronmoor_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-			}
-			else = {
-				OR = {
-					any_known_country = {
-						culture_group = alenic
-						army_strength = {
-							who = ROOT
-							value = 0.5
-						}
-						OR = {
-							has_opinion_modifier = {
-								who = root
-								modifier = insulted
-							}
-							has_opinion_modifier = {
-								who = root
-								modifier = scornfully_insulted
-							}
-						}
-					}
-					beronmoor_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
 				}
 			}
 		}
@@ -1107,6 +1184,7 @@ KOBOLD_STARTER_EXPANDED_4 = {
 				area = jonsway_area
 				area = alenvord_area
 				area = westmounts_area
+				area = beronmoor_area
 			}
 		}
 
@@ -1136,6 +1214,10 @@ KOBOLD_STARTER_EXPANDED_4 = {
 				owned_by = ROOT
 			}
 			westmounts_area = {
+				type = all
+				owned_by = ROOT
+			}
+			beronmoor_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1530,7 +1612,7 @@ KOBILDZAN_2 = {
 					owned_by = ROOT
 				}
 				NOT = {
-					development = 8
+					development = 5
 				}
 				NOT = {
 					culture_group = kobold
@@ -1562,7 +1644,7 @@ KOBILDZAN_2 = {
 						has_terrain = cavern 
 					}
 				}
-				development = 8
+				development = 5
 				culture_group = kobold
 				OR = {
 					has_manpower_building_trigger = yes
@@ -1784,6 +1866,58 @@ KOBILDZAN_4 = {
 	}
 
 	slot = 4
+
+	kobildzan_destroy_the_empire = {
+		icon = mission_unknown_mission
+		position = 6
+
+		required_missions = {
+			kob_starter_skewer_eagle
+			kob_starter_kobold_coast
+		}
+
+		provinces_to_highlight = {
+			owner = {
+				OR = {
+					is_elector = yes
+					is_emperor = yes
+				}
+			}
+			is_capital = yes
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = kob_expanded_empire_not_exists.tooltip
+						NOT = {
+							any_known_country = {
+								is_emperor = yes
+							}
+						}
+					}
+					NOT = {
+						great_power_rank = 4
+					}
+				}
+				all_province = {
+					owner = {
+						OR = {
+							is_elector = yes
+							is_emperor = yes
+						}
+					}
+					is_capital = yes
+					controlled_by = ROOT
+				}
+			}
+		}
+
+		effect = {
+			
+		}
+	}
 
 	kobildzan_keep_order = {
 		icon = mission_kobildzan_keep_order

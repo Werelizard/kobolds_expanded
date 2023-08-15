@@ -57,3 +57,56 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = kob_expanded_misc_events.1002
+	title = kob_expanded_misc_events.1002.title
+	desc = {
+		desc = kob_expanded_misc_events.1002.alternate1.desc
+		trigger = {
+			has_country_flag = kob_expanded_smart_gnome_flag
+		}
+	}
+	desc = {
+		desc = kob_expanded_misc_events.1002.alternate2.desc
+		trigger = {
+			has_country_flag = kob_expanded_witty_gnome_flag
+		}
+	}
+	desc = {
+		desc = kob_expanded_misc_events.1002.alternate3.desc
+		trigger = {
+			has_country_flag = kob_expanded_charming_gnome_flag
+		}
+	}
+
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = kob_expanded_smart_gnome_flag
+				}
+				33 = {
+					set_country_flag = kob_expanded_witty_gnome_flag
+				}
+				33 = {
+					set_country_flag = kob_expanded_charming_gnome_flag
+				}
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1002.a
+	}
+
+	after = {
+		clr_country_flag = kob_expanded_smart_gnome_flag
+		clr_country_flag = kob_expanded_witty_gnome_flag
+		clr_country_flag = kob_expanded_charming_gnome_flag
+	}
+}
