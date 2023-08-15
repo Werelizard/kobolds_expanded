@@ -1831,7 +1831,7 @@ KOBILDZAN_3 = {
 	}
 
 	kobildzan_determine_our_future = {
-		icon = mission_kobildzan_determine_our_future
+		icon = mission_kobildzan_determine_our_future_animated
 
 		position = 7
 

@@ -166,6 +166,16 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_kobildzan_reform_our_military.dds"
 	}
 
+	frameAnimatedSpriteType = { # Handmade
+		name = "mission_kobildzan_determine_our_future_animated"
+		texturefile = "gfx//interface//missions//mission_kobildzan_determine_our_future_animated.dds"
+		noOfFrames = 50
+		transparencecheck = yes
+		animation_rate_fps = 4
+		looping = yes
+		play_on_show = yes
+	}
+
 	####################################
 	# The Great Yapping                #
 	####################################
