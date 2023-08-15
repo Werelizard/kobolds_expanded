@@ -146,11 +146,11 @@ greenscale_ideas = {
 kobildzani_ideas = {
 	start = {
 		land_morale = 0.1
-		hostile_attrition = 2
+		defensiveness = 0.25
 	}
 
 	bonus = {
-		defensiveness = 0.25
+		max_hostile_attrition = 2
 	}
 
 	trigger = {

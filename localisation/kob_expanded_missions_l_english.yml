@@ -72,7 +72,7 @@
  kob_expanded_is_prosperous.tooltip:0 "Is prosperous."
  kob_expanded_isNotMonstrous.tooltip:0 "§Y[Root.GetName]§! is not considered a monstrous nation."
  kob_expanded_neitherOrExpellingGnomes.tooltip:0 "Is neither §Ypurging§! or §Yexpelling§! the gnomes."
- kob_expanded_noGnomishProvinceHasADifferentReligionUnrestOrRecentUprising.tooltip:0 "Every owned province with §YCliff Gnome§! culture follows that §Y[Root.Religion.GetName]§!, has less than §Y1§! unrest and does not have the '§YRecent Uprising§!' modifier."
+ kob_expanded_noGnomishProvinceHasADifferentReligionUnrestOrRecentUprising.tooltip:0 "Every owned province with §YCliff Gnome§! culture follows the §Y[Root.Religion.GetName]§!, has less than §Y1§! unrest and does not have the '§YRecent Uprising§!' modifier."
  kob_expanded_rewards_affected_by_number_of_provinces_matching_requirements.tooltip:0 "§YEvery province§! matching the requirements will gain a modifier of our choice in the triggered event - as well as a permanent country-wide reward of our chosing."
  kob_expanded_great_fair_every_province_meeting_requirements_gets_these.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Production Efficiency: §G10.0%§!\nLocal Trade Power: §G25.0%§!"
  kob_expanded_great_fair_get_inno_per_province.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Monthly Institution Growth: §G+1.0§!\nLocal Build Cost: §G-10.0%§!"
@@ -87,6 +87,9 @@
  kob_expanded_unlock_great_hoard_missions.tooltip:0 "Unlocks the §YGreat Hoard§! missions.\n\nOur country will turn towards the new world, and the accumulation of wealth."
  kob_expanded_unlock_dragon_empire_missions.tooltip:0 "Unlocks the §YDragon Empire§! missions.\n\nOur country will make preparations to return the Dragons to Cannor and bring about a second Dragonwake."
  kob_expanded_unlock_mad_science_missions.tooltip:0 "Unlocks the §YMad Science§! missions.\n\nOur country will focus inward and towards techno-magic as we will strive to push Artificery to its limits."
+ kob_expanded_has_adminsitrators.tooltip:0 "Has §YIzendatua Administrators§!."
+ kob_expanded_fire_gnome_tolerance_events.tooltip:0 "Allows the §YIn Deep Thought§! events to fire, which will grant us opportunities to gradually convert §YGnomish§! provinces to §Y[Root.Religion.GetName]§!."
+ kob_expaned_permanentModifierUntilReligionConvertedORMissionComplete.tooltip:0 "Every §YGnomish§! culture province will get the '§YGnomish Autonomy§!' modifier until we either convert the province's religion or complete the mission §YA Better Dragon Coast§!, giving the following effects:nLocal Unrest: §G-1.0§!\nLocal Missionary Strength: §R-2.0%§!\nMinimum Local Autonomy: §R+20.0%§!\nLocal Religious Unity Contribution: §Y-100%§!"
 
  ## Mission-triggered events
 
@@ -170,6 +173,7 @@
  kob_expanded_modern_kobold_swarm:0 "Kobildzani Flame-Rifles"
  kob_expanded_reform_military:0 "Early Rifle Prototypes"
  kob_expanded_litteracy_reform:0 "Education Programs"
+ kob_expanded_gnomish_autonomy:0 "Gnomish Autonomy"
 
  ## Custom Localisation
 

@@ -29,3 +29,50 @@ kob_expanded_on_new_monarch = {
 		}
 	}
 }
+
+#This should be placed into the "oon_province_religion_changed "  on_action for every update
+
+kob_expanded_on_non_province_religion_changed = {
+	if = {
+		limit = {
+			has_province_modifier = kob_expanded_gnomish_autonomy
+			AND = {
+				has_owner_religion = yes
+			}
+		}
+		remove_province_modifier = kob_expanded_gnomish_autonomy
+	}
+}
+
+#This should be placed into the "on_province_owner_change"  on_action for every update
+
+kob_expanded_on_province_owner_change = {
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+				NOT = {
+					mission_completed = kob_starter_gnomes_tolerance_1
+				}
+			}
+			NOT = {
+				has_province_modifier = kob_expanded_gnomish_autonomy
+			}
+			culture_group = gnomish
+			region = dragon_coast_region
+			NOT = {
+				has_owner_religion = yes
+			}
+		}
+		add_province_modifier = {
+			name = kob_expanded_gnomish_autonomy
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_province_modifier = kob_expanded_gnomish_autonomy
+		}
+		remove_province_modifier = kob_expanded_gnomish_autonomy
+	}
+}

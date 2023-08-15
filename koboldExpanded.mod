@@ -11,4 +11,4 @@ tags={
 	"Gameplay"
 }
 supported_version="1.35.*"
-path="/mod/koboldExpanded"
+path="C:/Users/Lydia/Documents/Paradox Interactive/Europa Universalis IV/mod/koboldExpanded"

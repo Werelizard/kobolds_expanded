@@ -9624,6 +9624,9 @@ on_province_religion_changed = {
 				random = 730
 			}
 	}
+
+	#Kob expanded
+	kob_expanded_on_non_province_religion_changed = yes
 }
 
 # province
@@ -11431,6 +11434,8 @@ on_province_owner_change = {
 			duration = -1
 		}
 	}
+
+	#Kobolds expanded
 }
 
 # country 1.35

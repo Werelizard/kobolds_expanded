@@ -24,6 +24,7 @@ country_event = {
 				limit = {
 					any_owned_province = {
 						culture_group = gnomish
+						region = dragon_coast_region
 					}
 				}
 				random_owned_province = {
@@ -31,17 +32,16 @@ country_event = {
 						region = dragon_coast_region
 						culture_group = gnomish
 					}
-
+					save_event_target_as = koboldEventTarget
 				}
-				save_event_target_as = koboldEventTarget
 			}
 			else = {
 				random_owned_province = {
 					limit = {
 						region = dragon_coast_region
 					}
+					save_event_target_as = koboldEventTarget
 				}
-				save_event_target_as = koboldEventTarget
 			}
 		}
 	}
@@ -51,17 +51,21 @@ country_event = {
 		name = kob_expanded_mission_events.1001.a
 
 		custom_tooltip = kob_expanded_unlockGnomishToleranceMissions.tooltip
-
+		custom_tooltip = empty_line_tt
+		custom_tooltip = kob_expaned_permanentModifierUntilReligionConvertedORMissionComplete.tooltip
+		
 		hidden_effect = {
 			set_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
-		}
-
-		every_owned_province = {
-			limit = {
-				region = dragon_coast_region
-				culture_group = gnomish
+			every_owned_province = {
+				limit = {
+					region = dragon_coast_region
+					culture_group = gnomish
+				}
+				add_province_modifier = {
+					name = kob_expanded_gnomish_autonomy
+					duration = -1
+				}
 			}
-			add_local_autonomy = 100
 		}
 
 		swap_non_generic_missions = yes	
@@ -106,6 +110,10 @@ country_event = {
 			}
 		}
 		
+		hidden_effect = {
+			set_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		}
+
 		swap_non_generic_missions = yes	
 	}
 }
@@ -182,17 +190,6 @@ country_event = {
 			event_target:koboldEventTarget = {
 				add_local_autonomy = 100
 				add_base_manpower = 2
-			}
-		}
-
-		custom_tooltip = everyRedScaleProvinceLosesAllSeperatism.tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					culture = redscale_kobold
-				}
-				add_nationalism = -15
-				add_local_autonomy = 100
 			}
 		}
 	}
@@ -303,17 +300,6 @@ country_event = {
 				add_base_manpower = 2
 			}
 		}
-
-		custom_tooltip = everyBlueScaleProvinceLosesAllSeperatism.tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					culture = bluescale_kobold
-				}
-				add_nationalism = -15
-				add_local_autonomy = 100
-			}
-		}
 	}
 
 	option = { #No, they serve us
@@ -420,17 +406,6 @@ country_event = {
 			event_target:koboldEventTarget = {
 				add_local_autonomy = 100
 				add_base_manpower = 2
-			}
-		}
-
-		custom_tooltip = everyGreenScaleProvinceLosesAllSeperatism.tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					culture = greenscale_kobold
-				}
-				add_nationalism = -15
-				add_local_autonomy = 100
 			}
 		}
 	}

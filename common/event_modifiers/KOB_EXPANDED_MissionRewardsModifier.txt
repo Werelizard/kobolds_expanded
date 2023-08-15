@@ -30,8 +30,7 @@ kob_expanded_against_winelords = {
 }
 
 kob_expanded_forefathers_pleased = {
-	tolerance_own = 2
-	church_power_modifier = 0.35
+	global_missionary_strength = 0.015
 }
 
 kob_expanded_conquerors_of_alen = {
@@ -124,4 +123,11 @@ kob_expanded_artisan_reward_local = {
 kob_expanded_artisan_reward_artificiers_local = {
 	institution_growth = 0.5
 	local_build_cost = -0.1
+}
+
+kob_expanded_gnomish_autonomy = {
+	local_unrest = -1
+	min_local_autonomy = 20
+	local_religious_unity_contribution = -1
+	local_missionary_strength = -0.02
 }

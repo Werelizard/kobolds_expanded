@@ -15,6 +15,6 @@ spriteTypes = {
 		textureFile1 = "gfx/interface/government_mechanics/kobold_disorder/kobold_disorder_active.dds"
 		textureFile2 = "gfx/interface/government_mechanics/kobold_disorder/kobold_disorder_passive.dds"
 		size = { x = 274 y = 110 }
-		effectFile = "gfx/FX/progress.shader"
+		effectFile = "gfx/FX/KOB_EXPANDED_disorder.lua"
 	}
 }
