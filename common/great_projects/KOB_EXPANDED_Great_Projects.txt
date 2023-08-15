@@ -1,0 +1,189 @@
+kob_expanded_undercity = {
+    # Province the project starts in
+    start = 189
+
+	time = {
+		months = 0
+	}
+
+    # Date built in real life (If you start the game at a date later than this, then the project will show up)
+    date = 1821.12.31
+
+    # How much it costs to build
+    build_cost = 500
+
+    # If the project can be moved
+    can_be_moved = no
+
+    # Starting tier of the project
+    starting_tier = 0
+
+    # Project type
+    type = monument
+
+    # Conditions to build the project
+    build_trigger = {
+        
+    }
+
+    # What happens when the project is built
+    on_built = {
+       
+    }
+
+    # What happens when the project is destroyed
+    on_destroyed = {
+        
+    }
+
+    # Conditions to use project
+    can_use_modifiers_trigger = {
+        culture_group = kobold
+    }
+
+    # Conditions to upgrade project
+    can_upgrade_trigger = {
+		owner = {
+			mission_completed = kobildzan_develop_underground
+			culture_group = kobold
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = kob_expanded_undercity
+					tier = 2
+				}
+			}
+			development = 30
+		}
+		else_if = {
+			limit = {
+				has_great_project = {
+					type = kob_expanded_undercity
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = kob_expanded_undercity
+						tier = 2
+					}
+				}
+			}
+			development = 15
+		}
+    }
+
+    # Conditions for if the project will be destroyed when conquered
+    keep_trigger = {
+		culture_group = kobold
+    }
+
+    # Tiers
+	tier_0 = {
+        upgrade_time = {
+            months = 0
+        }
+
+        cost_to_upgrade = {
+            factor = 0
+        }
+
+        province_modifiers = {
+            
+        }
+
+        area_modifier = {
+          
+        }
+
+        country_modifiers = {
+           
+        }
+
+        on_upgraded = {
+            
+        }
+    }
+
+    tier_1 = {
+        upgrade_time = {
+            months = 120
+        }
+
+        cost_to_upgrade = {
+            factor = 1500
+        }
+
+        province_modifiers = {
+            trade_goods_size_modifier = 0.05
+        }
+
+        area_modifier = {
+        	local_development_cost_modifier = -0.2
+			allowed_num_of_buildings = 1
+        }
+
+        country_modifiers = {
+           
+        }
+
+        on_upgraded = {
+            
+        }
+    }
+
+	tier_2 = {
+        upgrade_time = {
+            months = 240
+        }
+
+        cost_to_upgrade = {
+            factor = 3000
+        }
+
+        province_modifiers = {
+            trade_goods_size_modifier = 0.01
+        }
+
+        area_modifier = {
+			local_development_cost_modifier = -0.4
+			allowed_num_of_manufactories = 1
+        }
+
+        country_modifiers = {
+           
+        }
+
+        on_upgraded = {
+            
+        }
+    }
+
+	tier_3 = {
+        upgrade_time = {
+            months = 360
+        }
+
+        cost_to_upgrade = {
+            factor = 5000
+        }
+
+        province_modifiers = {
+            trade_goods_size_modifier = 0.1
+			allowed_num_of_buildings = 1
+        }
+
+        area_modifier = {
+			local_development_cost_modifier = -0.75
+			allowed_num_of_manufactories = 1
+        }
+
+        country_modifiers = {
+           
+        }
+
+        on_upgraded = {
+            
+        }
+    }
+}

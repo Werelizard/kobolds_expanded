@@ -1,0 +1,6 @@
+spriteTypes = { 
+    spriteType = { # It's a dark souls screenshot listen I love dark souls 2
+        name = "GFX_great_project_kob_expanded_undercity"	
+        texturefile = "gfx//interface//great_projects//great_project_kob_expanded_undercity.dds"
+    }
+}

@@ -176,6 +176,21 @@ spriteTypes = {
 		play_on_show = yes
 	}
 
+	spriteType = { # From Paradxox Interactive
+		name = "mission_kobildzan_halfling_tolerance"
+		texturefile = "gfx//interface//missions//mission_kobildzan_halfling_tolerance.dds"
+	}
+
+	spriteType = { # From Paradxox Interactive
+		name = "mission_kobildzan_halfling_intolerance"
+		texturefile = "gfx//interface//missions//mission_kobildzan_halfling_intolerance.dds"
+	}
+
+	spriteType = { # From Paradxox Interactive
+		name = "mission_kobildzan_destroy_the_empire"
+		texturefile = "gfx//interface//missions//mission_kobildzan_destroy_the_empire.dds"
+	}
+
 	####################################
 	# The Great Yapping                #
 	####################################

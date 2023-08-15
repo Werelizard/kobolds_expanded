@@ -8,6 +8,10 @@
  KOB_EXPANDED_BOOKMARK:0 "£kob_bookmark_text£"
  KOB_EXPANDED_BOOKMARK_DESC:0 ""The Dragoncoast                                           £icon_veteran£ §YRecommended for EU4 veterans who are looking for something unique.§!\n\n£bookmark_race_kobold£\n    £bookmark_separator£\nFollowing the Dragonwake, the Kobold clans have fallen into disunity, with their neighbours hungrily eyeing their territories for themselves. Can these bickering, dragon-worshipping tribes truly ever be united once more?"
 
+ ## Great Projects
+
+ kob_expanded_undercity:0 "The Great Depths"
+
  ## Ruler traits
  
  KOB_unifier_personality:0 "Great Unifier"

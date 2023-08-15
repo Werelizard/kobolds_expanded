@@ -504,7 +504,7 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 	}
 
 	kobildzan_halfling_tolerance_1 = {
-		icon = mission_unknown_mission
+		icon = mission_kobildzan_halfling_tolerance
 
 		position = 6
 
@@ -539,7 +539,7 @@ KOBILDZAN_HALFLINGS_INTOLERANCE = {
 	}
 
 	kobildzan_halfling_intolerance_1 = {
-		icon = mission_unknown_mission
+		icon = mission_kobildzan_halfling_intolerance
 
 		position = 6
 
@@ -1656,6 +1656,8 @@ KOBILDZAN_2 = {
 
 		effect = {
 			custom_tooltip = kob_expanded_dens_give_dev_rewards.tooltip
+			custom_tooltip = empty_line_tt
+			custom_tooltip = kob_expanded_unlock_urban_city_monument.tooltip
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -1663,7 +1665,7 @@ KOBILDZAN_2 = {
 						has_terrain = cavern 
 						has_tax_building_trigger = yes
 					}
-					add_base_tax = 2
+					add_base_tax = 1
 				}
 				every_owned_province = {
 					limit = {
@@ -1671,7 +1673,7 @@ KOBILDZAN_2 = {
 						has_terrain = cavern 
 						has_manpower_building_trigger = yes
 					}
-					add_base_manpower = 2
+					add_base_manpower = 1
 				}
 				every_owned_province = {
 					limit = {
@@ -1868,7 +1870,7 @@ KOBILDZAN_4 = {
 	slot = 4
 
 	kobildzan_destroy_the_empire = {
-		icon = mission_unknown_mission
+		icon = mission_kobildzan_destroy_the_empire
 		position = 6
 
 		required_missions = {
