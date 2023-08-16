@@ -7,7 +7,7 @@ kob_expanded_undercity = {
 	}
 
     # Date built in real life (If you start the game at a date later than this, then the project will show up)
-    date = 1821.12.31
+    date = 1444.01.01
 
     # How much it costs to build
     build_cost = 500
@@ -23,7 +23,6 @@ kob_expanded_undercity = {
 
     # Conditions to build the project
     build_trigger = {
-        
     }
 
     # What happens when the project is built
@@ -116,19 +115,17 @@ kob_expanded_undercity = {
 
         province_modifiers = {
             trade_goods_size_modifier = 0.05
+            local_development_cost_modifier = -0.5
         }
 
         area_modifier = {
-        	local_development_cost_modifier = -0.2
-			allowed_num_of_buildings = 1
         }
 
         country_modifiers = {
-           global_trade_power = 0.05
         }
 
         on_upgraded = {
-            
+            kob_upgrade_cave_modifier_1 = yes
         }
     }
 
@@ -142,20 +139,20 @@ kob_expanded_undercity = {
         }
 
         province_modifiers = {
-            trade_goods_size_modifier = 0.01
+            trade_goods_size_modifier = 0.1
+            local_development_cost_modifier = -0.65
         }
 
         area_modifier = {
-			local_development_cost_modifier = -0.4
 			allowed_num_of_manufactories = 1
         }
 
         country_modifiers = {
-            global_trade_power = 0.1
+           
         }
 
         on_upgraded = {
-            
+            kob_upgrade_cave_modifier_2 = yes
         }
     }
 
@@ -169,21 +166,19 @@ kob_expanded_undercity = {
         }
 
         province_modifiers = {
-            trade_goods_size_modifier = 0.1
-			allowed_num_of_buildings = 1
+            trade_goods_size_modifier = 0.15
+            local_development_cost_modifier = -0.9
+            allowed_num_of_buildings = 1
         }
 
         area_modifier = {
-			local_development_cost_modifier = -0.75
-			allowed_num_of_manufactories = 1
         }
 
         country_modifiers = {
-            global_trade_power = 0.15
         }
 
         on_upgraded = {
-            
+            kob_upgrade_cave_modifier_3 = yes
         }
     }
 }

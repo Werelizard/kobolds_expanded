@@ -208,6 +208,7 @@
  kobildzan_halfling_tolerance_1_title:0 "A Long Expected Party"
  kobildzan_halfling_intolerance_1_title:0 "The Scouring of Turnwell"
  kobildzan_destroy_the_empire_title:0 "Our Wings, Unfurled"
+ kobildzan_develop_coast_title:0 "Deeply and Greedily"
 
  ##Descriptions
 
@@ -224,6 +225,7 @@
  kobildzan_halfling_tolerance_1_desc:0 ""
  kobildzan_halfling_intolerance_1_desc:0 ""
  kobildzan_destroy_the_empire_desc:0 ""
+ kobildzan_develop_coast_desc:0 ""
 
  ############################################################
  # Localisation for the Kobold Expanded Missions - Yapper.  #

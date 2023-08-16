@@ -191,6 +191,12 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_kobildzan_destroy_the_empire.dds"
 	}
 
+	spriteType = { # From Koboldpress
+		name = "mission_kobildzan_develop_coast"
+		texturefile = "gfx//interface//missions//mission_kobildzan_develop_coast.dds"
+	}
+
+
 	####################################
 	# The Great Yapping                #
 	####################################

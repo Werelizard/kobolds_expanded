@@ -72,7 +72,7 @@ kob_expanded_mended_wounds = {
 
 kob_expanded_artisan_reward = {
 	global_trade_power = 0.1
-	global_trade_goods_size = 0.05
+	global_trade_goods_size_modifier = 0.1
 	global_prosperity_growth = 1
 }
 

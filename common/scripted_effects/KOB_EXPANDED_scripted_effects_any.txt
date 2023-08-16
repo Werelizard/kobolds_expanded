@@ -1,0 +1,221 @@
+#######################################################
+# KOBOLD ANY EFFECTS' - "Kobolds Expanded"            #
+# These effects should be added to the on_action file #
+#                                                     #
+# By L. E. H.                                         #
+#######################################################
+
+# Efect to add dev modifier to provinces in dragon coast caves
+
+kob_upgrade_cave_modifier_1 = {
+	custom_tooltip = kob_expanded_upgrade_depths_1.tooltip
+	hidden_effect = {
+		4643 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_1
+				duration = -1
+			}
+		}
+		4644 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_1
+				duration = -1
+			}
+		}
+		4645 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_1
+				duration = -1
+			}
+		}
+		185 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_1
+				duration = -1
+			}
+		}
+		187 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_1
+				duration = -1
+			}
+		}
+		186 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_1
+				duration = -1
+			}
+		}
+		4646 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_1
+				duration = -1
+			}
+		}
+	}
+}
+
+kob_upgrade_cave_modifier_2 = {
+	custom_tooltip = kob_expanded_upgrade_depths_2.tooltip
+	hidden_effect = {
+		remove_province_modifier = kob_expanded_depths_1
+		remove_province_modifier = kob_expanded_depths_2
+		remove_province_modifier = kob_expanded_depths_3
+		4643 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_2
+				duration = -1
+			}
+		}
+		4644 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_2
+				duration = -1
+			}
+		}
+		4645 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_2
+				duration = -1
+			}
+		}
+		185 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_2
+				duration = -1
+			}
+		}
+		187 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_2
+				duration = -1
+			}
+		}
+		186 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_2
+				duration = -1
+			}
+		}
+		4646 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_2
+				duration = -1
+			}
+		}
+	}
+}
+
+kob_upgrade_cave_modifier_3 = {
+	custom_tooltip = kob_expanded_upgrade_depths_3.tooltip
+	hidden_effect = {
+		remove_province_modifier = kob_expanded_depths_1
+		remove_province_modifier = kob_expanded_depths_2
+		remove_province_modifier = kob_expanded_depths_3
+		4643 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_3
+				duration = -1
+			}
+		}
+		4644 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_3
+				duration = -1
+			}
+		}
+		4645 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_3
+				duration = -1
+			}
+		}
+		185 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_3
+				duration = -1
+			}
+		}
+		187 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_3
+				duration = -1
+			}
+		}
+		186 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_3
+				duration = -1
+			}
+		}
+		4646 = {
+			remove_province_modifier = kob_expanded_depths_1
+			remove_province_modifier = kob_expanded_depths_2
+			remove_province_modifier = kob_expanded_depths_3
+			add_province_modifier = {
+				name = kob_expanded_depths_3
+				duration = -1
+			}
+		}
+	}
+}

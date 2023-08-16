@@ -1475,8 +1475,8 @@ KOBILDZAN_1 = {
 
 	slot = 1
 
-	kobildzan_develop_crafts = {
-		icon = mission_kobildzan_develop_crafts
+	kobildzan_develop_coast = {
+		icon = mission_kobildzan_develop_coast
 
 		position = 7
 
@@ -1484,9 +1484,30 @@ KOBILDZAN_1 = {
 			kobildzan_develop_underground
 		}
 
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kobildzan_develop_crafts = {
+		icon = mission_kobildzan_develop_crafts
+
+		position = 8
+
+		required_missions = {
+			kobildzan_develop_coast
+		}
+
 		provinces_to_highlight = {
 			owned_by = ROOT
-			has_kobold_minority_trigger = yes
+			OR = {
+				has_owner_accepted_culture = yes
+				culture_group = kobold
+			}
 			OR = {
 				NOT = {
 					has_manufactory_trigger = yes
@@ -1523,8 +1544,11 @@ KOBILDZAN_1 = {
 				full_idea_group = economic_ideas
 			}
 			any_owned_province = {
+				OR = {
+					has_owner_accepted_culture = yes
+					culture_group = kobold
+				}
 				has_manufactory_trigger = yes
-				has_kobold_minority_trigger = yes
 				has_production_building_trigger = yes
 				OR = {
 					trade_goods = mithril 
@@ -1545,43 +1569,6 @@ KOBILDZAN_1 = {
 		}
 	}
 
-	kobildzan_new_golden_age = {
-		icon = mission_kobildzan_new_golden_age
-
-		position = 8
-
-		required_missions = {
-			kobildzan_develop_crafts
-			kobildzan_education_reform
-			kobildzan_determine_our_future
-		}
-
-		provinces_to_highlight = {
-		}
-
-		trigger = {
-			NOT = {
-				great_power_rank = 6
-			}
-			is_at_war = no
-			OR = {
-				NOT = {
-					has_reform = kob_expanded_kobold_monarchy
-				}
-				NOT = {
-					has_government_power = {
-						mechanic_type = kob_expanded_interal_disorder
-						power_type = kob_expanded_disorder
-						value = 10
-					}
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = kob_expanded_extendGoldenAgeOrNewOneOrNextAgeWillBeLonger.tooltip
-		}
-	}
 }
 
 KOBILDZAN_2 = {
@@ -1617,16 +1604,16 @@ KOBILDZAN_2 = {
 				NOT = {
 					culture_group = kobold
 				}
-			}
-			AND = {
-				NOT = {
-					has_trade_building_trigger = yes
-				}
-				NOT = {
-					has_tax_building_trigger = yes	
-				}
-				NOT = {
-					has_production_building_trigger = yes
+				AND = {
+					NOT = {
+						has_trade_building_trigger = yes
+					}
+					NOT = {
+						has_tax_building_trigger = yes	
+					}
+					NOT = {
+						has_production_building_trigger = yes
+					}
 				}
 			}
 		}
@@ -1768,6 +1755,45 @@ KOBILDZAN_2 = {
 				duration = 7300
 			}
 
+		}
+	}
+
+	
+	kobildzan_new_golden_age = {
+		icon = mission_kobildzan_new_golden_age
+
+		position = 8
+
+		required_missions = {
+			kobildzan_develop_coast
+			kobildzan_education_reform
+			kobildzan_determine_our_future
+		}
+
+		provinces_to_highlight = {
+		}
+
+		trigger = {
+			NOT = {
+				great_power_rank = 6
+			}
+			is_at_war = no
+			OR = {
+				NOT = {
+					has_reform = kob_expanded_kobold_monarchy
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = kob_expanded_interal_disorder
+						power_type = kob_expanded_disorder
+						value = 10
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = kob_expanded_extendGoldenAgeOrNewOneOrNextAgeWillBeLonger.tooltip
 		}
 	}
 }
