@@ -67,15 +67,13 @@ country_event = {
 				}
 			}
 		}
-
+		custom_tooltip = empty_line_tt
 		swap_non_generic_missions = yes	
 	}
 
 	option = {
 		#We will purge the Gnomes
 		name = kob_expanded_mission_events.1001.b
-
-		add_stability = 1
 
 		custom_tooltip = kob_expanded_unlockGnomishPurgeMissions.tooltip
 		custom_tooltip = empty_line_tt
@@ -113,7 +111,7 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
 		}
-
+		custom_tooltip = empty_line_tt
 		swap_non_generic_missions = yes	
 	}
 }

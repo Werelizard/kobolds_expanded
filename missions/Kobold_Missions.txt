@@ -508,17 +508,104 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 
 		position = 6
 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = applefields_area
+						area = pearpoint_area
+						area = norley_area
+						area = lorentish_approach_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					OR = {
+						NOT = {
+							has_manufactory_trigger = yes
+						}
+						NOT = {
+							base_production = 5
+						}
+					}
+					OR = {
+						province_id = 147
+						province_id = 149
+						province_id = 76
+						province_id = 12
+						province_id = 139
+						province_id = 163
+					}
+				}
+			}
+		}
+
 		required_missions = {
 			kob_starter_gnomes_tolerance_2
 			kob_starter_push_south
 		}
 
 		trigger = {
-			always = no
+			medium_tolerance_halfling_race_trigger = yes
+			applefields_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pearpoint_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			norley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lorentish_approach_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_with_grain_five_production.tooltip
+				147 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					base_production = 5
+					if = {
+						limit = {
+							trade_goods = grain
+						}
+						has_building = farm_estate
+					}
+				}
+				149 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_manufactory_trigger = yes
+					base_production = 5
+				}
+				76 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_manufactory_trigger = yes
+					base_production = 5
+				}
+				12 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_manufactory_trigger = yes
+					base_production = 5
+				}
+				139 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_manufactory_trigger = yes
+					base_production = 5
+				}
+				163 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_manufactory_trigger = yes
+					base_production = 5
+				}
+			}
 		}
 
 		effect = {
-			
 		}
 	}
 
@@ -679,11 +766,17 @@ KOBOLD_STARTER_EXPANDED_2 = {
 				name = kob_expanded_against_winelords
 				duration = 3650
 			}
-			southroy_area = {
-				add_claim = ROOT
+			applefields_area = {
+				add_permanent_claim = ROOT
 			}
-			deranne_area = {
-				add_claim = ROOT
+			pearpoint_area = {
+				add_permanent_claim = ROOT
+			}
+			norley_area = {
+				add_permanent_claim = ROOT
+			}
+			lorentish_approach_area = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -895,23 +988,39 @@ KOBOLD_STARTER_EXPANDED_3 = {
 		position = 4
 
 		provinces_to_highlight = {
-			OR = {
-				NOT = {
-					owned_by = ROOT
+			if = {
+				limit = {
+					ROOT = {
+						NOT = {
+							has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+						}
+					}
 				}
-				NOT = {
-					religion = ROOT
-				}
-				AND = {
+				OR = {
 					NOT = {
-						has_owner_accepted_culture = yes
+						owned_by = ROOT
+					}
+					NOT = {
+						religion = ROOT
 					}
 					NOT = {
 						culture_group = kobold
 					}
+					devastation = 1
 				}
-				unrest = 1
-				devastation = 1
+			}
+			else = {
+				OR = {
+					NOT = {
+						owned_by = ROOT
+					}
+					local_autonomy_above_min = 1
+					NOT = {
+						has_owner_accepted_culture = yes
+					}
+					devastation = 1
+					unrest = 1
+				}
 			}
 			region = dragon_coast_region
 		}
@@ -928,13 +1037,25 @@ KOBOLD_STARTER_EXPANDED_3 = {
 			dragon_coast_region = {
 				type = all
 				owned_by = ROOT
-				religion = ROOT
-				OR = {
+				if = {
+					limit = {
+						ROOT = {
+							NOT = {
+								has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+							}
+						}
+					}
+					religion = ROOT
 					culture_group = kobold
+				}	
+				else = {
+					NOT = {
+						local_autonomy_above_min = 1
+					}
 					has_owner_accepted_culture = yes
-				}
-				NOT = {
-					unrest = 1
+					NOT = {
+						unrest = 1
+					}
 				}
 				NOT = {
 					devastation = 1
@@ -1228,6 +1349,7 @@ KOBOLD_STARTER_EXPANDED_4 = {
 				name = kob_expanded_conquerors_of_alen
 				duration = -1
 			}
+			custom_tooltip = kob_expanded_imperial_incident_kobold_invasion_can_fire.tooltip
 		}
 	}
 }
@@ -1484,12 +1606,39 @@ KOBILDZAN_1 = {
 			kobildzan_develop_underground
 		}
 
+		provinces_to_highlight = {
+			region = dragon_coast_region
+			OR = {
+				has_terrain = highlands
+				has_terrain = hills
+			}
+		}
+
 		trigger = {
-			
+			dragon_coast_region = {
+				type = all
+				owned_by = ROOT
+				OR = {
+					has_terrain = highlands
+					has_terrain = hills
+				}
+			}
+			every_owned_province = {
+				region = dragon_coast_region
+				OR = {
+					has_terrain = highlands
+					has_terrain = hills
+				}
+				OR = {
+					base_production = 5
+					development = 10
+				}
+				has_production_building_trigger = yes	
+			}
 		}
 
 		effect = {
-			
+			custom_tooltip = kob_expanded_unlock_decisions_to_change_goods.tooltip
 		}
 	}
 
@@ -1929,21 +2078,134 @@ KOBILDZAN_4 = {
 						great_power_rank = 4
 					}
 				}
-				all_province = {
-					owner = {
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_control_elector_emperor_provinces.tooltip
+					all_province = {
+						owner = {
+							OR = {
+								is_elector = yes
+								is_emperor = yes
+							}
+						}
+						is_capital = yes
 						OR = {
-							is_elector = yes
-							is_emperor = yes
+							controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+							}
+							controller = {
+								alliance_with = ROOT
+							}
 						}
 					}
-					is_capital = yes
-					controlled_by = ROOT
 				}
 			}
 		}
 
 		effect = {
-			
+			dismantle_hre = yes
+			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_discovery
+						current_age = age_of_reformation
+					}
+					OR = {
+						AND = {
+							NOT = {
+								any_known_country = {
+									is_emperor = yes
+								}
+							}
+							NOT = {
+								great_power_rank = 4
+							}
+						}
+						AND = {
+							all_province = {
+								owner = {
+									OR = {
+										is_elector = yes
+										is_emperor = yes
+									}
+								}
+								is_capital = yes
+								OR = {
+									controlled_by = ROOT
+									controller = {
+										is_subject_of = ROOT
+									}
+									controller = {
+										alliance_with = ROOT
+									}
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = kob_expanded_empire_destroyed_branching_permanent_rewards.tooltip
+				add_power_projection = {
+					type = 25_permanent_power_projection
+					amount = 25
+				}
+				add_country_modifier = {
+					name = kob_expanded_dismantle_empire
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						current_age = age_of_revolutions
+						current_age = age_of_absolutism
+					}
+					OR = {
+						AND = {
+							NOT = {
+								any_known_country = {
+									is_emperor = yes
+								}
+							}
+							NOT = {
+								great_power_rank = 4
+							}
+						}
+						AND = {
+							all_province = {
+								owner = {
+									OR = {
+										is_elector = yes
+										is_emperor = yes
+									}
+								}
+								is_capital = yes
+								OR = {
+									controlled_by = ROOT
+									controller = {
+										is_subject_of = ROOT
+									}
+									controller = {
+										alliance_with = ROOT
+									}
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = kob_expanded_empire_destroyed_branching_temporary_rewards.tooltip
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 25
+				}
+				add_country_modifier = {
+					name = kob_expanded_dismantle_empire
+					duration = 18250
+				}
+			}
+			else = {
+				custom_tooltip = kob_expanded_empire_destroyed_branching_no_rewards.tooltip
+			}
 		}
 	}
 

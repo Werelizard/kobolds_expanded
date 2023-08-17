@@ -80,17 +80,24 @@
  kob_expanded_extendGoldenAgeOrNewOneOrNextAgeWillBeLonger.tooltip:0 "If we are in a golden age, it will be extended by §Y25 years§!. If we had our golden age, we will be able to have a second one. Otherwise, our next golden age will last an additional §Y25 years§!."
  kob_expanded_cavern_and_Dragoncoast.tooltip:0 "Has the §YCavern§! terrain and is in the §YDragoncoast§! region."
  kob_expanded_dens_give_dev_rewards.tooltip:0 "Every owned province that has the §YCavern§! terrain and is in the §YDragoncoast§! will get development depending on what buildings are present:\n\n§Y1 £kob_expanded_base_tax£ base tax§! if they have a tax building.\n§Y1 £kob_expanded_base_production§£ base production§! if they have a production building.\n§Y1 £kob_expanded_base_manpower§£ base manpower§! if they have a manpower building."
- kobildzan_keep_order_no_reward.tooltip:0 "£no£ If we complete this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, we will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, we will gain §Y200§! splendor instead."
- kobildzan_keep_order_into_absolutism_age.tooltip:0 "£yes£ Since we completed this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, we will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, we will gain §Y200§! splendor instead."
- kob_expanded_hasCompletedGreatYappingDisaster_reward.tooltip:0 "£no£ If we complete this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, we will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£yes£ Since we completed this mission by surviving §YThe Great Yappering§! disaster, we will gain §Y200§! splendor."
+ kobildzan_keep_order_no_reward.tooltip:0 "£no£ If we complete this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, §Y[Root.GetName]§! will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, §Y[Root.GetName]§! will gain §Y200§! splendor instead."
+ kobildzan_keep_order_into_absolutism_age.tooltip:0 "£yes£ Since we completed this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, §Y[Root.GetName]§! will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, §Y[Root.GetName]§! will gain §Y200§! splendor instead."
+ kob_expanded_hasCompletedGreatYappingDisaster_reward.tooltip:0 "£no£ If we complete this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, §Y[Root.GetName]§! will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£yes£ Since we completed this mission by surviving §YThe Great Yappering§! disaster, §Y[Root.GetName]§! will gain §Y200§! splendor."
  kob_expanded_future.tooltip:0 "§YWe will determine what path [Root.GetName] will follow§!"
  kob_expanded_unlock_great_hoard_missions.tooltip:0 "Unlocks the §YGreat Hoard§! missions.\n\nOur country will turn towards the new world, and the accumulation of wealth."
  kob_expanded_unlock_dragon_empire_missions.tooltip:0 "Unlocks the §YDragon Empire§! missions.\n\nOur country will make preparations to return the Dragons to Cannor and bring about a second Dragonwake."
  kob_expanded_unlock_mad_science_missions.tooltip:0 "Unlocks the §YMad Science§! missions.\n\nOur country will focus inward and towards techno-magic as we will strive to push Artificery to its limits."
  kob_expanded_has_adminsitrators.tooltip:0 "Has §YIzendatua Administrators§!."
  kob_expanded_fire_gnome_tolerance_events.tooltip:0 "Allows the §YIn Deep Thought§! events to fire, which will grant us opportunities to gradually convert §YGnomish§! provinces to §Y[Root.Religion.GetName]§!."
- kob_expaned_permanentModifierUntilReligionConvertedORMissionComplete.tooltip:0 "Every §YGnomish§! culture province will get the '§YGnomish Autonomy§!' modifier until we either convert the province's religion or complete the mission §YA Better Dragon Coast§!, giving the following effects:nLocal Unrest: §G-1.0§!\nLocal Missionary Strength: §R-2.0%§!\nMinimum Local Autonomy: §R+20.0%§!\nLocal Religious Unity Contribution: §Y-100%§!"
+ kob_expaned_permanentModifierUntilReligionConvertedORMissionComplete.tooltip:0 "Every §YGnomish§! culture province will get the '§YGnomish Autonomy§!' modifier until we either convert the province's religion or complete the mission '§YA Better Dragon Coast§!', giving the following effects:nLocal Unrest: §G-1.0§!\nLocal Missionary Strength: §R-2.0%§!\nMinimum Local Autonomy: §R+20.0%§!\nLocal Religious Unity Contribution: §Y-100%§!"
  kob_expanded_unlock_urban_city_monument.tooltip:0 "§YThe Great Depths§! Great Project will become available in §YSoxun Kobildzex§!."
+ kob_expanded_unlock_decisions_to_change_goods.tooltip:0 "We will be able to take a §Ydecision§! to change the trade goods in §Yhills§! and §Yhighlands§! provinces in the Dragoncoast, for a fee."
+ kob_expanded_empire_destroyed_branching_no_rewards.tooltip:0 "£no£ If we complete this mission §Ybefore the Age of Witch-Kings§!, we will gain the following rewards:\n\n§Y[Root.GetName]§! gains §Y25§! power projection. This power projection is permanent!\n§Y[Root.GetName]§! gets '§YKobildzan, Ascendant§!' until the end of the game, giving the following effects:\nMorale Damage: §G+10.0%§!\n\n£no£ If we complete this mission §Yafter the Age of Witch-Kings§!, we will gain the following rewards:\n\n§Y[Root.GetName]§! gains §Y25§! power projection.\n§Y[Root.GetName]§! gets '§YKobildzan, Ascendant§!' for §Y50 years§!, giving the following effects:\nMorale Damage: §G+10.0%§!"
+ kob_expanded_empire_destroyed_branching_temporary_rewards.tooltip:0 "£no£ If we complete this mission §Ybefore the Age of Witch-Kings§!, we will gain the following rewards:\n\n§Y[Root.GetName]§! gains §Y25§! power projection. This power projection is permanent!\n§Y[Root.GetName]§! gets '§YKobildzan, Ascendant§!' until the end of the game, giving the following effects:\nMorale Damage: §G+10.0%§!\n\n£yes£ Since we completed this mission §Yafter the Age of Witch-Kings§!, we will gain the following rewards:\n\n§Y[Root.GetName]§! gains §Y25§! power projection.\n§Y[Root.GetName]§! gets '§YKobildzan, Ascendant§!' for §Y50 years§!, giving the following effects:\nMorale Damage: §G+10.0%§!"
+ kob_expanded_empire_destroyed_branching_permanent_rewards.tooltip:0 "£yes£ Since we completed this mission §Ybefore the Age of Witch-Kings§!, we will gain the following rewards:\n\n§Y[Root.GetName]§! gains §Y25§! power projection. This power projection is permanent!\n§Y[Root.GetName]§! gets '§YKobildzan, Ascendant§!' until the end of the game, giving the following effects:\nMorale Damage: §G+10.0%§!\n\n£no£ If we complete this mission §Yafter the Age of Witch-Kings§!, we will gain the following rewards:\n\n§Y[Root.GetName]§! gains §Y25§! power projection.\n§Y[Root.GetName]§! gets '§YKobildzan, Ascendant§!' for §Y50 years§!, giving the following effects:\nMorale Damage: §G+10.0%§!"
+ kob_expanded_imperial_incident_kobold_invasion_can_fire.tooltip:0 "§RThe imperial incident 'The Shadow of Kobildzan' will be able to fire, if it hasn't already.§!"
+ kob_expanded_empire_not_exists.tooltip:0 "The Empire of Anbennar does not exist"
+ kob_expanded_control_elector_emperor_provinces.tooltip:0 "The Emperor and the Elector's capitals are owned by §Y[Root.GetName]§!, its subjects or its allies."
 
  ## Mission-triggered events
 
@@ -98,8 +105,8 @@
  kob_expanded_mission_events.1001.desc:0 ""
  kob_expanded_mission_events.1001.a:0 "We shall be merciful."
  kob_expanded_mission_events.1001.b:0 "Let the Gnomes cower before the children of the Dragons."
- kob_expanded_unlockGnomishToleranceMissions.tooltip:0 "§YUnlocks the Gnomish tolerance missions.§!"
- kob_expanded_unlockGnomishPurgeMissions.tooltip:0 "§YUnlocks the Gnomish purge missions.§!"
+ kob_expanded_unlockGnomishToleranceMissions.tooltip:0 "§YOur dynamic missions will change to reflect our newfound tolerance towards the other inhabitants of the Dragoncoast.§!\n\nThe requirements for the '§YA Kobold Coast§!' mission will change, if not already completed."
+ kob_expanded_unlockGnomishPurgeMissions.tooltip:0 "§YOur dynamic missions will change to reflect our intolerance towards the other inhabitants of the Dragoncoast.§!"
  kob_expanded_gnomish_revolts.tooltip:0 "§RGnomes living under our rule will rise up against us!§!"
 
  kob_expanded_mission_events.1002.title:0 "The Clan-Meet of Fetaginbaia"
@@ -175,6 +182,7 @@
  kob_expanded_reform_military:0 "Early Rifle Prototypes"
  kob_expanded_litteracy_reform:0 "Education Programs"
  kob_expanded_gnomish_autonomy:0 "Gnomish Autonomy"
+ kob_expanded_dismantle_empire:0 "Kobildzan, Ascendant"
 
  ## Custom Localisation
 

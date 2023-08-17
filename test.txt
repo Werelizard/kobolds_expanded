@@ -1,0 +1,4 @@
+
+			173 = {
+				change_trade_goods = copper
+			}

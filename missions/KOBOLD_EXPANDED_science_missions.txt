@@ -1,0 +1,71 @@
+#################################################
+# KOBOLD MISSIONS REPLACER - "Kobolds Expanded" #
+# For the mad science path                      #
+#                                               #
+# By L. E. H.                                   #
+#################################################
+
+kob_expanded_mad_science_1 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 1
+}
+
+kob_expanded_mad_science_2 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 2
+}
+
+kob_expanded_mad_science_3 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 3
+}
+
+kob_expanded_mad_science_4 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 4
+}
+
+kob_expanded_mad_science_5 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 5
+}
