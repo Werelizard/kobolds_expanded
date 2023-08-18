@@ -13,4 +13,9 @@ spriteTypes = {
 		name = "government_reform_kobold_kingdom"
 		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_kingdom.dds"
 	}
+
+	spriteType = {
+		name = "government_reform_kobold_mad_science"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_mad_science.dds"
+	}
 }

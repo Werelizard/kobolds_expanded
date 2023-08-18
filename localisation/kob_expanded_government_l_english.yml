@@ -29,6 +29,8 @@
  monthly_kob_expanded_disorder:0 "Monthly Disorder"
  kob_expanded_disorder_gain_modifier:0 "Disorder Gain Modifier"
 
+ kob_expanded_recklessness:0 "Inspiration"
+
  # Government Names
  
  KOB_EXPANDED_BURUZAGI:0 "Bazgradzen Buruzagi"

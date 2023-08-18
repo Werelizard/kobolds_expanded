@@ -76,3 +76,12 @@ kob_expanded_on_province_owner_change = {
 		remove_province_modifier = kob_expanded_gnomish_autonomy
 	}
 }
+
+# This should go
+kob_expanded_on_tech_up = {
+	
+}
+
+kop_expanded_on_insitution_embraced = {
+	
+}

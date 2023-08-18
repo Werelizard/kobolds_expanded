@@ -2389,6 +2389,7 @@ innovativeness = {
 
 	#Anbennar
 	tec_brilliance_influence = 0.01
+	monthly_kob_expanded_recklessness = 1
 }
 
 rajput_regiment = {

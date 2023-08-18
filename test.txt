@@ -1,5 +1,1 @@
-183 = {
-	province_event = { 
-		id = kob_expanded_misc_events.1004
-	}
-}
+add_government_reform  = kob_expanded_kobold_mad_science
