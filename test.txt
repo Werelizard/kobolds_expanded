@@ -1,4 +1,5 @@
-
-			173 = {
-				change_trade_goods = copper
-			}
+183 = {
+	province_event = { 
+		id = kob_expanded_misc_events.1004
+	}
+}

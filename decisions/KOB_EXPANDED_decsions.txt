@@ -1,0 +1,35 @@
+country_decisions = {
+	#Decision to develop goods
+	kob_expanded_develop_coast_ining_industry = {
+		major = yes
+		potential = {
+			mission_completed = kobildzan_develop_crafts
+			any_owned_province = {
+				region = dragon_coast_region
+				OR = {
+					has_terrain = highlands
+					has_terrain = hills
+				}
+				AND = {
+					NOT = {
+						trade_goods = copper
+					}
+					NOT = {
+						trade_goods = iron
+					}
+					NOT = {
+						trade_goods = gold
+					}
+				}
+			}
+		}
+		allow = {
+			treasury = 300
+		}
+		effect = {
+			country_event = {
+				id = kob_expanded_misc_events.1003
+			}
+		}
+	}
+}

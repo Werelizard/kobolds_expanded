@@ -58,6 +58,7 @@ country_event = {
 	}
 }
 
+#Gnome riddles events
 country_event = {
 	id = kob_expanded_misc_events.1002
 	title = kob_expanded_misc_events.1002.title
@@ -108,5 +109,441 @@ country_event = {
 		clr_country_flag = kob_expanded_smart_gnome_flag
 		clr_country_flag = kob_expanded_witty_gnome_flag
 		clr_country_flag = kob_expanded_charming_gnome_flag
+	}
+}
+
+#Changing trade good event - Country
+country_event = {
+	id = kob_expanded_misc_events.1003
+	title = kob_expanded_misc_events.1003.title
+	desc = kob_expanded_misc_events.1003.desc
+
+	picture = kob_expanded_trade_goods
+
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+
+	option = { # Cancel the event
+		name = kob_expanded_misc_events.1003.a
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.336
+		goto = 336
+		trigger = {
+			owns = 336
+			336 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		336 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.212
+		goto = 212
+		trigger = {
+			owns = 212
+			212 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		212 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.211
+		goto = 211
+		trigger = {
+			owns = 211
+			211 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		211 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.150
+		goto = 150
+		trigger = {
+			owns = 150
+			150 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		150 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.167
+		goto = 167
+		trigger = {
+			owns = 167
+			167 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		167 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.148
+		goto = 148
+		trigger = {
+			owns = 148
+			148 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		148 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.170
+		goto = 170
+		trigger = {
+			owns = 170
+			170 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		170 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.174
+	
+		goto = 174
+
+		trigger = {
+			owns = 174
+			174 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		174 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.173
+
+		goto = 173
+
+		trigger = {
+			owns = 173
+			173 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		173 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.179
+
+		goto = 179
+
+		trigger = {
+			owns = 179
+			179 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		179 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.183
+
+		goto = 183
+
+		trigger = {
+			owns = 183
+			183 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		183 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.180
+
+		goto = 180
+
+		trigger = {
+			owns = 180
+			180 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		180 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.182
+
+		goto = 182
+
+		trigger = {
+			owns = 182
+			182 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		182 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+
+	option = {
+		name = kob_expanded_misc_events.1003.184
+
+		goto = 184
+
+		trigger = {
+			owns = 184
+			184 = {
+				NOT = {
+					trade_goods = copper
+				}
+				NOT = {
+					trade_goods = iron
+				}
+				NOT = {
+					trade_goods = gold
+				}
+			}
+		}
+
+		add_treasury = -300
+		184 = {
+			province_event = { 
+				id = kob_expanded_misc_events.1004
+			}
+		}
+	}
+}
+
+#Changing trade good event - Province
+province_event = {
+	id = kob_expanded_misc_events.1004
+	title = kob_expanded_misc_events.1004.title
+	desc = kob_expanded_misc_events.1004.desc
+
+	picture = kob_expanded_trade_goods
+
+	is_triggered_only = yes
+
+	immediate = {
+		
+	}
+
+	option = { # Let's diggy diggy
+		name = kob_expanded_misc_events.1004.a
+
+		random_list = {
+			45 = {
+				change_trade_goods = iron
+			}
+			45 ={
+				change_trade_goods = copper
+			}
+			8 = {
+				change_trade_goods = gems
+			}
+			8 = {
+				change_trade_goods = gold
+			}
+		}
+
+		add_province_modifier = {
+			name = kob_expanded_mining_development
+			duration = 1825
+		}
 	}
 }

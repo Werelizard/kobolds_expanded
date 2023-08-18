@@ -135,7 +135,7 @@ kob_expanded_undercity = {
         }
 
         cost_to_upgrade = {
-            factor = 3000
+            factor = 5000
         }
 
         province_modifiers = {
@@ -144,7 +144,6 @@ kob_expanded_undercity = {
         }
 
         area_modifier = {
-			allowed_num_of_manufactories = 1
         }
 
         country_modifiers = {
@@ -162,12 +161,12 @@ kob_expanded_undercity = {
         }
 
         cost_to_upgrade = {
-            factor = 5000
+            factor = 7500
         }
 
         province_modifiers = {
-            trade_goods_size_modifier = 0.15
-            local_development_cost_modifier = -0.9
+            trade_goods_size_modifier = 0.10
+            local_development_cost_modifier = -0.85
             allowed_num_of_buildings = 1
         }
 

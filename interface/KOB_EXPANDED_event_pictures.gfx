@@ -20,4 +20,19 @@ spriteTypes = {
 		name = "kob_expanded_event_kobold_election"
 		texturefile = "gfx//event_pictures//kob_expanded_kob_election.dds"
 	}
+
+	spriteType = { # from paradox itneractive
+		name = "kob_expanded_feast"
+		texturefile = "gfx//event_pictures//kob_expanded_feast.dds"
+	}
+
+	spriteType = { # from paradox itneractive
+		name = "kob_expanded_turnwell_burns"
+		texturefile = "gfx//event_pictures//kob_expanded_turnwell_burns.dds"
+	}
+
+	spriteType = { # from paradox itneractive
+		name = "kob_expanded_trade_goods"
+		texturefile = "gfx//event_pictures//kob_expanded_trade_goods.dds"
+	}
 }

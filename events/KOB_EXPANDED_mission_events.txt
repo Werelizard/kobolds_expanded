@@ -814,3 +814,152 @@ country_event = {
 		swap_non_generic_missions = yes
 	}
 }
+
+
+# Sacking of Turnwell
+country_event = {
+	id = kob_expanded_mission_events.1010
+	title = kob_expanded_mission_events.1010.title
+	desc = kob_expanded_mission_events.1010.desc
+
+	picture = kob_expanded_turnwell_burns
+
+	is_triggered_only = yes
+
+	option = { #Turnwell can burn!
+		name = kob_expanded_mission_events.1010.a
+
+		141 = {
+			set_base_tax = 1
+			set_base_manpower = 1
+			set_base_production = 1
+			add_devastation = 100
+			change_religion = ROOT
+			change_culture = ROOT
+		}
+
+		add_country_modifier = {
+			name = kob_expanded_scouring_turnwell
+			duration = -1
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					small_country_region = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}	
+				}
+			}
+			small_country_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		else = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 15
+			}
+		}
+	}
+}
+
+# A long expected party
+country_event = {
+	id = kob_expanded_mission_events.1011
+	title = kob_expanded_mission_events.1011.title
+	desc = kob_expanded_mission_events.1011.desc
+
+	picture = kob_expanded_feast
+
+	is_triggered_only = yes
+
+	option = { #Release small country as vassal
+		name = kob_expanded_mission_events.1011.a
+
+		trigger = {
+			NOT = {
+				exists = A97
+			}
+		}
+
+		add_country_modifier = {
+			name = kob_expanded_halflings_tolerance
+			duration = -1
+		}
+		custom_tooltip = kob_expanded_release_small_country_as_subject.tooltip
+		custom_tooltip = empty_line_tt
+		custom_tooltip = kob_expanded_small_country_gets_claims_on_small_country_region.tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						region = small_country_region
+						province_id = 141
+					}
+				}
+				add_core = A97
+				cede_province = A97
+			}
+			create_subject = {
+				subject_type = march
+				subject = A97
+			}
+			ROOT = {
+				add_historical_friend = A97
+			}
+			A97 = {
+				add_liberty_desire = -100
+				add_historical_friend = ROOT
+				small_country_region = {
+					add_permanent_claim = PREV
+				}
+			}
+		}
+	}
+
+	option = { #Release small country later
+		name = kob_expanded_mission_events.1011.b
+
+		trigger = {
+			NOT = {
+				exists = A97
+			}
+		}
+
+		custom_tooltip = kob_expanded_release_small_country_later.tooltip
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = kob_expanded_halflings_tolerance
+			duration = -1
+		}
+
+		hidden_effect = {
+			set_country_flag = kob_expanded_can_form_small_country_flag
+		}
+	}
+
+	option = { #If small country exists
+		name = kob_expanded_mission_events.1011.c
+
+		trigger = {
+			exists = A97
+		}
+
+		custom_tooltip = kob_expanded_release_small_country_later.tooltip
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = kob_expanded_halflings_tolerance
+			duration = -1
+		}
+
+		small_country_region = {
+			add_permanent_claim = ROOT
+		}
+
+		hidden_effect = {
+			set_country_flag = kob_expanded_can_form_small_country_flag
+		}
+	}
+}

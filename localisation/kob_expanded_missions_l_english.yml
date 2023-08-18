@@ -27,7 +27,7 @@
  kob_starter_skewer_eagle_title:0 "Skewer the Eagle"
  kob_conquer_green_scales_title:0 "[ROOT.Getkob_expanded_green_scales_mission_title]"
  kob_starter_push_along_coast_title:0 "The Fall of Celmaldor"
- kob_starter_dominate_north_gulf_title:0 "The Northern Shores"
+ kob_starter_dominate_north_gulf_title:0 "The Northern Dens"
 
  ## Mission descriptions
 
@@ -62,13 +62,12 @@
  kob_expanded_largerArmyThanTheOwnerOfCelmaldor.tooltip:0 "§Y[Root.GetName]§! has a larger army than §YCelmaldor§!'s owner."
  kob_expanded_gainPermanentClaimOnSerpentPassAndFrozenPassCoast.tooltip:0 "§Y[Root.GetName]§! gains permanent claims on the §YFrostbridges§! area as well as §YColdmarket§!, §YEnvermarck§!, §YBayvic§! and §YOrdal§!."
  kob_expanded_unlockKoboldUnificationCB.tooltip:0 "Unlocks the §YKobold Reclamation§! casus belli. This casus belli will allow us to press our claims against any other nations owing provinces in the §YDragoncoast§! region as well as the §YWestmoors§! and §YMoorhills§! areas."
- kob_expanded_ControlSerpentPassAndFrozenPassCoast.tooltip:0 "§Y[Root.GetName]§! or its non-tributary subjects own all provinces in the §YFrostbridges§! area, as well as the provinces of §YColdmarket§!, §YEnvermarck§!, §YBayvic§! and §YOrdal§!."
  kob_expanded_alenicChargeModifierLostOnDefeat.tooltip:0 "[Root.GetName] gets '§YThe Kobold Charge§!' until we §Olose a war§!, giving the following effects:\nPrestige from Land battles: §G+100.0%§!\nShock Damage: §G+5.0%§!\n"
  kob_expanded_purgingOrExpellingGnomes.tooltip:0 "Is §Ypurging§! or §Yexpelling§! the gnomes."
  kob_expanded_allCoresWeOwnOfNimscoddDestroyed.tooltip:0 "All of §YNimscodd§!'s cores will be destroyed."
  kob_expanded_allGnomeProvincesForcefullyConverted.tooltip:0 "All of §YNimscodd§'s cores will be destroyed."
  kob_expanded_ownedByRootOrNonTributarySubject.tooltip:0 "Is owned by §Y[Root.GetName]§! or its non-tributary, non-gnomish subjects."
- kob_expanded_gnomishProvincesGetUnrest.tooltip:0 "Every owned province in the §YDragon Coast§! region that are part of the §YGnomish§! culture group get '§YDisplaced Gnomes§!' for §Y10 years§!, giving the following effects:\nLocal Unrest: §R+4.00§!\nLocal Development Cost: §G-5.0%§!\n\nThe §YKobold§! minority size will be §GAdded/Increased§! in the same provinces."
+ kob_expanded_gnomishProvincesGetUnrest.tooltip:0 "Every owned province in the §YDragon Coast§! region that are part of the §YGnomish§! culture group get '§YDisplaced Gnomes§!' for §Y10 years§!, giving the following effects:\nLocal Unrest: §R+4.00§!\nLocal Development Cost: §G-5.0%§!\n\n§YKobold§! minority sizes will be §GAdded/Increased§! in the same provinces."
  kob_expanded_is_prosperous.tooltip:0 "Is prosperous."
  kob_expanded_isNotMonstrous.tooltip:0 "§Y[Root.GetName]§! is not considered a monstrous nation."
  kob_expanded_neitherOrExpellingGnomes.tooltip:0 "Is neither §Ypurging§! or §Yexpelling§! the gnomes."
@@ -106,6 +105,9 @@
  kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_with_grain_five_production.tooltip:0 "All §YGrain§! producing provinces in the §YPearpoint§!, §YApplefields§!, §YNorley§! and §YElkmarch§! areas have a §Yfarm estate§! building and §Y5 £kob_expanded_base_production£§! base production."
  kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_kobold_or_infantry.tooltip:0 "All  provinces in the §YPearpoint§!, §YApplefields§!, §YNorley§! and §YElkmarch§! areas as well as §Y[141.GetName]§! are either in the §YKobold§! culture group or have §Y5§! infantry regiments present."
  kob_expanded_purging_or_expelling_halflings.tooltip:0 "Is §Ypurging§! or §Yexpelling§! the haflings."
+ kob_expanded_serpentshead_changes_to_greenscale_culture.tooltip:0 "Every province in the §YSerpentshead§! area as well as §YDeland§! will change to §YGreenscale Kobold§! culture. \n\n§YKobold§! minority sizes will be §GAdded/Increased§! in the same provinces. §YHuman§! and §YElven§! minority sizes will be §RRemoved/Decreased§! in the same provinces."
+ kob_expanded_serpentshead_changes_to_our_culture.tooltip:0 "Every province in the §YSerpentshead§! area as well as §YDeland§! will change to §YKobildzani Kobold§! culture. \n\n§YKobold§! minority sizes will be §GAdded/Increased§! in the same provinces. §YHuman§! and §YElven§! minority sizes will be §RRemoved/Decreased§! in the same provinces."
+ kob_expanded_permanent_claim_serpentshead_trade_node.tooltip:0 "§Y[Root.GetName]§! gets permanent claims on every province in the §YSerpentshead§! trade node."
 
  ## Mission-triggered events
 
@@ -160,7 +162,20 @@
  kob_expanded_mission_events.1009.desc:0 ""
  kob_expanded_mission_events.1009.a:0 "The wealth of the world calls to us!"
  kob_expanded_mission_events.1009.b:0 "Our Draconic ancestry beckons us."
-  kob_expanded_mission_events.1009.c:0 "Artificery is the future!"
+ kob_expanded_mission_events.1009.c:0 "Artificery is the future!"
+
+ kob_expanded_mission_events.1010.title:0 "The Scouring of Turnwell"
+ kob_expanded_mission_events.1010.desc:0 ""
+ kob_expanded_mission_events.1010.a:0 "Let the Halflings burn!"
+
+ kob_expanded_mission_events.1011.title:0 "A Long Expected Party"
+ kob_expanded_mission_events.1011.desc:0 ""
+ kob_expanded_mission_events.1011.a:0 "We welcome the halflings as our fellows!"
+ kob_expanded_mission_events.1011.b:0 "What?...hic-...sure, sure."
+ kob_expanded_mission_events.1011.c:0 "All of the Small Country shall be freed!"
+ kob_expanded_release_small_country_as_subject.tooltip:0 "§YSmall Country§! will be released as our §Ymarch§!."
+ kob_expanded_small_country_gets_claims_on_small_country_region.tooltip:0 "§YSmall Country§! will gain permanent claims on the §YSmall Country§! region."
+ kob_expanded_release_small_country_later.tooltip:0 "We will be able to form §YSmall Country§! via a decision and release them a a subject."
 
  ## Mission modifiers
 
@@ -191,6 +206,8 @@
  kob_expanded_litteracy_reform:0 "Education Programs"
  kob_expanded_gnomish_autonomy:0 "Gnomish Autonomy"
  kob_expanded_dismantle_empire:0 "Kobildzan, Ascendant"
+ kob_expanded_halflings_tolerance:0 "Our Short Brethren"
+ kob_expanded_scouring_turnwell:0 "The Scouring"
 
  ## Custom Localisation
 

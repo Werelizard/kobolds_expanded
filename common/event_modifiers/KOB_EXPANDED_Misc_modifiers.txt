@@ -1,3 +1,5 @@
+# Province modifiers
+
 kob_expanded_depths_1 = {
 	local_development_cost = -0.5
 }
@@ -7,10 +9,14 @@ kob_expanded_depths_2 = {
 }
 
 kob_expanded_depths_3 = {
-	local_development_cost = -0.9
+	local_development_cost = -0.85
 }
 
 kob_expanded_gold_hoard = {
 	local_gold_depletion_chance_modifier = -1
-	inflation_reduction = 0.5
+	inflation_reduction = -0.25
+}
+
+kob_expanded_mining_development = {
+	local_production_efficiency = -1
 }

@@ -663,6 +663,9 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 		}
 
 		effect = {
+			country_event = {
+				id = kob_expanded_mission_events.1011
+			}
 		}
 	}
 
@@ -781,7 +784,9 @@ KOBILDZAN_HALFLINGS_INTOLERANCE = {
 		}
 
 		effect = {
-			
+			country_event = {
+				id = kob_expanded_mission_events.1010
+			}
 		}
 	}
 
@@ -1636,21 +1641,6 @@ KOBOLD_STARTER_EXPANDED_5 = {
 			country_event = {
 				id = kob_expanded_mission_events.1007
 			}
-			custom_tooltip = empty_line_tt
-			custom_tooltip = kob_expanded_gainPermanentClaimOnSerpentPassAndFrozenPassCoast.tooltip
-			hidden_effect = {
-				frostbridges_area = {
-					add_permanent_claim = ROOT
-				}
-				northern_greatwoods_area = {
-					add_permanent_claim = ROOT
-					has_port = yes
-				}
-				dinesck_area = {
-					add_permanent_claim = ROOT
-					has_port = yes
-				}
-			}
 		}
 	}
 
@@ -1676,58 +1666,91 @@ KOBOLD_STARTER_EXPANDED_5 = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = kob_expanded_ControlSerpentPassAndFrozenPassCoast.tooltip
-				frostbridges_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+			695 = {
+				num_of_times_improved_by_owner = 5
+				OR = {
+					has_building = dock
+					has_building = drydock
 				}
-				northern_greatwoods_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-					has_port = yes
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
 				}
-				dinesck_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-					has_port = yes
-				}
+				has_trade_building_trigger = yes
 			}
-			OR = {
-				AND = {
-					723 = {
-						country_or_non_sovereign_subject_holds = ROOT
-						province_has_center_of_trade_of_level = 2
-						has_trade_building_trigger = yes
-					}
-					696 = {
-						country_or_non_sovereign_subject_holds = ROOT
-						province_has_center_of_trade_of_level = 2
-						has_trade_building_trigger = yes
-					}
+			serpentshead_area = {
+				type = all
+				num_of_times_improved_by_owner = 5
+				OR = {
+					has_building = dock
+					has_building = drydock
 				}
-				1322 = {
-					is_strongest_trade_power = ROOT
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
 				}
+				has_trade_building_trigger = yes
 			}
 		}
 
 		effect = {
-			723 = {
-				add_kobold_minority_size_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						culture = kobildzani_kobold 
+					}
+				}
+				custom_tooltip = kob_expanded_serpentshead_changes_to_greenscale_culture.tooltip
+				hidden_effect = {
+					695 = {
+						add_kobold_minority_size_effect = yes
+						remove_human_minority_size_effect = yes
+						remove_elven_minority_size_effect = yes
+						add_nationalism = -15
+						change_culture = greenscale_kobold
+						change_religion = ROOT
+					}
+					serpentshead_area = {
+						type = all
+						add_kobold_minority_size_effect = yes
+						remove_human_minority_size_effect = yes
+						remove_elven_minority_size_effect = yes
+						add_nationalism = -15
+						change_culture = greenscale_kobold
+						change_religion = ROOT
+					}
+				}
 			}
-			696 = {
-				add_kobold_minority_size_effect = yes
+			else = {
+				custom_tooltip = kob_expanded_serpentshead_changes_to_our_culture.tooltip
+				hidden_efect = {
+					695 = {
+						add_kobold_minority_size_effect = yes
+						remove_human_minority_size_effect = yes
+						remove_elven_minority_size_effect = yes
+						add_nationalism = -15
+						change_culture = ROOT
+						change_religion = ROOT
+					}
+					serpentshead_area = {
+						type = all
+						add_kobold_minority_size_effect = yes
+						remove_human_minority_size_effect = yes
+						remove_elven_minority_size_effect = yes
+						add_nationalism = -15
+						change_culture = ROOT
+						change_religion = ROOT
+					}
+				}
 			}
-			add_country_modifier = {
-				name = kob_expanded_serpenthead_master
-				duration = 7300
-			}
-			define_advisor = {
-				type = trader
-				cost_multiplier = 0.25
-				skill = 3
-				culture = ROOT
+			custom_tooltip = empty_line_tt
+			custom_tooltip = kob_expanded_permanent_claim_serpentshead_trade_node.tooltip
+			hidden_effect = {
+				1322 = {
+					every_trade_node_member_province  = {
+						add_permanent_claim = ROOT
+					}
+				}
 			}
 		}
 	}
