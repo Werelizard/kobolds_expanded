@@ -78,7 +78,7 @@
  kob_expanded_great_fair_get_inno_per_province.tooltip:0 "Every owned province with a manufactory, a production building, a Kobold population and either §Y30§! development or producing either Mithril, Gems, Glass or Precursor relic gets '§YBolstered Kobold Guilds§!' for  §Y50 years§!, giving the following effects:\nLocal Monthly Institution Growth: §G+1.0§!\nLocal Build Cost: §G-10.0%§!"
  kob_expanded_hasCompletedGreatYappingDisaster.tooltip:0 "§Y[Root.GetName]§! has had §YThe Great Yappering§! disaster."
  kob_expanded_extendGoldenAgeOrNewOneOrNextAgeWillBeLonger.tooltip:0 "If we are in a golden age, it will be extended by §Y25 years§!. If we had our golden age, we will be able to have a second one. Otherwise, our next golden age will last an additional §Y25 years§!."
- kob_expanded_cavern_and_Dragoncoast.tooltip:0 "Has the §YCavern§! terrain and is in the §YDragoncoast§! region."
+ kob_expanded_cavern_and_Dragoncoast.tooltip:0 "Every province in the §YDragoncoast§! region that has the §YCavern§! terrain is owned by §Y[Root.GetName]§!, has a §YKobold§! culture, §Y5§! development and either a §Ytax§!, §Yproduction§! or §Ymanpower§! building."
  kob_expanded_dens_give_dev_rewards.tooltip:0 "Every owned province that has the §YCavern§! terrain and is in the §YDragoncoast§! will get development depending on what buildings are present:\n\n§Y1 £kob_expanded_base_tax£ base tax§! if they have a tax building.\n§Y1 £kob_expanded_base_production§£ base production§! if they have a production building.\n§Y1 £kob_expanded_base_manpower§£ base manpower§! if they have a manpower building."
  kobildzan_keep_order_no_reward.tooltip:0 "£no£ If we complete this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, §Y[Root.GetName]§! will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, §Y[Root.GetName]§! will gain §Y200§! splendor instead."
  kobildzan_keep_order_into_absolutism_age.tooltip:0 "£yes£ Since we completed this mission by maintaining our §YInternal Disorder§! below 20 into and beyond the Age of Witch-Kings, §Y[Root.GetName]§! will get '§YAn Ordered Society§!' for §Y20 years§!, giving the following effects:\nMonthly Disorder: §G-0.2§!\n\n£no£ If we complete this mission by surviving §YThe Great Yappering§! disaster, §Y[Root.GetName]§! will gain §Y200§! splendor instead."
@@ -98,6 +98,14 @@
  kob_expanded_imperial_incident_kobold_invasion_can_fire.tooltip:0 "§RThe imperial incident 'The Shadow of Kobildzan' will be able to fire, if it hasn't already.§!"
  kob_expanded_empire_not_exists.tooltip:0 "The Empire of Anbennar does not exist"
  kob_expanded_control_elector_emperor_provinces.tooltip:0 "The Emperor and the Elector's capitals are owned by §Y[Root.GetName]§!, its subjects or its allies."
+ kob_expanded_develop_hills.tooltip:0 "Every §Yhills§! and §Yhighlands§! province in the §YDragoncoast§! region is owned by §Y[Root.GetName]§!, has a §Yproduction§! building and either §Y5 £kob_expanded_base_production£§! base production or §Y10§! development."
+ kob_expanded_all_gnomish_provinces_dragoncoast_owned_tolerated.tooltip:0 "All §YCliff Gnome§! culture provinces in the §YDragoncoast§! region are owned by §Y[Root.GetName]§!, have an accepted culture, and are either §Yprosperous§! or have been improved §Y5§! times."
+ kob_expanded_all_kobold_provinces_in_cannor_are_cores.tooltip:0 "All §YKobold§! provinces in §YWestern Cannor§! are owned by §Y[Root.GetName]§! as core provinces."
+ kob_expanded_dismantle_anbennar.tooltip:0 "The §YEmpire of Anbennar§! will be dismantled!"
+ kob_expanded_all_gnomish_provinces_in_dragoncoast_are_owned_by_us.tooltip:0 "All §YCliff Gnome§! provinces in the §YDragoncoast§! region are owned by §Y[Root.GetName]§!."
+ kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_with_grain_five_production.tooltip:0 "All §YGrain§! producing provinces in the §YPearpoint§!, §YApplefields§!, §YNorley§! and §YElkmarch§! areas have a §Yfarm estate§! building and §Y5 £kob_expanded_base_production£§! base production."
+ kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_kobold_or_infantry.tooltip:0 "All  provinces in the §YPearpoint§!, §YApplefields§!, §YNorley§! and §YElkmarch§! areas as well as §Y[141.GetName]§! are either in the §YKobold§! culture group or have §Y5§! infantry regiments present."
+ kob_expanded_purging_or_expelling_halflings.tooltip:0 "Is §Ypurging§! or §Yexpelling§! the haflings."
 
  ## Mission-triggered events
 

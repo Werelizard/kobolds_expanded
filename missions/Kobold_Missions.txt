@@ -70,16 +70,27 @@ KOBOLD_STARTER_EXPANDED_1 = {
 			OR = {
 				province_id = 169
 				owned_by = A06
-			}	
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 
 		trigger = {
 			169 = {
-				owner = {
-					culture_group = kobold
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			OR = {
+				AND = {
+					169 = {
+						controlled_by = ROOT
+					}
+					is_in_war = {
+						attacker_leader = ROOT
+						defender_leader = A06
+						war_score = 90
+					}
+				}
 				NOT = {
 					exists = A06
 				}
@@ -184,7 +195,7 @@ KOBOLD_STARTER_GNOMES_PURGE = {
 
 		provinces_to_highlight = {
 			region = dragon_coast_region
-			culture_group = gnomish
+			culture = cliff_gnome
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -201,20 +212,17 @@ KOBOLD_STARTER_GNOMES_PURGE = {
 			NOT = {
 				exists = A06
 			}
-			dragon_coast_region = {
-				type = all
-				culture_group = gnomish
-				custom_trigger_tooltip = {
-					tooltip = kob_expanded_ownedByRootOrNonTributarySubject.tooltip
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_all_gnomish_provinces_in_dragoncoast_are_owned_by_us.tooltip
+				dragon_coast_region = {
 					OR = {
-						owned_by = ROOT
-						owner = {
-							is_subject_of = ROOT
-							NOT = {
-								culture_group = gnomish
-							}
+						NOT = { culture = cliff_gnome }
+						AND = {
+							culture = cliff_gnome
+							owned_by = ROOT
 						}
 					}
+					type = all
 				}
 			}
 		}
@@ -236,6 +244,7 @@ KOBOLD_STARTER_GNOMES_PURGE = {
 				}
 				169 = {
 					change_culture = ROOT
+					change_religion = ROOT
 					add_base_tax = -4
 					add_base_production = -4
 					add_base_manpower = -6
@@ -287,7 +296,9 @@ KOBOLD_STARTER_GNOMES_PURGE = {
 					NOT = {
 						average_unrest = 1
 					}
-					has_spawned_rebels = nationalist_rebels
+					NOT = {
+						has_spawned_rebels = nationalist_rebels
+					}
 				}
 			}
 			NOT = {
@@ -344,13 +355,30 @@ KOBOLD_STARTER_GNOMES_TOLERANCE = {
 			kob_starter_fall_of_nimscodd
 		}
 
+		provinces_to_highlight = {
+			region = dragon_coast_region 
+			culture = cliff_gnome
+			OR = {
+				AND = {
+					NOT = {
+						is_prosperous = yes
+					}
+					NOT = {
+						num_of_times_improved_by_owner = 5
+					}
+				}
+				NOT = {
+					has_owner_accepted_culture = yes
+				}
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
 		trigger = {
 			NOT = {
 				exists = A06
-			}
-			169 = {
-				owned_by = ROOT
-				has_owner_accepted_culture = yes
 			}
 			custom_trigger_tooltip = {
 				tooltip = kob_expanded_neitherOrExpellingGnomes.tooltip
@@ -361,17 +389,22 @@ KOBOLD_STARTER_GNOMES_TOLERANCE = {
 					has_country_modifier = racial_pop_gnomish_expulsion
 				}
 			}
-			dragon_coast_region = {
-				type = all
-				owned_by = ROOT
-				culture_group = gnomish
-				has_owner_accepted_culture = yes
-				OR = {
-					custom_trigger_tooltip = {
-						tooltip = kob_expanded_is_prosperous.tooltip
-						is_prosperous = yes
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_all_gnomish_provinces_dragoncoast_owned_tolerated.tooltip
+				dragon_coast_region = {
+					OR = {
+						NOT = { culture = cliff_gnome }
+						AND = {
+							culture = cliff_gnome
+							owned_by = ROOT
+							has_owner_accepted_culture = yes
+							OR = {
+								is_prosperous = yes
+								num_of_times_improved_by_owner = 5
+							}
+						}
 					}
-					num_of_times_improved_by_owner = 5
+					type = all
 				}
 			}
 		}
@@ -549,6 +582,9 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 
 		trigger = {
 			medium_tolerance_halfling_race_trigger = yes
+			141 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			applefields_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -567,40 +603,61 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_with_grain_five_production.tooltip
-				147 = {
-					country_or_non_sovereign_subject_holds = ROOT
-					base_production = 5
-					if = {
-						limit = {
+				applefields_area = {
+					OR = {
+						NOT = {
 							trade_goods = grain
 						}
-						has_building = farm_estate
+						AND = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = grain
+							has_building = farm_estate
+							base_production = 5
+						}
 					}
+					type = all
 				}
-				149 = {
-					country_or_non_sovereign_subject_holds = ROOT
-					has_manufactory_trigger = yes
-					base_production = 5
+				pearpoint_area = {
+					OR = {
+						NOT = {
+							trade_goods = grain
+						}
+						AND = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = grain
+							has_building = farm_estate
+							base_production = 5
+						}
+					}
+					type = all
 				}
-				76 = {
-					country_or_non_sovereign_subject_holds = ROOT
-					has_manufactory_trigger = yes
-					base_production = 5
+				norley_area = {
+					OR = {
+						NOT = {
+							trade_goods = grain
+						}
+						AND = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = grain
+							has_building = farm_estate
+							base_production = 5
+						}
+					}
+					type = all
 				}
-				12 = {
-					country_or_non_sovereign_subject_holds = ROOT
-					has_manufactory_trigger = yes
-					base_production = 5
-				}
-				139 = {
-					country_or_non_sovereign_subject_holds = ROOT
-					has_manufactory_trigger = yes
-					base_production = 5
-				}
-				163 = {
-					country_or_non_sovereign_subject_holds = ROOT
-					has_manufactory_trigger = yes
-					base_production = 5
+				lorentish_approach_area = {
+					OR = {
+						NOT = {
+							trade_goods = grain
+						}
+						AND = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = grain
+							has_building = farm_estate
+							base_production = 5
+						}
+					}
+					type = all
 				}
 			}
 		}
@@ -635,8 +692,92 @@ KOBILDZAN_HALFLINGS_INTOLERANCE = {
 			kob_starter_push_south
 		}
 
+		provinces_to_highlight = {
+			OR = {
+				area = applefields_area
+				area = pearpoint_area
+				area = norley_area
+				area = lorentish_approach_area
+				province_id = 141
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					infantry_in_province = 5
+				}
+				NOT = {
+					culture_group = kobold
+				}
+			}
+		}
+
 		trigger = {
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_purging_or_expelling_halflings.tooltip
+				OR = {
+					has_country_modifier = racial_pop_halfling_purge 
+					has_country_modifier = racial_pop_halfling_expulsion
+				}
+			}
+			141 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			applefields_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pearpoint_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			norley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lorentish_approach_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_kobold_or_infantry.tooltip
+				141 = {
+					OR = {
+						infantry_in_province = 5
+						culture_group = kobold
+					}
+					type = all
+				}
+				applefields_area = {
+					OR = {
+						infantry_in_province = 5
+						culture_group = kobold
+					}
+					type = all
+				}
+				pearpoint_area = {
+					OR = {
+						infantry_in_province = 5
+						culture_group = kobold
+					}
+					type = all
+				}
+				norley_area = {
+					OR = {
+						infantry_in_province = 5
+						culture_group = kobold
+					}
+					type = all
+				}
+				lorentish_approach_area = {
+					OR = {
+						infantry_in_province = 5
+						culture_group = kobold
+					}
+					type = all
+				}
+			}
 		}
 
 		effect = {
@@ -929,9 +1070,19 @@ KOBOLD_STARTER_EXPANDED_3 = {
 			NOT = {
 				is_at_war = yes
 			}
-			owns_all_provinces = {
-				culture_group = kobold
-				superregion = western_cannor_superregion
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_all_kobold_provinces_in_cannor_are_cores.tooltip
+				western_cannor_superregion = {
+					OR = {
+						NOT = { culture_group = kobold }
+						AND = {
+							culture_group = kobold
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					type = all
+				}
 			}
 		}
 
@@ -1615,25 +1766,33 @@ KOBILDZAN_1 = {
 		}
 
 		trigger = {
-			dragon_coast_region = {
-				type = all
-				owned_by = ROOT
-				OR = {
-					has_terrain = highlands
-					has_terrain = hills
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_develop_hills.tooltip
+				dragon_coast_region = {
+					OR = {
+						AND = {
+							NOT = {
+								has_terrain = highlands
+							}
+							NOT = {
+								has_terrain = hills
+							}
+						}
+						AND = {
+							OR = {
+								has_terrain = highlands
+								has_terrain = hills
+							}
+							owned_by = ROOT
+							OR = {
+								base_production = 5
+								development = 10
+							}
+							has_production_building_trigger = yes	
+						}
+					}
+					type = all
 				}
-			}
-			every_owned_province = {
-				region = dragon_coast_region
-				OR = {
-					has_terrain = highlands
-					has_terrain = hills
-				}
-				OR = {
-					base_production = 5
-					development = 10
-				}
-				has_production_building_trigger = yes	
 			}
 		}
 
@@ -1693,10 +1852,7 @@ KOBILDZAN_1 = {
 				full_idea_group = economic_ideas
 			}
 			any_owned_province = {
-				OR = {
-					has_owner_accepted_culture = yes
-					culture_group = kobold
-				}
+				culture_group = kobold
 				has_manufactory_trigger = yes
 				has_production_building_trigger = yes
 				OR = {
@@ -1704,6 +1860,7 @@ KOBILDZAN_1 = {
 					trade_goods = gems
 					trade_goods = glass
 					trade_goods = precursor_relics 
+					trade_goods = copper
 					development = 30
 				}
 			}
@@ -1768,24 +1925,22 @@ KOBILDZAN_2 = {
 		}
 
 		trigger = {
-			owns_all_provinces = {
-				region = dragon_coast_region
-				has_terrain = cavern 
-			}
-			all_owned_province = {
-				custom_trigger_tooltip = {
-					tooltip = kob_expanded_cavern_and_Dragoncoast.tooltip
-					AND = {
-						region = dragon_coast_region
-						has_terrain = cavern 
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_cavern_and_Dragoncoast.tooltip
+				dragon_coast_region = {
+					OR = {
+						NOT = { has_terrain = cavern }
+						AND = {
+							has_terrain = cavern
+							owned_by = ROOT
+							OR = {
+								has_manpower_building_trigger = yes
+								has_tax_building_trigger = yes
+								has_production_building_trigger = yes
+							}
+						}
 					}
-				}
-				development = 5
-				culture_group = kobold
-				OR = {
-					has_manpower_building_trigger = yes
-					has_tax_building_trigger = yes
-					has_production_building_trigger = yes
+					type = all
 				}
 			}
 		}
@@ -2103,8 +2258,16 @@ KOBILDZAN_4 = {
 		}
 
 		effect = {
-			dismantle_hre = yes
-			custom_tooltip = empty_line_tt
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				custom_tooltip = kob_expanded_dismantle_anbennar.tooltip
+				hidden_effect = {
+					dismantle_hre = yes
+				}
+				custom_tooltip = empty_line_tt
+			}
 			if = {
 				limit = {
 					OR = {

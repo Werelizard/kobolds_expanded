@@ -1,0 +1,8 @@
+spriteTypes = {
+	#Kobolds Expanded
+	spriteType = {
+		name = "GFX_holy_order_kobold_governor"
+		texturefile = "gfx/interface/holy_orders/Kobold_Governor.dds"
+		noOfFrames = 4
+	}
+}
