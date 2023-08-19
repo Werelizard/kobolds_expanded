@@ -3,7 +3,7 @@ guiTypes = {
 		name = "kob_expanded_disorder_gui"
 		backGround = ""
 		position = { x = 0 y = 0 }
-		size = { x = 340 y = 122 }
+		size = { x = 340 y = 140 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""

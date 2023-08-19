@@ -11,6 +11,8 @@
  kob_expanded_kobold_monarchy_centralised_reform_desc:0 "Having done away with the troubles of the Great Yappering, the Kobildzani Kingdom was succesfully reformed, implementing a strong, centralised monarchy with Kobold elements of governance."
  kob_expanded_kobold_monarchy_decentralised_reform:0 "Reformed Kobildzani Kingdom"
  kob_expanded_kobold_monarchy_decentralised_reform_desc:0 "Having done away with the troubles of the Great Yappering, the Kobildzani Kingdom was succesfully reformed, implementing a revised decentralised monarchy with Kobold elements of governance."
+ kob_expanded_kobold_mad_science:0 "Technocratic Administration"
+ kob_expanded_kobold_mad_science_desc:0 "The state serves the purposes of a technocratic administration, and is wholly dedicated to the pursuit of techno-magical innovation."
 
  ## Mechanics
  
@@ -29,7 +31,10 @@
  monthly_kob_expanded_disorder:0 "Monthly Disorder"
  kob_expanded_disorder_gain_modifier:0 "Disorder Gain Modifier"
 
- kob_expanded_recklessness:0 "Inspiration"
+ kob_expanded_recklessness:0 "Recklessness"
+ monthly_kob_expanded_recklessness:0 "Monthly Recklessness"
+ kob_expanded_recklessness_gain_modifier:0 "Recklessness Gain Modifier"
+ ability_kob_expanded_mad_science:0 "§YScientific Recklessness§!"
 
  # Government Names
  

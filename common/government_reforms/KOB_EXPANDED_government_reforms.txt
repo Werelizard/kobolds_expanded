@@ -184,9 +184,8 @@ kob_expanded_kobold_mad_science = {
 	
 	#Modifiers
 	modifiers = {
-		global_institution_spread = 0.1
 		artificers_influence_modifier = 0.1
-		artificers_loyalty_modifier = 0.1
+		artificers_loyalty_modifier = 0.05
 	}
 
 	#Mechanics

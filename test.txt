@@ -1,1 +1,7 @@
-add_government_reform  = kob_expanded_kobold_mad_science
+# add_government_reform = kob_expanded_kobold_mad_science
+
+add_government_power = {
+	mechanic_type = kob_expanded_mad_science
+	power_type = kob_expanded_recklessness
+	value = -32
+}

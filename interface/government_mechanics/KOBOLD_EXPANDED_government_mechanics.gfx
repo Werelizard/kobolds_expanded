@@ -40,4 +40,21 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+
+	spriteType = {
+		name = "GFX_kob_expanded_recklessness_frame"
+		texturefile = "gfx/interface/government_mechanics/mad_science/GFX_kob_expanded_recklessness_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	progressbartype = {
+		name = "GFX_single_government_power_bar_kob_expanded_recklessness"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/mad_science/GFX_kob_expanded_recklessness_active.dds"
+		textureFile2 = "gfx/interface/government_mechanics/mad_science/GFX_kob_expanded_recklessness_passive.dds"
+		size = { x = 267 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
 }

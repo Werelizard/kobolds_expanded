@@ -8,9 +8,11 @@
 kob_expanded_mad_science= {
 	powers = {
 		kob_expanded_recklessness = {
+			gui = kob_expanded_mad_science_mech
 			max = 100
 			min = 0
 			base_monthly_growth = -1
+			is_good = no
 			scaled_modifier = {
 				trigger = {
 					has_government_power = { 
@@ -20,11 +22,13 @@ kob_expanded_mad_science= {
 					}
 				}
 				modifier = {
-					embracement_cost = -0.5
-					innovativeness_gain = 0.5
+					global_institution_spread = 0.5
 					administrative_efficiency = -0.1
 					production_efficiency = -0.25
 				}
+			}
+			on_max_reached = {
+				custom_tooltip = kob_expanded_accidents_happen.tooltip
 			}
 		}
 	}
@@ -32,6 +36,7 @@ kob_expanded_mad_science= {
 		#Sponsor Researchers (Get a cheap advisor + 1 possible advisor)
 		KOBOLD_TECHNOCRACY_SPONSOR_RESEARCHER = {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_SPONSOR_RESEARCH
+			gui = kob_expanded_mad_science_interaction
 			trigger = {
 				years_of_income = 2
 			}
@@ -56,6 +61,7 @@ kob_expanded_mad_science= {
 		#Sponsor Project Breakthrough (Lower tech in one area and slightly increse it everywhere else + idea cost)
 		KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH = {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH
+			gui = kob_expanded_mad_science_interaction
 			trigger = {
 				years_of_income = 2
 			}
@@ -80,6 +86,7 @@ kob_expanded_mad_science= {
 		#Sponsor Public Lectures (Gives a +0.1 Global Instituon growth in capital area + dev discount in provinces that do NOT have the latest institution)
 		KOBOLD_TECHNOCRACY_PUBLIC_LECTURES = {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_PUBLIC_LECTURES
+			gui = kob_expanded_mad_science_interaction
 			trigger = {
 				years_of_income = 2
 			}

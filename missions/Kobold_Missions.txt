@@ -1653,11 +1653,30 @@ KOBOLD_STARTER_EXPANDED_5 = {
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			has_port = yes
 			OR = {
-				area = northern_greatwoods_area
-				area = frostbridges_area	
-				area = dinesck_area
+				area = serpentshead_area
+				province_id = 695
+			}
+			OR = {
+				AND = {
+					NOT = {
+						has_building = dock
+					}
+					NOT = {
+						has_building = drydock
+					}
+				}
+				AND = {
+					NOT = {
+						has_building = shipyard
+					}
+					NOT = {
+						has_building = grand_shipyard
+					}
+				}
+				NOT = {
+					has_trade_building_trigger = yes
+				}
 			}
 		}
 
