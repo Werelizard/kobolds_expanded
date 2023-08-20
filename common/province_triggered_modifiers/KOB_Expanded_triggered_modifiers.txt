@@ -9,7 +9,8 @@ kob_expanded_kob_fortress = {
 		has_fort_building_trigger = yes
 	}
 
-	local_defensiveness = 0.33
+	local_defensiveness = 0.15
 	local_hostile_attrition = 1
+	max_attrition = 1
 	local_assault_fort_ability = -0.75
 }

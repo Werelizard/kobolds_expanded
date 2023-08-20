@@ -134,7 +134,7 @@ greenscale_ideas = {
 	}
 
 	kob_expanded_greenscale_6 = { # Survivors
-		stability_cost_modifier = -0.2
+		global_monthly_devastation = -1
 	}
 
 	kob_expanded_greenscale_7 = { # New Traders
@@ -160,8 +160,8 @@ kobildzani_ideas = {
 	free = yes
 
 	kob_expanded_kobildzan_1 = { # United and in peace
-		war_exhaustion = -0.1
-		manpower_in_culture_group_provinces = 0.25
+		war_exhaustion_cost = -0.33
+		global_manpower_modifier = 0.15
 	}
 
 	kob_expanded_kobildzan_2 = { # Regulate the adminsitrators
@@ -170,15 +170,15 @@ kobildzani_ideas = {
 	}
 
 	kob_expanded_kobildzan_3 = { # New Dens
-		build_cost = -0.1
+		build_cost = -0.10
 	}
 
 	kob_expanded_kobildzan_4 = { # Kobold Craftmanship
-		global_trade_power = 0.1
+		global_trade_power = 0.10
 	}
 
 	kob_expanded_kobildzan_5 = { # The Birthplace of Dragonsteel
-		fire_damage_received = -0.05
+		fire_damage_received = -0.1
 		production_efficiency = 0.1
 	}
 
@@ -187,6 +187,6 @@ kobildzani_ideas = {
 	}
 
 	kob_expanded_kobildzan_7 = { # The Cannorian Dragon
-		artillery_power = 0.1
+		artillery_fire = 1
 	}
 }

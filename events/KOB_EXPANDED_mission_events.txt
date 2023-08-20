@@ -156,7 +156,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_red_scale_military
-			duration = 5475
+			duration = 9125
 		}
 
 		if = {
@@ -165,7 +165,7 @@ country_event = {
 			}
 			change_estate_land_share = {
 				estate = estate_monstrous_tribes
-				share = 10
+				share = 5
 			}
 			event_target:koboldEventTarget = {
 				add_base_manpower = 2
@@ -178,7 +178,7 @@ country_event = {
 			}
 			change_estate_land_share = {
 				estate = estate_nobles
-				share = 10
+				share = 5
 			}
 			event_target:koboldEventTarget = {
 				add_base_manpower = 2
@@ -264,7 +264,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_blue_scale_military
-			duration = 5475
+			duration = 9125
 		}
 
 		if = {
@@ -273,7 +273,7 @@ country_event = {
 			}
 			change_estate_land_share = {
 				estate = estate_monstrous_tribes
-				share = 10
+				share = 5
 			}
 			event_target:koboldEventTarget = {
 				add_base_manpower = 2
@@ -286,7 +286,7 @@ country_event = {
 			}
 			change_estate_land_share = {
 				estate = estate_nobles
-				share = 10
+				share = 5
 			}
 			event_target:koboldEventTarget = {
 				add_base_manpower = 2
@@ -372,7 +372,7 @@ country_event = {
 
 		add_country_modifier = {
 			name = kob_expanded_green_scale_military
-			duration = 5475
+			duration = 9125
 		}
 
 		if = {
@@ -381,7 +381,7 @@ country_event = {
 			}
 			change_estate_land_share = {
 				estate = estate_monstrous_tribes
-				share = 10
+				share = 5
 			}
 			event_target:koboldEventTarget = {
 				add_base_manpower = 2
@@ -394,7 +394,7 @@ country_event = {
 			}
 			change_estate_land_share = {
 				estate = estate_nobles
-				share = 10
+				share = 5
 			}
 			event_target:koboldEventTarget = {
 				add_base_manpower = 2

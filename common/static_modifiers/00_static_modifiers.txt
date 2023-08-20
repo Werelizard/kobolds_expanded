@@ -705,7 +705,7 @@ negative_stability = {
 	yearly_authority = 1
 
 	#Kobolds Expanded
-	monthly_kob_expanded_disorder = 0.025
+	monthly_kob_expanded_disorder = -0.025
 }
 #Anbennar
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -1261,7 +1261,7 @@ over_extension = {
 	monthly_militarized_society = -0.05
 
 	#Kobolds expanded
-	monthly_kob_expanded_disorder = 0.5
+	monthly_kob_expanded_disorder = 0.2
 }
 
 prestige = {
@@ -1310,7 +1310,7 @@ prestige = {
 	yearly_authority = 0.5
 
 	#Kobolds Expanded
-	monthly_kob_expanded_disorder = -0.5
+	monthly_kob_expanded_disorder = -0.25
 }
 
 no_debate_in_parliament = {
@@ -1476,7 +1476,7 @@ in_golden_era = {
 	max_revolutionary_zeal = 10
 
 	#Kobolds Expanded
-	monthly_kob_expanded_disorder  = -0.1
+	monthly_kob_expanded_disorder  = -0.5
 }
 
 absolutism = {
@@ -1549,7 +1549,7 @@ power_projection = {
 	horde_unity = 0.5
 	republican_tradition = 0.2
 	#Kobolds Expanded
-	monthly_kob_expanded_disorder = -0.002
+	monthly_kob_expanded_disorder = -0.25
 }
 
 power_projection_25 = {
@@ -2606,7 +2606,7 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier #1.35
 average_global_autonomy = { #100% autonomy => 100% modifier #1.35
 	monthly_ottoman_decadence = 0.25
 	#Kobold Expanded
-	monthly_kob_expanded_disorder = 0.5
+	monthly_kob_expanded_disorder = 0.25
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier #1.35

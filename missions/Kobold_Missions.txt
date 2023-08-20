@@ -53,6 +53,12 @@ KOBOLD_STARTER_EXPANDED_1 = {
 				name = kob_expanded_dragon_fleet
 				duration = 3650
 			}
+			storm_isles_area = {
+				add_permanent_claim = ROOT
+			}
+			nimscodd_area = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -813,6 +819,7 @@ KOBOLD_STARTER_EXPANDED_2 = {
 
 		provinces_to_highlight = {
 			province_id = 167
+			province_id = 184
 		}
 
 		required_missions = {
@@ -824,13 +831,28 @@ KOBOLD_STARTER_EXPANDED_2 = {
 				owned_by = ROOT
 				has_fort_building_trigger = yes
 			}
+			184 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+			}
 		}
 
 		effect = {
+			184 = {
+				change_culture = ROOT
+				change_religion = ROOT
+				add_province_triggered_modifier = kob_expanded_kob_fortress
+			}
 			167 = {
 				change_culture = ROOT
 				change_religion = ROOT
 				add_province_triggered_modifier = kob_expanded_kob_fortress
+			}
+			gnomish_pass_area = {
+				add_permanent_claim = ROOT
+			}
+			dragonhills_area = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -873,6 +895,13 @@ KOBOLD_STARTER_EXPANDED_2 = {
 		effect = {
 			country_event = {
 				id = kob_expanded_mission_events.1006
+			}
+			custom_tooltip = empty_line_tt
+			iochand_area = {
+				add_permanent_claim = ROOT
+			}
+			reaver_coast_area = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -960,12 +989,42 @@ KOBOLD_STARTER_EXPANDED_3 = {
 		}
 
 		effect = {
-			custom_tooltip = kob_expanded_unlockKoboldUnificationCB.tooltip
-			custom_tooltip = empty_line_tt
-			hidden_effect = {
-				set_country_flag = kob_expanded_unlock_unification_cb_flag
-			}
+			# custom_tooltip = kob_expanded_unlockKoboldUnificationCB.tooltip
+			# custom_tooltip = empty_line_tt
+			# hidden_effect = {
+			# 	set_country_flag = kob_expanded_unlock_unification_cb_flag
+			# }
 			add_yearly_manpower = 2
+			dragondowns_area = {
+				add_permanent_claim = ROOT
+			}
+			167 = {
+				add_permanent_claim = ROOT
+			}
+			dragonpoint_area = {
+				add_permanent_claim = ROOT
+			}
+			dragonspine_area = {
+				add_permanent_claim = ROOT
+			}
+			dragonheights_area = {
+				add_permanent_claim = ROOT
+			}
+			dragondepth_area = {
+				add_permanent_claim = ROOT
+			}
+			westmoor_proper_area = {
+				add_permanent_claim = ROOT
+			}
+			moorhills_area = {
+				add_permanent_claim = ROOT
+			}
+			coddorran_heights_area = {
+				add_permanent_claim = ROOT
+			}
+			694 = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -1724,7 +1783,6 @@ KOBOLD_STARTER_EXPANDED_5 = {
 				custom_tooltip = kob_expanded_serpentshead_changes_to_greenscale_culture.tooltip
 				hidden_effect = {
 					695 = {
-						add_kobold_minority_size_effect = yes
 						remove_human_minority_size_effect = yes
 						remove_elven_minority_size_effect = yes
 						add_nationalism = -15
@@ -1733,7 +1791,6 @@ KOBOLD_STARTER_EXPANDED_5 = {
 					}
 					serpentshead_area = {
 						type = all
-						add_kobold_minority_size_effect = yes
 						remove_human_minority_size_effect = yes
 						remove_elven_minority_size_effect = yes
 						add_nationalism = -15
@@ -1746,7 +1803,6 @@ KOBOLD_STARTER_EXPANDED_5 = {
 				custom_tooltip = kob_expanded_serpentshead_changes_to_our_culture.tooltip
 				hidden_efect = {
 					695 = {
-						add_kobold_minority_size_effect = yes
 						remove_human_minority_size_effect = yes
 						remove_elven_minority_size_effect = yes
 						add_nationalism = -15
@@ -1755,7 +1811,6 @@ KOBOLD_STARTER_EXPANDED_5 = {
 					}
 					serpentshead_area = {
 						type = all
-						add_kobold_minority_size_effect = yes
 						remove_human_minority_size_effect = yes
 						remove_elven_minority_size_effect = yes
 						add_nationalism = -15
@@ -2221,8 +2276,8 @@ KOBILDZAN_3 = {
 
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = kob_expanded_isNotMonstrous.tooltip
-				NOT = { has_country_modifier = monstrous_nation }
+				tooltip = kob_expanded_eventHasHappened.tooltip
+				NOT = { always = yes }
 			}
 		}
 

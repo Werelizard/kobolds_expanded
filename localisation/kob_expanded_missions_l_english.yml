@@ -13,7 +13,7 @@
  kob_starter_gnomes_purge_2_title:0 "Absolute Victory"
  kob_starter_gnomes_tolerance_1_title:0 "A Place for Gnome-Kind"
  kob_starter_gnomes_tolerance_2_title:0 "A Better Dragon Coast"
- kob_starter_conquer_pass_title:0 "The Southern Den"
+ kob_starter_conquer_pass_title:0 "The Outer Dens"
  kob_starter_push_to_the_hills_title:0 "Recover the Dragon Hills"
  kob_starter_push_south_title:0 "The March to Portnamm"
  kob_starter_rally_the_clans_title:0 "Rally the Clans"
@@ -69,7 +69,6 @@
  kob_expanded_ownedByRootOrNonTributarySubject.tooltip:0 "Is owned by §Y[Root.GetName]§! or its non-tributary, non-gnomish subjects."
  kob_expanded_gnomishProvincesGetUnrest.tooltip:0 "Every owned province in the §YDragon Coast§! region that are part of the §YGnomish§! culture group get '§YDisplaced Gnomes§!' for §Y10 years§!, giving the following effects:\nLocal Unrest: §R+4.00§!\nLocal Development Cost: §G-5.0%§!\n\n§YKobold§! minority sizes will be §GAdded/Increased§! in the same provinces."
  kob_expanded_is_prosperous.tooltip:0 "Is prosperous."
- kob_expanded_isNotMonstrous.tooltip:0 "§Y[Root.GetName]§! is not considered a monstrous nation."
  kob_expanded_neitherOrExpellingGnomes.tooltip:0 "Is neither §Ypurging§! or §Yexpelling§! the gnomes."
  kob_expanded_noGnomishProvinceHasADifferentReligionUnrestOrRecentUprising.tooltip:0 "Every owned province with §YCliff Gnome§! culture follows the §Y[Root.Religion.GetName]§!, has less than §Y1§! unrest and does not have the '§YRecent Uprising§!' modifier."
  kob_expanded_rewards_affected_by_number_of_provinces_matching_requirements.tooltip:0 "§YEvery province§! matching the requirements will gain a modifier of our choice in the triggered event - as well as a permanent country-wide reward of our chosing."
@@ -105,9 +104,10 @@
  kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_with_grain_five_production.tooltip:0 "All §YGrain§! producing provinces in the §YPearpoint§!, §YApplefields§!, §YNorley§! and §YElkmarch§! areas have a §Yfarm estate§! building and §Y5 £kob_expanded_base_production£§! base production."
  kob_expanded_all_provinces_pearpoint_applefields_norley_elkmarch_kobold_or_infantry.tooltip:0 "All  provinces in the §YPearpoint§!, §YApplefields§!, §YNorley§! and §YElkmarch§! areas as well as §Y[141.GetName]§! are either in the §YKobold§! culture group or have §Y5§! infantry regiments present."
  kob_expanded_purging_or_expelling_halflings.tooltip:0 "Is §Ypurging§! or §Yexpelling§! the haflings."
- kob_expanded_serpentshead_changes_to_greenscale_culture.tooltip:0 "Every province in the §YSerpentshead§! area as well as §YDeland§! will change to §YGreenscale Kobold§! culture. \n\n§YKobold§! minority sizes will be §GAdded/Increased§! in the same provinces. §YHuman§! and §YElven§! minority sizes will be §RRemoved/Decreased§! in the same provinces."
- kob_expanded_serpentshead_changes_to_our_culture.tooltip:0 "Every province in the §YSerpentshead§! area as well as §YDeland§! will change to §YKobildzani Kobold§! culture. \n\n§YKobold§! minority sizes will be §GAdded/Increased§! in the same provinces. §YHuman§! and §YElven§! minority sizes will be §RRemoved/Decreased§! in the same provinces."
+ kob_expanded_serpentshead_changes_to_greenscale_culture.tooltip:0 "Every province in the §YSerpentshead§! area as well as §YDeland§! will change to §YGreenscale Kobold§! culture. \n\n§YHuman§! and §YElven§! minority sizes will be §RRemoved/Decreased§! in the same provinces."
+ kob_expanded_serpentshead_changes_to_our_culture.tooltip:0 "Every province in the §YSerpentshead§! area as well as §YDeland§! will change to §YKobildzani Kobold§! culture. \n\n§YHuman§! and §YElven§! minority sizes will be §RRemoved/Decreased§! in the same provinces."
  kob_expanded_permanent_claim_serpentshead_trade_node.tooltip:0 "§Y[Root.GetName]§! gets permanent claims on every province in the §YSerpentshead§! trade node."
+ kob_expanded_eventHasHappened.tooltip:0 "The event §YThe Fate of Kobildzan§! has happened."
 
  ## Mission-triggered events
 
