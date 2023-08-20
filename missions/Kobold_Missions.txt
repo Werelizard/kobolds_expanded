@@ -1687,6 +1687,7 @@ KOBOLD_STARTER_EXPANDED_5 = {
 		trigger = {
 			695 = {
 				num_of_times_improved_by_owner = 5
+				owned_by = ROOT
 				OR = {
 					has_building = dock
 					has_building = drydock
@@ -1699,6 +1700,7 @@ KOBOLD_STARTER_EXPANDED_5 = {
 			}
 			serpentshead_area = {
 				type = all
+				owned_by = ROOT
 				num_of_times_improved_by_owner = 5
 				OR = {
 					has_building = dock

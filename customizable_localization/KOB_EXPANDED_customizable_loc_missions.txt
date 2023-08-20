@@ -230,3 +230,18 @@ defined_text = {
         localisation_key = kob_ruler_is_not_steel_scale
     }
 }
+
+# Kobold coast mission
+defined_text = {
+    name = Getkob_expanded_kobold_coast_mission_desc
+    random = no
+    text = {
+        trigger = {
+            has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+        }
+        localisation_key = kob_expanded_kobold_coast_tolerance
+    }
+    text = {
+        localisation_key = kob_expanded_kobold_coast_no_tolerance
+    }
+}
