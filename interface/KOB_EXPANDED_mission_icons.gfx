@@ -196,6 +196,14 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_kobildzan_develop_coast.dds"
 	}
 
+	####################################
+	# Mad Science Path                 #
+	####################################
+
+	spriteType = { # From Koboldpress
+		name = "mission_artificiers_placeholder"
+		texturefile = "gfx//interface//missions//mad_science_missions//mission_artificiers_placeholder.dds"
+	}
 
 	####################################
 	# The Great Yapping                #

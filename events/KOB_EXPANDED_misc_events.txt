@@ -56,6 +56,16 @@ country_event = {
 			kob_expanded_set_kobold_ruler_modifier = yes
 		}
 	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = kob_expanded_mission_events.1009
+				days = 365
+				random = 365
+			}
+		}
+	}
 }
 
 #Gnome riddles events
