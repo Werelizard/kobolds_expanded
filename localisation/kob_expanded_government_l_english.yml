@@ -34,7 +34,21 @@
  kob_expanded_recklessness:0 "Recklessness"
  monthly_kob_expanded_recklessness:0 "Monthly Recklessness"
  kob_expanded_recklessness_gain_modifier:0 "Recklessness Gain Modifier"
- ability_kob_expanded_mad_science:0 "§YScientific Recklessness§!"
+ ability_kob_expanded_mad_science:0 "§YRecklessness§!"
+ KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH:0 "Sponsor Breakthrough"
+ KOBOLD_TECHNOCRACY_SPONSOR_RESEARCHER:0 "Sponsor Researchers"
+ KOBOLD_TECHNOCRACY_PUBLIC_LECTURES:0 "Sponsor Public Lectures"
+ KOBOLD_TECHNOCRACY_PUBLIC_LECTURES_desc:0 ""
+ KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH_desc:0 ""
+ KOBOLD_TECHNOCRACY_SPONSOR_RESEARCHER_desc:0 ""
+ kob_expanded_sponsor_project_breakthrough.tooltip:0 "We will sponsor a scientific project, decreasing the technology cost of one specific type by §Y-10.0%§! and granting a §Y-5.0%§! idea cost modifier for §Y10 years§!."
+ kob_expanded_hold_public_lectures.tooltip:0 "We will fund public lectures, speeding up the current institution's spread in our capital province as well as any province with a university for §Y10 years§! for §Y10 years§!."
+ kob_expanded_sponsor_researcher.tooltip:0 "We will allocate ressources for our administration, granting us the ability to select a disconted administrative advisor of our choosing, while also gaining a §Y-10.0%§! advisor cost modifier "
+ kob_expanded_increases_recklessness_monthly.tooltip:0 "§YRecklessness§! will increase monthly by §R0.4§! for the next §Y10§! years."
+ kob_expanded_accidents_happen.tooltip:0 "§RAccidents can happen...§!"
+ kob_expanded_sponsor_research:0 "Sponsored Researcher"
+ kob_expanded_sponsor_lectures:0 "Sponsored Public Lectures"
+ kob_expanded_sponsor_breakthrough:0 "Sponsored Breakthrough"
 
  # Government Names
  
@@ -59,3 +73,5 @@
  kob_expanded_government_events.1001.e:0 "The Darkscales will assume leadership"
  kob_expanded_government_events.1001.f:0 "The Steelscales will assume leadership"
  kob_expanded_government_events.1001.g:0 "[Root.Monarch.GetTitle] [Root.Monarch.GetName] will not stand down!"
+
+ 

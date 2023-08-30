@@ -35,4 +35,24 @@ spriteTypes = {
 		name = "kob_expanded_trade_goods"
 		texturefile = "gfx//event_pictures//kob_expanded_trade_goods.dds"
 	}
+
+	spriteType = { # from Halfling Hobbies
+	name = "kob_expanded_turnwell_choice"
+	texturefile = "gfx//event_pictures//kob_expanded_turnwell_choice.dds"
+	}
+
+	spriteType = { # from shawn lee
+	name = "kob_expanded_laboratory"
+	texturefile = "gfx//event_pictures//kob_expanded_laboratory.dds"
+	}
+
+	spriteType = { # from shawn lee
+	name = "kob_expanded_university"
+	texturefile = "gfx//event_pictures//kob_expanded_university.dds"
+	}
+
+	spriteType = { # from shawn lee
+	name = "kob_expanded_scientist"
+	texturefile = "gfx//event_pictures//kob_expanded_scientist.dds"
+	}
 }

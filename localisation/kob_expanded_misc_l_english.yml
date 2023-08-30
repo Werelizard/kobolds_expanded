@@ -12,9 +12,9 @@
 
  kob_expanded_undercity:0 "The Great Depths"
  kob_expanded_undercity_desc:0 "§gDeep in the Dragoncoast, the Kobolds built a wonderous city, one deep enough to rival the Dwarves' ingenuity, reaching to encompass the entirey of the the Dragoncoast's tunnels.§!"
- kob_expanded_upgrade_depths_1.tooltip:0 "Every §YCavern§! province in the §YDragoncoas§! will also get:\nLocal Development Cost: §G-50.0%§!"
- kob_expanded_upgrade_depths_2.tooltip:0 "Every §YCavern§! province in the §YDragoncoas§! will also get:\nLocal Development Cost: §G-65.0%§!"
- kob_expanded_upgrade_depths_3.tooltip:0 "Every §YCavern§! province in the §YDragoncoas§! will also get:\nLocal Development Cost: §G-85.0%§!"
+ kob_expanded_upgrade_depths_1.tooltip:0 "Every §YCavern§! province in the §YDragoncoast§! region will also get:\nLocal Development Cost: §G-50.0%§!"
+ kob_expanded_upgrade_depths_2.tooltip:0 "Every §YCavern§! province in the §YDragoncoast§! region will also get:\nLocal Development Cost: §G-65.0%§!"
+ kob_expanded_upgrade_depths_3.tooltip:0 "Every §YCavern§! province in the §YDragoncoast§! region will also get:\nLocal Development Cost: §G-85.0%§!"
 
  ## Ruler traits
  

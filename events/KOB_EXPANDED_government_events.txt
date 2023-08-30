@@ -237,11 +237,13 @@ country_event = {
 # Events for the Mad Science mechanic         #
 ###############################################
 
-## Free Advisor
+## Sponsor researcher
 country_event = {
 	id = kob_expanded_government_events.1010
 	title = kob_expanded_government_events.1010.title
 	desc = kob_expanded_government_events.1010.desc
+
+	picture = kob_expanded_scientist
 
 	is_triggered_only = yes
 
@@ -252,15 +254,124 @@ country_event = {
 	}
 
 	option = {
-		#We will show them mercy
+		#Recruit a naturalist
 		name = kob_expanded_government_events.1010.a
+
+		define_advisor = {
+			type = natural_scientist
+			cost_multiplier = 0.5
+			skill = 3
+		}
+	}
+
+	option = {
+		#Recruit an economic theorist
+		name = kob_expanded_government_events.1010.b
+
+		define_advisor = {
+			type = master_of_mint
+			cost_multiplier = 0.5
+			skill = 3
+		}
+	}
+
+	option = {
+		#Recruit a philophser
+		name = kob_expanded_government_events.1010.c
+
+		define_advisor = {
+			type = philosopher
+			cost_multiplier = 0.5
+			skill = 3
+		}
+	}
+}
+
+## Sponsor Breakthrough
+
+country_event = {
+	id = kob_expanded_government_events.1011
+	title = kob_expanded_government_events.1011.title
+	desc = kob_expanded_government_events.1011.desc
+
+	picture = kob_expanded_laboratory
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#Add list for random project A
+
+			#Add list for random project B
+
+			#Add list for random project C
+		}
+	}
+
+	option = {
+		#Sponsor the project A
+		name = kob_expanded_government_events.1011.a
 
 	
 	}
 
 	option = {
-		#We will purge the Gnomes
-		name = kob_expanded_government_events.1010.b
+		#Sponsor the project B
+		name = kob_expanded_government_events.1011.b
 
+	
+	}
+
+	option = {
+		#Sponsor the project C
+		name = kob_expanded_government_events.1011.c
+
+	
+	}
+}
+
+## Sponsor Public Lectures
+
+country_event = {
+	id = kob_expanded_government_events.1012
+	title = kob_expanded_government_events.1012.title
+	desc = kob_expanded_government_events.1012.desc
+
+	picture = kob_expanded_university
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {
+		name = kob_expanded_government_events.1012.a
+	
+	}
+}
+
+## Accidents happen
+
+country_event = {
+	id = kob_expanded_government_events.1012
+	title = kob_expanded_government_events.1012.title
+	desc = kob_expanded_government_events.1012.desc
+
+	picture = kob_expanded_university
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {
+		name = kob_expanded_government_events.1012.a
+	
 	}
 }

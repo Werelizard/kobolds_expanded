@@ -155,6 +155,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -180,6 +183,9 @@ country_event = {
 				}
 				NOT = {
 					trade_goods = gold
+				}
+				NOT = {
+					trade_goods = gems
 				}
 			}
 		}
@@ -207,6 +213,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -232,6 +241,9 @@ country_event = {
 				}
 				NOT = {
 					trade_goods = gold
+				}
+				NOT = {
+					trade_goods = gems
 				}
 			}
 		}
@@ -259,6 +271,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -285,6 +300,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -310,6 +328,9 @@ country_event = {
 				}
 				NOT = {
 					trade_goods = gold
+				}
+				NOT = {
+					trade_goods = gems
 				}
 			}
 		}
@@ -339,6 +360,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -366,6 +390,9 @@ country_event = {
 				}
 				NOT = {
 					trade_goods = gold
+				}
+				NOT = {
+					trade_goods = gems
 				}
 			}
 		}
@@ -395,6 +422,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -422,6 +452,9 @@ country_event = {
 				}
 				NOT = {
 					trade_goods = gold
+				}
+				NOT = {
+					trade_goods = gems
 				}
 			}
 		}
@@ -451,6 +484,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -479,6 +515,9 @@ country_event = {
 				NOT = {
 					trade_goods = gold
 				}
+				NOT = {
+					trade_goods = gems
+				}
 			}
 		}
 
@@ -506,6 +545,9 @@ country_event = {
 				}
 				NOT = {
 					trade_goods = gold
+				}
+				NOT = {
+					trade_goods = gems
 				}
 			}
 		}

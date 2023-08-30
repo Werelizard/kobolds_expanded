@@ -500,10 +500,10 @@ KOBILDZAN_HALFLINGS_UNDECIDED = {
 	potential = {
 		tag = Z38
 		NOT = {
-			has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+			has_country_flag = kob_expanded_unlock_halfling_purge_missions_flag
 		}
 		NOT = {
-			has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+			has_country_flag = kob_expanded_unlock_halfling_tolerance_missions_flag
 		}
 	}
 
@@ -513,7 +513,6 @@ KOBILDZAN_HALFLINGS_UNDECIDED = {
 		position = 6
 
 		required_missions = {
-			kob_starter_gnomes_undecided_2
 			kob_starter_push_south
 		}
 
@@ -537,9 +536,9 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 	potential = {
 		tag = Z38
 		NOT = {
-			has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+			has_country_flag = kob_expanded_unlock_halfling_purge_missions_flag
 		}
-		has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+		has_country_flag = kob_expanded_unlock_halfling_tolerance_missions_flag
 	}
 
 	kobildzan_halfling_tolerance_1 = {
@@ -582,7 +581,6 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 		}
 
 		required_missions = {
-			kob_starter_gnomes_tolerance_2
 			kob_starter_push_south
 		}
 
@@ -685,9 +683,9 @@ KOBILDZAN_HALFLINGS_INTOLERANCE = {
 
 	potential = {
 		tag = Z38
-		has_country_flag = kob_expanded_unlock_gnomish_purge_missions_cb_flag
+		has_country_flag = kob_expanded_unlock_halfling_purge_missions_flag
 		NOT = {
-			has_country_flag = kob_expanded_unlock_gnomish_tolerance_missions_cb_flag
+			has_country_flag = kob_expanded_unlock_halfling_tolerance_missions_flag
 		}
 	}
 
@@ -697,7 +695,6 @@ KOBILDZAN_HALFLINGS_INTOLERANCE = {
 		position = 6
 
 		required_missions = {
-			kob_starter_gnomes_purge_2
 			kob_starter_push_south
 		}
 
@@ -818,8 +815,18 @@ KOBOLD_STARTER_EXPANDED_2 = {
 		position = 2
 
 		provinces_to_highlight = {
-			province_id = 167
-			province_id = 184
+			OR = {
+				province_id = 167
+				province_id = 184
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					has_fort_building_trigger = yes
+				}
+			}
 		}
 
 		required_missions = {
@@ -937,21 +944,25 @@ KOBOLD_STARTER_EXPANDED_2 = {
 		}
 
 		effect = {
-			add_country_modifier = {
-				name = kob_expanded_against_winelords
-				duration = 3650
-			}
-			applefields_area = {
-				add_permanent_claim = ROOT
-			}
-			pearpoint_area = {
-				add_permanent_claim = ROOT
-			}
-			norley_area = {
-				add_permanent_claim = ROOT
-			}
-			lorentish_approach_area = {
-				add_permanent_claim = ROOT
+			# add_country_modifier = {
+			# 	name = kob_expanded_against_winelords
+			# 	duration = 3650
+			# }
+			# applefields_area = {
+			# 	add_permanent_claim = ROOT
+			# }
+			# pearpoint_area = {
+			# 	add_permanent_claim = ROOT
+			# }
+			# norley_area = {
+			# 	add_permanent_claim = ROOT
+			# }
+			# lorentish_approach_area = {
+			# 	add_permanent_claim = ROOT
+			# }
+
+			country_event = {
+				id = kob_expanded_mission_events.1012
 			}
 		}
 	}
@@ -1152,11 +1163,13 @@ KOBOLD_STARTER_EXPANDED_3 = {
 
 		effect = {
 			add_ruler_personality = KOB_unifier_personality
+			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
 					government_rank = 1
 				}
 				set_government_rank = 2
+				custom_tooltip = empty_line_tt
 				add_prestige_or_monarch_power = {
 					amount = 50
 				}
@@ -1169,30 +1182,123 @@ KOBOLD_STARTER_EXPANDED_3 = {
 		}
 	}
 
-	kob_starter_honour_forefathers = {
-		icon = mission_kob_starter_honour_forefathers
+	kob_starter_resettle_the_pass = {
+		icon = mission_kob_starter_resettle_the_pass
 
 		position = 4
 
+		required_missions = {
+			kob_starter_control_north_pass
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				area = moorhills_area
+				area = westmoor_proper_area
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				unrest = 1
+				has_rebel_faction = nationalist_rebels
+				AND = {
+					NOT = {
+						culture_group = kobold
+					}
+					nationalism = 1
+				}
+			}
+		}
+		
 		trigger = {
-			religion = kobold_dragon_cult
-			treasury = 500
-			num_of_owned_provinces_with = {
-				value = 8
-				has_owner_religion = yes
-				culture_group = kobold
-				OR = {
-					has_building = temple
-					has_building = cathedral
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_resettle_the_pass_with_kobolds.tooltip
+				moorhills_area = {
+					OR = {
+						NOT = { nationalism = 1 }
+						culture_group = kobold
+					}
+					NOT = {
+						unrest = 1
+					}
+					NOT = {
+						has_rebel_faction = nationalist_rebels
+					}
+					owned_by = ROOT
+					type = all
+				}
+				westmoor_proper_area = {
+					OR = {
+						NOT = { nationalism = 1 }
+						culture_group = kobold
+					}
+					NOT = {
+						unrest = 1
+					}
+					NOT = {
+						has_rebel_faction = nationalist_rebels
+					}
+					owned_by = ROOT
+					type = all
 				}
 			}
 		}
 
 		effect = {
-			add_treasury = -500
-			add_country_modifier = {
-				name = kob_expanded_forefathers_pleased
-				duration = 10950
+			custom_tooltip = kob_expanded_resettle_the_pass_rewards.tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = moorhills_area
+							area = westmoor_proper_area
+						}
+						culture_group = kobold
+					}
+					random_list = {
+						33 = {
+							add_base_manpower = 2
+						}
+						33 = {
+							add_base_tax = 2
+						}
+						33 = {
+							add_base_production = 2
+						}
+					}
+				}
+				if = {
+					limit = {
+						primary_culture = kobildzani_kobold
+					}
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = moorhills_area
+								area = westmoor_proper_area
+							}
+							NOT = {
+								culture_group = kobold
+							}
+						}
+						change_culture = greenscale_kobold
+					}
+				}
+				else = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								area = moorhills_area
+								area = westmoor_proper_area
+							}
+							NOT = {
+								culture_group = kobold
+							}
+						}
+						change_culture = ROOT
+					}
+				}
 			}
 		}
 	}
@@ -1241,7 +1347,6 @@ KOBOLD_STARTER_EXPANDED_3 = {
 		}
 
 		required_missions = {
-			kob_starter_honour_forefathers
 			kob_starter_push_to_the_hills
 		}
 
@@ -2603,7 +2708,7 @@ KOBILDZAN_3 = {
 		}
 
 		effect = {
-			change_government_reform_progress = 150
+			change_government_reform_progress = 100
 		}
 	}
 
@@ -2621,14 +2726,31 @@ KOBILDZAN_3 = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = kob_expanded_eventHasHappened.tooltip
-				NOT = { always = yes }
+			OR = {
+				is_great_power = yes
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_defeated_great_power.tooltip
+					any_country = {
+						is_great_power = yes
+						ROOT = {
+							has_won_war_against = {
+								who = PREV
+								max_years_since = 100
+							}
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_isNotMonstrous.tooltip
+					NOT = { has_country_modifier = monstrous_nation }
+				}
 			}
 		}
 
 		effect = {
-			custom_tooltip = kob_expanded_future.tooltip
+			country_event = {
+				id = kob_expanded_mission_events.1009
+			}
 		}
 	}
 }
@@ -2831,10 +2953,16 @@ KOBILDZAN_4 = {
 
 		trigger = {
 			stability = 3
-			NOT = {
-				rebel_progress_at_least = {
-					value = 20
+			custom_trigger_tooltip = {
+				tooltip = kob_expanded_no_rebel_faction_over_seventy.tooltip
+				NOT = {
+					rebel_progress_at_least = {
+						value = 70
+					}
 				}
+			}
+			NOT = {
+				num_of_rebel_armies = 1
 			}
 			estate_loyalty = {
 				estate = all
@@ -2885,7 +3013,7 @@ KOBILDZAN_4 = {
 				custom_tooltip = empty_line_tt
 				add_country_modifier = {
 					name = kob_expanded_ordered_vixaria
-					duration = 7300
+					duration = 18250
 				}
 			}
 			#You've done the disaster (So no disorder, ergo no need to make the effects too complicated)

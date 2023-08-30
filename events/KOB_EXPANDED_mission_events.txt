@@ -963,3 +963,72 @@ country_event = {
 		}
 	}
 }
+
+# The Fate of Halflings
+country_event = {
+	id = kob_expanded_mission_events.1012
+	title = kob_expanded_mission_events.1012.title
+	desc = kob_expanded_mission_events.1012.desc
+
+	picture = kob_expanded_turnwell_choice
+
+	is_triggered_only = yes
+
+	option = { #Tolerate Halflings
+		name = kob_expanded_mission_events.1012.a
+
+		custom_tooltip = kob_expanded_tolerate_halflings.tooltip
+
+		hidden_effect = {
+			set_country_flag = kob_expanded_unlock_halfling_tolerance_missions_flag
+		}
+
+		swap_non_generic_missions = yes
+
+		add_country_modifier = {
+			name = kob_expanded_against_winelords
+			duration = 3650
+		}
+		applefields_area = {
+			add_permanent_claim = ROOT
+		}
+		pearpoint_area = {
+			add_permanent_claim = ROOT
+		}
+		norley_area = {
+			add_permanent_claim = ROOT
+		}
+		lorentish_approach_area = {
+			add_permanent_claim = ROOT
+		}
+	}
+
+	option = { #Expell the Halflings
+		name = kob_expanded_mission_events.1012.b
+
+		custom_tooltip = kob_expanded_expel_halflings.tooltip
+
+		hidden_effect = {
+			set_country_flag = kob_expanded_unlock_halfling_purge_missions_flag
+		}
+
+		swap_non_generic_missions = yes
+
+		add_country_modifier = {
+			name = kob_expanded_against_winelords
+			duration = 3650
+		}
+		applefields_area = {
+			add_permanent_claim = ROOT
+		}
+		pearpoint_area = {
+			add_permanent_claim = ROOT
+		}
+		norley_area = {
+			add_permanent_claim = ROOT
+		}
+		lorentish_approach_area = {
+			add_permanent_claim = ROOT
+		}
+	}
+}

@@ -11,7 +11,7 @@ kob_expanded_mad_science= {
 			gui = kob_expanded_mad_science_mech
 			max = 100
 			min = 0
-			base_monthly_growth = -1
+			base_monthly_growth = -0.5
 			is_good = no
 			scaled_modifier = {
 				trigger = {
@@ -22,13 +22,18 @@ kob_expanded_mad_science= {
 					}
 				}
 				modifier = {
-					global_institution_spread = 0.5
+					embracement_cost = -0.5
 					administrative_efficiency = -0.1
-					production_efficiency = -0.25
+					monthly_kob_expanded_recklessness = 0.5
 				}
 			}
 			on_max_reached = {
 				custom_tooltip = kob_expanded_accidents_happen.tooltip
+				hidden_effect = {
+					country_event = {
+						id = kob_expanded_government_events.1012
+					}
+				}
 			}
 		}
 	}
@@ -38,18 +43,21 @@ kob_expanded_mad_science= {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_SPONSOR_RESEARCH
 			gui = kob_expanded_mad_science_interaction
 			trigger = {
-				years_of_income = 2
+				
 			}
 			effect = {
-				add_years_of_income = -2
-				add_government_power = {
-					mechanic_type = kob_expanded_mad_science
-					power_type = kob_expanded_recklessness
-					value = 20
-				}
 				custom_tooltip = kob_expanded_sponsor_researcher.tooltip
+				custom_tooltip = empty_line_tt
+				custom_tooltip = kob_expanded_increases_recklessness_monthly.tooltip
 				hidden_effect = {
-					#TO DO: sponsor researcher event
+					add_country_modifier = {
+						name = kob_expanded_sponsor_research
+						duration = 3650
+						hidden = yes
+					}
+					country_event = {
+						id = kob_expanded_government_events.1010
+					}
 				}
 			}
 			cooldown_years = 10
@@ -63,18 +71,21 @@ kob_expanded_mad_science= {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH
 			gui = kob_expanded_mad_science_interaction
 			trigger = {
-				years_of_income = 2
+				
 			}
 			effect = {
-				add_years_of_income = -2
-				add_government_power = {
-					mechanic_type = kob_expanded_mad_science
-					power_type = kob_expanded_recklessness
-					value = 20
-				}
 				custom_tooltip = kob_expanded_sponsor_project_breakthrough.tooltip
+				custom_tooltip = empty_line_tt
+				custom_tooltip = kob_expanded_increases_recklessness_monthly.tooltip
 				hidden_effect = {
-					#TO DO: sponsor researcher event
+					add_country_modifier = {
+						name = kob_expanded_sponsor_breakthrough
+						duration = 3650
+						hidden = yes
+					}
+					country_event = {
+						id = kob_expanded_government_events.1011
+					}
 				}
 			}
 			cooldown_years = 10
@@ -83,23 +94,26 @@ kob_expanded_mad_science= {
 			}
 		}
 
-		#Sponsor Public Lectures (Gives a +0.1 Global Instituon growth in capital area + dev discount in provinces that do NOT have the latest institution)
+		#Sponsor Public Lectures (Gives a +0.1 Global Instituon growth in capital area + provinces with unviersities)
 		KOBOLD_TECHNOCRACY_PUBLIC_LECTURES = {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_PUBLIC_LECTURES
 			gui = kob_expanded_mad_science_interaction
 			trigger = {
-				years_of_income = 2
+				
 			}
 			effect = {
-				add_years_of_income = -2
-				add_government_power = {
-					mechanic_type = kob_expanded_mad_science
-					power_type = kob_expanded_recklessness
-					value = 20
-				}
 				custom_tooltip = kob_expanded_hold_public_lectures.tooltip
+				custom_tooltip = empty_line_tt
+				custom_tooltip = kob_expanded_increases_recklessness_monthly.tooltip
 				hidden_effect = {
-					#TO DO: sponsor researcher event
+					add_country_modifier = {
+						name = kob_expanded_sponsor_lectures
+						duration = 3650
+						hidden = yes
+					}
+					country_event = {
+						id = kob_expanded_government_events.1012
+					}
 				}		
 			}
 			cooldown_years = 10

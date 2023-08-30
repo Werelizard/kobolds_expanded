@@ -20,3 +20,17 @@ kob_expanded_gold_hoard = {
 kob_expanded_mining_development = {
 	local_production_efficiency = -1
 }
+
+# Country modifiers
+
+kob_expanded_sponsor_research = {
+	monthly_kob_expanded_recklessness = 0.4
+}
+
+kob_expanded_sponsor_lectures = {
+	monthly_kob_expanded_recklessness = 0.4
+}
+
+kob_expanded_sponsor_breakthrough = {
+	monthly_kob_expanded_recklessness = 0.4
+}

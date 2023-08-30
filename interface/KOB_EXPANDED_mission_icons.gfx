@@ -195,12 +195,17 @@ spriteTypes = {
 		name = "mission_kobildzan_develop_coast"
 		texturefile = "gfx//interface//missions//mission_kobildzan_develop_coast.dds"
 	}
+	
+	spriteType = { # From Paradxox Interactive
+	name = "mission_kob_starter_resettle_the_pass"
+	texturefile = "gfx//interface//missions//mission_kob_starter_resettle_the_pass.dds"
+	}
 
 	####################################
 	# Mad Science Path                 #
 	####################################
 
-	spriteType = { # From Koboldpress
+	spriteType = { # From BethesdaInteractive
 		name = "mission_artificiers_placeholder"
 		texturefile = "gfx//interface//missions//mad_science_missions//mission_artificiers_placeholder.dds"
 	}

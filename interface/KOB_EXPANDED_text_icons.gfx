@@ -18,4 +18,24 @@ spriteTypes = {
 		name = "GFX_text_kob_bookmark_text"
 		texturefile = "gfx/interface/text_icons/GFX_text_kob_bookmark_text.dds"
 	}
+
+	spriteType = {
+		name = "GFX_text_kob_expanded_gold"
+		texturefile = "gfx/interface/text_icons/kob_expanded_gold.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_kob_expanded_iron"
+		texturefile = "gfx/interface/text_icons/kob_expanded_iron.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_kob_expanded_copper"
+		texturefile = "gfx/interface/text_icons/kob_expanded_copper.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_kob_expanded_gems"
+		texturefile = "gfx/interface/text_icons/kob_expanded_gems.dds"
+	}
 }
