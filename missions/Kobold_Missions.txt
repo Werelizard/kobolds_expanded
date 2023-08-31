@@ -498,7 +498,8 @@ KOBILDZAN_HALFLINGS_UNDECIDED = {
 	has_country_shield = yes
 
 	potential = {
-		tag = Z38
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
 		NOT = {
 			has_country_flag = kob_expanded_unlock_halfling_purge_missions_flag
 		}
@@ -534,7 +535,8 @@ KOBILDZAN_HALFLINGS_TOLERANCE = {
 	has_country_shield = yes
 
 	potential = {
-		tag = Z38
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
 		NOT = {
 			has_country_flag = kob_expanded_unlock_halfling_purge_missions_flag
 		}
@@ -682,7 +684,8 @@ KOBILDZAN_HALFLINGS_INTOLERANCE = {
 	has_country_shield = yes
 
 	potential = {
-		tag = Z38
+		culture_group = kobold
+		capital_scope = { superregion = western_cannor_superregion }
 		has_country_flag = kob_expanded_unlock_halfling_purge_missions_flag
 		NOT = {
 			has_country_flag = kob_expanded_unlock_halfling_tolerance_missions_flag
@@ -1162,7 +1165,6 @@ KOBOLD_STARTER_EXPANDED_3 = {
 		}
 
 		effect = {
-			add_ruler_personality = KOB_unifier_personality
 			custom_tooltip = empty_line_tt
 			if = {
 				limit = {
@@ -1670,6 +1672,179 @@ KOBOLD_STARTER_EXPANDED_4 = {
 				duration = -1
 			}
 			custom_tooltip = kob_expanded_imperial_incident_kobold_invasion_can_fire.tooltip
+		}
+	}
+
+	kobildzan_destroy_the_empire = {
+		icon = mission_kobildzan_destroy_the_empire
+		position = 6
+
+		required_missions = {
+			kob_starter_skewer_eagle
+			kob_starter_kobold_coast
+		}
+
+		provinces_to_highlight = {
+			owner = {
+				OR = {
+					is_elector = yes
+					is_emperor = yes
+				}
+			}
+			is_capital = yes
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = kob_expanded_empire_not_exists.tooltip
+						NOT = {
+							any_known_country = {
+								is_emperor = yes
+							}
+						}
+					}
+					NOT = {
+						great_power_rank = 4
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = kob_expanded_control_elector_emperor_provinces.tooltip
+					all_province = {
+						owner = {
+							OR = {
+								is_elector = yes
+								is_emperor = yes
+							}
+						}
+						is_capital = yes
+						OR = {
+							controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+							}
+							controller = {
+								alliance_with = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				custom_tooltip = kob_expanded_dismantle_anbennar.tooltip
+				hidden_effect = {
+					dismantle_hre = yes
+				}
+				custom_tooltip = empty_line_tt
+			}
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_discovery
+						current_age = age_of_reformation
+					}
+					OR = {
+						AND = {
+							NOT = {
+								any_known_country = {
+									is_emperor = yes
+								}
+							}
+							NOT = {
+								great_power_rank = 4
+							}
+						}
+						AND = {
+							all_province = {
+								owner = {
+									OR = {
+										is_elector = yes
+										is_emperor = yes
+									}
+								}
+								is_capital = yes
+								OR = {
+									controlled_by = ROOT
+									controller = {
+										is_subject_of = ROOT
+									}
+									controller = {
+										alliance_with = ROOT
+									}
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = kob_expanded_empire_destroyed_branching_permanent_rewards.tooltip
+				add_power_projection = {
+					type = 25_permanent_power_projection
+					amount = 25
+				}
+				add_country_modifier = {
+					name = kob_expanded_dismantle_empire
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						current_age = age_of_revolutions
+						current_age = age_of_absolutism
+					}
+					OR = {
+						AND = {
+							NOT = {
+								any_known_country = {
+									is_emperor = yes
+								}
+							}
+							NOT = {
+								great_power_rank = 4
+							}
+						}
+						AND = {
+							all_province = {
+								owner = {
+									OR = {
+										is_elector = yes
+										is_emperor = yes
+									}
+								}
+								is_capital = yes
+								OR = {
+									controlled_by = ROOT
+									controller = {
+										is_subject_of = ROOT
+									}
+									controller = {
+										alliance_with = ROOT
+									}
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = kob_expanded_empire_destroyed_branching_temporary_rewards.tooltip
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 25
+				}
+				add_country_modifier = {
+					name = kob_expanded_dismantle_empire
+					duration = 18250
+				}
+			}
+			else = {
+				custom_tooltip = kob_expanded_empire_destroyed_branching_no_rewards.tooltip
+			}
 		}
 	}
 }
@@ -2765,179 +2940,6 @@ KOBILDZAN_4 = {
 	}
 
 	slot = 4
-
-	kobildzan_destroy_the_empire = {
-		icon = mission_kobildzan_destroy_the_empire
-		position = 6
-
-		required_missions = {
-			kob_starter_skewer_eagle
-			kob_starter_kobold_coast
-		}
-
-		provinces_to_highlight = {
-			owner = {
-				OR = {
-					is_elector = yes
-					is_emperor = yes
-				}
-			}
-			is_capital = yes
-		}
-
-		trigger = {
-			OR = {
-				AND = {
-					custom_trigger_tooltip = {
-						tooltip = kob_expanded_empire_not_exists.tooltip
-						NOT = {
-							any_known_country = {
-								is_emperor = yes
-							}
-						}
-					}
-					NOT = {
-						great_power_rank = 4
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = kob_expanded_control_elector_emperor_provinces.tooltip
-					all_province = {
-						owner = {
-							OR = {
-								is_elector = yes
-								is_emperor = yes
-							}
-						}
-						is_capital = yes
-						OR = {
-							controlled_by = ROOT
-							controller = {
-								is_subject_of = ROOT
-							}
-							controller = {
-								alliance_with = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-
-		effect = {
-			if = {
-				limit = {
-					hre_size = 1
-				}
-				custom_tooltip = kob_expanded_dismantle_anbennar.tooltip
-				hidden_effect = {
-					dismantle_hre = yes
-				}
-				custom_tooltip = empty_line_tt
-			}
-			if = {
-				limit = {
-					OR = {
-						current_age = age_of_discovery
-						current_age = age_of_reformation
-					}
-					OR = {
-						AND = {
-							NOT = {
-								any_known_country = {
-									is_emperor = yes
-								}
-							}
-							NOT = {
-								great_power_rank = 4
-							}
-						}
-						AND = {
-							all_province = {
-								owner = {
-									OR = {
-										is_elector = yes
-										is_emperor = yes
-									}
-								}
-								is_capital = yes
-								OR = {
-									controlled_by = ROOT
-									controller = {
-										is_subject_of = ROOT
-									}
-									controller = {
-										alliance_with = ROOT
-									}
-								}
-							}
-						}
-					}
-				}
-				custom_tooltip = kob_expanded_empire_destroyed_branching_permanent_rewards.tooltip
-				add_power_projection = {
-					type = 25_permanent_power_projection
-					amount = 25
-				}
-				add_country_modifier = {
-					name = kob_expanded_dismantle_empire
-					duration = -1
-				}
-			}
-			else_if = {
-				limit = {
-					OR = {
-						current_age = age_of_revolutions
-						current_age = age_of_absolutism
-					}
-					OR = {
-						AND = {
-							NOT = {
-								any_known_country = {
-									is_emperor = yes
-								}
-							}
-							NOT = {
-								great_power_rank = 4
-							}
-						}
-						AND = {
-							all_province = {
-								owner = {
-									OR = {
-										is_elector = yes
-										is_emperor = yes
-									}
-								}
-								is_capital = yes
-								OR = {
-									controlled_by = ROOT
-									controller = {
-										is_subject_of = ROOT
-									}
-									controller = {
-										alliance_with = ROOT
-									}
-								}
-							}
-						}
-					}
-				}
-				custom_tooltip = kob_expanded_empire_destroyed_branching_temporary_rewards.tooltip
-				add_power_projection = {
-					type = mission_rewards_power_projection
-					amount = 25
-				}
-				add_country_modifier = {
-					name = kob_expanded_dismantle_empire
-					duration = 18250
-				}
-			}
-			else = {
-				custom_tooltip = kob_expanded_empire_destroyed_branching_no_rewards.tooltip
-			}
-		}
-	}
 
 	kobildzan_keep_order = {
 		icon = mission_kobildzan_keep_order
