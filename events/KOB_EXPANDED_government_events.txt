@@ -243,7 +243,7 @@ country_event = {
 	title = kob_expanded_government_events.1010.title
 	desc = kob_expanded_government_events.1010.desc
 
-	picture = kob_expanded_scientist
+	picture = kob_expanded_great_scientist
 
 	is_triggered_only = yes
 
@@ -261,6 +261,12 @@ country_event = {
 			type = natural_scientist
 			cost_multiplier = 0.5
 			skill = 3
+			max_age = 40
+		}
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = kob_expanded_sponsored_research
+			duration = 3650
 		}
 	}
 
@@ -272,6 +278,12 @@ country_event = {
 			type = master_of_mint
 			cost_multiplier = 0.5
 			skill = 3
+			max_age = 40
+		}
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = kob_expanded_sponsored_research
+			duration = 3650
 		}
 	}
 
@@ -283,6 +295,12 @@ country_event = {
 			type = philosopher
 			cost_multiplier = 0.5
 			skill = 3
+			max_age = 40
+		}
+		custom_tooltip = empty_line_tt
+		add_country_modifier = {
+			name = kob_expanded_sponsored_research
+			duration = 3650
 		}
 	}
 }
@@ -298,35 +316,35 @@ country_event = {
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			#Add list for random project A
-
-			#Add list for random project B
-
-			#Add list for random project C
-		}
-	}
 
 	option = {
 		#Sponsor the project A
 		name = kob_expanded_government_events.1011.a
 
-	
+		add_country_modifier = {
+			name = kob_expanded_admin_breakthrough
+			duration = 3650
+		}
 	}
 
 	option = {
 		#Sponsor the project B
 		name = kob_expanded_government_events.1011.b
 
-	
+		add_country_modifier = {
+			name = kob_expanded_dip_breakthrough
+			duration = 3650
+		}
 	}
 
 	option = {
 		#Sponsor the project C
 		name = kob_expanded_government_events.1011.c
 
-	
+		add_country_modifier = {
+			name = kob_expanded_mil_breaktrhough
+			duration = 3650
+		}
 	}
 }
 
@@ -343,35 +361,305 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_building = university
+						is_in_capital_area = yes
+					}
+				}
+				save_event_target_as = koboldEventTarget
+			}
 		}
 	}
 
 	option = {
 		name = kob_expanded_government_events.1012.a
-	
+		capital_scope = {
+			area = {
+				add_province_modifier = {
+					name = kob_expanded_sponsored_lectures
+					duration = 3650
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_building = university
+					NOT = {
+						is_in_capital_area = yes
+					}
+				}
+			}
+			custom_tooltip = kob_expanded_all_university_provinces_get_institution.tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = {
+							is_in_capital_area = yes
+						}
+						has_building = university
+					}
+					add_province_modifier = {
+						name = kob_expanded_sponsored_lectures
+						duration = 3650
+					}
+				}
+			}
+		}
+		
 	}
 }
 
 ## Accidents happen
 
 country_event = {
-	id = kob_expanded_government_events.1012
-	title = kob_expanded_government_events.1012.title
-	desc = kob_expanded_government_events.1012.desc
+	id = kob_expanded_government_events.1013
+	title = kob_expanded_government_events.1013.title
+	desc = kob_expanded_government_events.1013.desc
 
-	picture = kob_expanded_university
+	picture = kob_expanded_laboratory
 
 	is_triggered_only = yes
 
 	immediate = {
 		hidden_effect = {
-			
+			random_owned_province = {
+				limit = {
+					NOT = {
+						is_overseas = yes
+					}
+					culture_group = ROOT
+				}
+				save_event_target_as = koboldEventTarget
+			}
+		
+			#Determine how bad it'll be
+			random_list = {
+				20 = {
+					#Devastation
+					set_country_flag = kob_expanded_accident_small_boom_flag
+				}
+				15 = {
+					#Lose 50% goods produced in province
+					set_country_flag = kob_expanded_accident_small_accident_flag
+				}
+				15 = {
+					#Lose manpower
+					set_country_flag = kob_expanded_accident_small_death_flag
+				}
+				10 = {
+					#Devastation and dev loss
+					set_country_flag = kob_expanded_accident_medium_boom_flag
+				}
+				10 = {
+					#Lose 50% goods produced in province and lose a random building
+					set_country_flag = kob_expanded_accident_medium_accident_flag
+				}
+				10 = {
+					#Lose manpower
+					set_country_flag = kob_expanded_accident_medium_death_flag
+				}
+				10 = {
+					#Devastation, dev loss, lose stab
+					set_country_flag = kob_expanded_accident_large_boom_flag
+				}
+				10 = {
+					#Lose 50% goods produced in province and lose a random building and lose stab
+					set_country_flag = kob_expanded_accident_large_accident_flag
+				}
+			}
 		}
 	}
 
 	option = {
-		name = kob_expanded_government_events.1012.a
+		name = kob_expanded_government_events.1013.a
+		goto = koboldEventTarget
+
+		add_government_power = {
+			mechanic_type = kob_expanded_mad_science
+			power_type = kob_expanded_recklessness
+			value = -100
+		}
+
+		add_stability = -1
 	
+		if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_small_boom_flag
+			}
+			event_target:koboldEventTarget = {
+				add_devastation = 50
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_small_accident_flag	
+			}
+			event_target:koboldEventTarget = {
+				add_province_modifier = {
+					name = kob_expanded_accident_damaged_equipment
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_small_death_flag
+			}
+			add_yearly_manpower = -0.25
+			event_target:koboldEventTarget = {
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_medium_boom_flag
+			}
+			event_target:koboldEventTarget = {
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+				random_list = {
+					33 = {
+						add_base_manpower = -1
+					}
+					33 = {						
+						add_base_tax = -1
+					}
+					33 = {
+						add_base_production = -1
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_medium_accident_flag
+			}
+			event_target:koboldEventTarget = {
+				add_province_modifier = {
+					name = kob_expanded_accident_damaged_equipment
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+				if = {
+					limit = {
+						has_building = counting_house
+					}
+					remove_building = counting_house
+				}
+				else_if = {
+					limit = {
+						has_building = workshop
+					}
+					remove_building = workshop
+				}
+				else = {
+					add_base_production = -1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_medium_death_flag
+			}
+			add_yearly_manpower = -0.5
+			event_target:koboldEventTarget = {
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_large_boom_flag
+			}
+			event_target:koboldEventTarget = {
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+				add_devastation = 100
+				random_list = {
+					33 = {
+						add_base_manpower = -1
+					}
+					33 = {						
+						add_base_tax = -1
+					}
+					33 = {
+						add_base_production = -1
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = kob_expanded_accident_large_accident_flag
+			}
+			event_target:koboldEventTarget = {
+				add_province_modifier = {
+					name = kob_expanded_accident_damaged_equipment
+					duration = 1825
+				}
+				add_province_modifier = {
+					name = kob_expanded_accident_unrest
+					duration = 1825
+				}
+				if = {
+					limit = {
+						has_building = manufactory
+					}
+					remove_building = manufactory
+				}
+				else_if = {
+					limit = {
+						has_building = counting_house
+					}
+					remove_building = counting_house
+				}
+				else_if = {
+					limit = {
+						has_building = workshop
+					}
+					remove_building = workshop
+				}
+				else = {
+					add_base_production = -2
+				}
+			}
+		}
+		else = {
+			add_stability = -1
+		}
+	}
+
+	after = {
+		clr_country_flag = kob_expanded_accident_small_boom_flag
+		clr_country_flag = kob_expanded_accident_small_accident_flag
+		clr_country_flag = kob_expanded_accident_small_death_flag
+		clr_country_flag = kob_expanded_accident_medium_boom_flag
+		clr_country_flag = kob_expanded_accident_medium_accident_flag
+		clr_country_flag = kob_expanded_accident_medium_death_flag
+		clr_country_flag = kob_expanded_accident_large_boom_flag
+		clr_country_flag = kob_expanded_accident_large_accident_flag
 	}
 }

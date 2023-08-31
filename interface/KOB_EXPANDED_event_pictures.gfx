@@ -12,11 +12,11 @@ spriteTypes = {
 	}
 
 	spriteType = { # Forgotten Realms / WOTC
-		name = "kob_expanded_event_kobold_in_cave"
-		texturefile = "gfx//event_pictures//kob_expanded_kob_event.dds"
+		name = "kob_expanded_event_kobold_cave"
+		texturefile = "gfx//event_pictures//kob_expanded_kob_cave.dds"
 	}
 
-	spriteType = { # from paradox itneractive
+	spriteType = { # from bluetygr on blenderartists
 		name = "kob_expanded_event_kobold_election"
 		texturefile = "gfx//event_pictures//kob_expanded_kob_election.dds"
 	}
@@ -51,8 +51,13 @@ spriteTypes = {
 	texturefile = "gfx//event_pictures//kob_expanded_university.dds"
 	}
 
-	spriteType = { # from shawn lee
-	name = "kob_expanded_scientist"
-	texturefile = "gfx//event_pictures//kob_expanded_scientist.dds"
+	spriteType = { # paizo / bruno cesar
+	name = "kob_expanded_great_scientist"
+	texturefile = "gfx//event_pictures//kob_expanded_great_scientist.dds"
+	}
+
+	spriteType = { # paizo / Paradox Interactive
+	name = "kob_expanded_kob_choose_destiny"
+	texturefile = "gfx//event_pictures//kob_expanded_kob_choose_destiny.dds"
 	}
 }

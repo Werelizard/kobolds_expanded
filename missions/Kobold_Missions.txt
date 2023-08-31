@@ -2112,352 +2112,6 @@ KOBOLD_STARTER_EXPANDED_5 = {
 	}
 }
 
-################################
-# MAD SCIENCE PATH - MISSIONS  #
-################################
-
-kob_expanded_mad_science_1 = {
-	generic = no
-	ai = yes
-	has_country_shield = yes
-
-	potential = {
-		tag = Z38
-		has_country_flag = kob_expanded_mad_science_path_flag
-	}
-
-	slot = 1
-
-	kob_mad_science_gnomish_secrets = {
-		icon = mission_artificiers_placeholder
-		position = 9
-
-		required_missions = {
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_gnomish_tech = {
-		icon = mission_artificiers_placeholder
-		position = 10
-
-		required_missions = {
-			kob_mad_science_gnomish_secrets
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-}
-
-kob_expanded_mad_science_2 = {
-	generic = no
-	ai = yes
-	has_country_shield = yes
-
-	potential = {
-		tag = Z38
-		has_country_flag = kob_expanded_mad_science_path_flag
-	}
-
-	slot = 2
-
-	kob_mad_science_reach_out_anbencost = {
-		icon = mission_artificiers_placeholder
-		position = 9
-
-		required_missions = {
-			
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_the_dragoncoast_guild = {
-		icon = mission_artificiers_placeholder
-		position = 11
-
-		required_missions = {
-			kob_mad_science_gnomish_tech
-			kob_mad_science_reach_out_anbencost
-			kob_mad_science_scientific_breakthroughs
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-}
-
-kob_expanded_mad_science_3 = {
-	generic = no
-	ai = yes
-	has_country_shield = yes
-
-	potential = {
-		tag = Z38
-		has_country_flag = kob_expanded_mad_science_path_flag
-	}
-
-	slot = 3
-
-	kob_mad_science_empower_artificiers = {
-		icon = mission_artificiers_placeholder
-		position = 8
-
-		required_missions = {
-			kobildzan_determine_our_future
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_build_laboratories = {
-		icon = mission_artificiers_placeholder
-		position = 9
-
-		required_missions = {
-			kob_mad_science_empower_artificiers
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_scientific_breakthroughs = {
-		icon = mission_artificiers_placeholder
-		position = 10
-
-		required_missions = {
-			kob_mad_science_build_laboratories
-			kob_mad_science_undercity_university
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_the_mad_scientist = {
-		icon = mission_artificiers_placeholder
-		position = 11
-
-		required_missions = {
-			kob_mad_science_scientific_breakthroughs
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-}
-
-kob_expanded_mad_science_4 = {
-	generic = no
-	ai = yes
-	has_country_shield = yes
-
-	potential = {
-		tag = Z38
-		has_country_flag = kob_expanded_mad_science_path_flag
-	}
-
-	slot = 4
-
-	kob_mad_science_write_scientific_manuals = {
-		icon = mission_artificiers_placeholder
-		position = 8
-
-		required_missions = {
-			
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_undercity_university = {
-		icon = mission_artificiers_placeholder
-		position = 9
-
-		required_missions = {
-			kob_mad_science_write_scientific_manuals
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_magic_classes = {
-		icon = mission_artificiers_placeholder
-		position = 11
-
-		required_missions = {
-			kob_mad_science_undercity_university
-			kob_mad_science_alchemy_refinement
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-}
-
-kob_expanded_mad_science_5 = {
-	generic = no
-	ai = yes
-	has_country_shield = yes
-
-	potential = {
-		tag = Z38
-		has_country_flag = kob_expanded_mad_science_path_flag
-	}
-
-	slot = 5
-
-	kob_mad_science_seek_magic_support = {
-		icon = mission_artificiers_placeholder
-		position = 9
-
-		required_missions = {
-			
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-
-	kob_mad_science_alchemy_refinement = {
-		icon = mission_artificiers_placeholder
-		position = 10
-
-		required_missions = {
-			kob_mad_science_seek_magic_support
-		}
-
-		provinces_to_highlight = {
-			
-		}
-
-		trigger = {
-			
-		}
-
-		effect = {
-			
-		}
-	}
-}
-
-
 #################################################
 # Kobildzani Missions                           #
 #################################################
@@ -3105,6 +2759,352 @@ KOBILDZAN_5 = {
 				name = kob_expanded_modern_kobold_swarm
 				duration = -1
 			}
+		}
+	}
+}
+
+
+################################
+# MAD SCIENCE PATH - MISSIONS  #
+################################
+
+kob_expanded_mad_science_1 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 1
+
+	kob_mad_science_gnomish_secrets = {
+		icon = mission_artificiers_placeholder
+		position = 9
+
+		required_missions = {
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_gnomish_tech = {
+		icon = mission_artificiers_placeholder
+		position = 10
+
+		required_missions = {
+			kob_mad_science_gnomish_secrets
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+kob_expanded_mad_science_2 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 2
+
+	kob_mad_science_reach_out_anbencost = {
+		icon = mission_artificiers_placeholder
+		position = 9
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_the_dragoncoast_guild = {
+		icon = mission_artificiers_placeholder
+		position = 11
+
+		required_missions = {
+			kob_mad_science_gnomish_tech
+			kob_mad_science_reach_out_anbencost
+			kob_mad_science_scientific_breakthroughs
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+kob_expanded_mad_science_3 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 3
+
+	kob_mad_science_empower_artificiers = {
+		icon = mission_artificiers_placeholder
+		position = 8
+
+		required_missions = {
+			kobildzan_determine_our_future
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_build_laboratories = {
+		icon = mission_artificiers_placeholder
+		position = 9
+
+		required_missions = {
+			kob_mad_science_empower_artificiers
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_scientific_breakthroughs = {
+		icon = mission_artificiers_placeholder
+		position = 10
+
+		required_missions = {
+			kob_mad_science_build_laboratories
+			kob_mad_science_undercity_university
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_the_mad_scientist = {
+		icon = mission_artificiers_placeholder
+		position = 11
+
+		required_missions = {
+			kob_mad_science_scientific_breakthroughs
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+kob_expanded_mad_science_4 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 4
+
+	kob_mad_science_write_scientific_manuals = {
+		icon = mission_artificiers_placeholder
+		position = 8
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_undercity_university = {
+		icon = mission_artificiers_placeholder
+		position = 9
+
+		required_missions = {
+			kob_mad_science_write_scientific_manuals
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_magic_classes = {
+		icon = mission_artificiers_placeholder
+		position = 11
+
+		required_missions = {
+			kob_mad_science_undercity_university
+			kob_mad_science_alchemy_refinement
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+}
+
+kob_expanded_mad_science_5 = {
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = Z38
+		has_country_flag = kob_expanded_mad_science_path_flag
+	}
+
+	slot = 5
+
+	kob_mad_science_seek_magic_support = {
+		icon = mission_artificiers_placeholder
+		position = 9
+
+		required_missions = {
+			
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
+		}
+	}
+
+	kob_mad_science_alchemy_refinement = {
+		icon = mission_artificiers_placeholder
+		position = 10
+
+		required_missions = {
+			kob_mad_science_seek_magic_support
+		}
+
+		provinces_to_highlight = {
+			
+		}
+
+		trigger = {
+			
+		}
+
+		effect = {
+			
 		}
 	}
 }

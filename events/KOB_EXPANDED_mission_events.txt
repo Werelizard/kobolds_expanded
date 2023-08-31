@@ -771,7 +771,7 @@ country_event = {
 	title = kob_expanded_mission_events.1009.title
 	desc = kob_expanded_mission_events.1009.desc
 
-	picture = kob_expanded_event_kobold_in_cave
+	picture = kob_expanded_kob_choose_destiny
 
 	is_triggered_only = yes
 

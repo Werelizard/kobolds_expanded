@@ -1,20 +1,20 @@
 spriteTypes = {
-	spriteType = {
+	spriteType = { #Forgotten realms
 		name = "government_reform_kobold_absolute_rule"
 		texturefile = "gfx//interface//government_reform_icons//kobold_absolute_rule.dds"
 	}
 
-	spriteType = {
+	spriteType = { #Forgotten realms
 		name = "government_reform_kobold_reformed_rule"
 		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_reformed_rule.dds"
 	}
 
-	spriteType = {
+	spriteType = { #Hand made
 		name = "government_reform_kobold_kingdom"
 		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_kingdom.dds"
 	}
 
-	spriteType = {
+	spriteType = { #The Order 1886
 		name = "government_reform_kobold_mad_science"
 		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_mad_science.dds"
 	}

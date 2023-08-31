@@ -11,7 +11,7 @@ kob_expanded_mad_science= {
 			gui = kob_expanded_mad_science_mech
 			max = 100
 			min = 0
-			base_monthly_growth = -0.5
+			base_monthly_growth = -0.2
 			is_good = no
 			scaled_modifier = {
 				trigger = {
@@ -22,16 +22,14 @@ kob_expanded_mad_science= {
 					}
 				}
 				modifier = {
-					embracement_cost = -0.5
 					administrative_efficiency = -0.1
-					monthly_kob_expanded_recklessness = 0.5
+					overextension_impact_modifier = 0.5
 				}
 			}
 			on_max_reached = {
-				custom_tooltip = kob_expanded_accidents_happen.tooltip
 				hidden_effect = {
 					country_event = {
-						id = kob_expanded_government_events.1012
+						id = kob_expanded_government_events.1013
 					}
 				}
 			}
@@ -48,13 +46,12 @@ kob_expanded_mad_science= {
 			effect = {
 				custom_tooltip = kob_expanded_sponsor_researcher.tooltip
 				custom_tooltip = empty_line_tt
-				custom_tooltip = kob_expanded_increases_recklessness_monthly.tooltip
+				add_government_power = {
+					mechanic_type = kob_expanded_mad_science
+					power_type = kob_expanded_recklessness
+					value = 20
+				}
 				hidden_effect = {
-					add_country_modifier = {
-						name = kob_expanded_sponsor_research
-						duration = 3650
-						hidden = yes
-					}
 					country_event = {
 						id = kob_expanded_government_events.1010
 					}
@@ -66,7 +63,7 @@ kob_expanded_mad_science= {
 			}
 		}
 
-		#Sponsor Project Breakthrough (Lower tech in one area and slightly increse it everywhere else + idea cost)
+		#Sponsor Project Breakthrough (Lower tech in one area and slightly + idea cost)
 		KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH = {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_PROJECT_BREAKTHROUGH
 			gui = kob_expanded_mad_science_interaction
@@ -76,13 +73,12 @@ kob_expanded_mad_science= {
 			effect = {
 				custom_tooltip = kob_expanded_sponsor_project_breakthrough.tooltip
 				custom_tooltip = empty_line_tt
-				custom_tooltip = kob_expanded_increases_recklessness_monthly.tooltip
+				add_government_power = {
+					mechanic_type = kob_expanded_mad_science
+					power_type = kob_expanded_recklessness
+					value = 20
+				}
 				hidden_effect = {
-					add_country_modifier = {
-						name = kob_expanded_sponsor_breakthrough
-						duration = 3650
-						hidden = yes
-					}
 					country_event = {
 						id = kob_expanded_government_events.1011
 					}
@@ -94,23 +90,22 @@ kob_expanded_mad_science= {
 			}
 		}
 
-		#Sponsor Public Lectures (Gives a +0.1 Global Instituon growth in capital area + provinces with unviersities)
+		#Sponsor Public Lectures (Gives a +2 Yearly Global Instituon growth in capital area + provinces with unviersities)
 		KOBOLD_TECHNOCRACY_PUBLIC_LECTURES = {
 			icon = GFX_kob_expanded_KOBOLD_TECHNOCRACY_PUBLIC_LECTURES
 			gui = kob_expanded_mad_science_interaction
 			trigger = {
-				
+				is_lacking_institutions = yes 
 			}
 			effect = {
 				custom_tooltip = kob_expanded_hold_public_lectures.tooltip
 				custom_tooltip = empty_line_tt
-				custom_tooltip = kob_expanded_increases_recklessness_monthly.tooltip
+				add_government_power = {
+					mechanic_type = kob_expanded_mad_science
+					power_type = kob_expanded_recklessness
+					value = 20
+				}
 				hidden_effect = {
-					add_country_modifier = {
-						name = kob_expanded_sponsor_lectures
-						duration = 3650
-						hidden = yes
-					}
 					country_event = {
 						id = kob_expanded_government_events.1012
 					}

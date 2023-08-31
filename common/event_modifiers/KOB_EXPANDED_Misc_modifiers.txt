@@ -21,16 +21,37 @@ kob_expanded_mining_development = {
 	local_production_efficiency = -1
 }
 
+kob_expanded_sponsored_lectures = {
+	institution_growth = 10.2
+	local_development_cost = -0.05
+}
+
+kob_expanded_accident_unrest = {
+	local_unrest = 5
+}
+
+kob_expanded_accident_damaged_equipment = {
+	trade_goods_size_modifier = -0.5
+}
+
+
 # Country modifiers
 
-kob_expanded_sponsor_research = {
-	monthly_kob_expanded_recklessness = 0.4
+kob_expanded_admin_breakthrough = {
+	adm_tech_cost_modifier = -0.1
+	idea_cost = -0.1
 }
 
-kob_expanded_sponsor_lectures = {
-	monthly_kob_expanded_recklessness = 0.4
+kob_expanded_dip_breakthrough = {
+	dip_tech_cost_modifier = -0.1
+	idea_cost = -0.1
 }
 
-kob_expanded_sponsor_breakthrough = {
-	monthly_kob_expanded_recklessness = 0.4
+kob_expanded_mil_breaktrhough = {
+	mil_tech_cost_modifier = -0.1
+	idea_cost = -0.1
+}
+
+kob_expanded_sponsored_research = {
+	advisor_cost = -0.1
 }
