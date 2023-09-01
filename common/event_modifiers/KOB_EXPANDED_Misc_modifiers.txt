@@ -34,6 +34,10 @@ kob_expanded_accident_damaged_equipment = {
 	trade_goods_size_modifier = -0.5
 }
 
+kob_expanded_reformed_ekaitzu_regiments = {
+	local_manpower_modifier = 0.15
+}
+
 # Country modifiers
 
 kob_expanded_ascent_kobildzan = {
@@ -57,6 +61,11 @@ kob_expanded_mil_breaktrhough = {
 
 kob_expanded_sponsored_research = {
 	advisor_cost = -0.1
+}
+
+kob_expanded_artificier_military_reform = {
+	regiment_recruit_speed = -0.25
+	is_rajput_modifier = yes
 }
 
 ## Disorder election shenanigans

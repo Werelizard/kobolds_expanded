@@ -42,6 +42,10 @@ country_event = {
 				loyalty = -10
 			}
 		}
+
+		ai_chance = { #The AI shhould NEVER re-elect
+			factor = 0
+		}
 	}
 
 	option = {
@@ -86,7 +90,7 @@ country_event = {
 		
 		define_ruler = {
 			culture = bluescale_kobold
-			max_random_adm = 4
+			max_random_adm = 6
 			max_random_dip = 4
 			max_random_mil = 2
 			min_age = 25
@@ -162,6 +166,10 @@ country_event = {
 			}
 			set_ruler_culture = goldscale_kobold
 		}
+
+		ai_chance = { #The AI shhould NEVER elect a non coast kobold
+			factor = 0
+		}
 	}
 
 	option = {
@@ -225,6 +233,10 @@ country_event = {
 				hidden = yes
 			}
 			set_ruler_culture = steelscale_kobold
+		}
+
+		ai_chance = { #The AI shhould NEVER elect a non coast kobold
+			factor = 0
 		}
 	}
 

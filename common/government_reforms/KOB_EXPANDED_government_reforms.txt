@@ -49,8 +49,8 @@ kob_expanded_kobold_monarchy = {
 	modifiers = {
     	relation_with_other_culture = -50 #Isolationist
 		own_territory_dice_roll_bonus = 1
-		defensiveness = 0.15 #Extremely defensive
-		max_absolutism = -40 
+		defensiveness = 0.1 #Extremely defensive
+		max_absolutism = -15 
 		governing_capacity = 50 #decentralised
 	}
 
@@ -98,8 +98,8 @@ kob_expanded_kobold_monarchy_centralised_reform = {
 	#Modifiers
 	modifiers = {
 		own_territory_dice_roll_bonus = 1
-		defensiveness = 0.15 #Still defensive
-		max_absolutism = 20
+		defensiveness = 0.1 #Still defensive
+		max_absolutism = 10
 		unjustified_demands = -0.1
 		yearly_absolutism = 1 #FAR more centralised
 	}
@@ -145,7 +145,7 @@ kob_expanded_kobold_monarchy_decentralised_reform = {
 	#Modifiers
 	modifiers = {
 		own_territory_dice_roll_bonus = 1
-		defensiveness = 0.15 #Still defensive
+		defensiveness = 0.1 #Still defensive
 		parliament_backing_chance = 0.25
 		parliament_effect_duration = 5
 		governing_capacity_modifier = 0.1 #FAR more decentralised
@@ -153,6 +153,38 @@ kob_expanded_kobold_monarchy_decentralised_reform = {
 
 	ai = {
 		factor = 10000
+	}
+}
+
+##########
+# TIER 2 #
+##########
+
+#Shared Power with the clans
+kob_expanded_shared_power = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	trigger = {
+
+	}
+
+	custom_attributes = {
+		kob_expanded_no_disorder_when_hereditary_heir_chosen = yes
+	}
+	
+	#Modifiers
+	modifiers = {
+		nobles_influence_modifier = 0.15
+	}
+
+	ai = {
+		factor = 0
 	}
 }
 
@@ -191,6 +223,327 @@ kob_expanded_kobold_mad_science = {
 	#Mechanics
 	government_abilities = {
 		kob_expanded_mad_science
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+##########
+# TIER 5 #
+##########
+
+#Reform Tribal Regiments
+kob_expanded_ekaitzu_regiments = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	trigger = {
+
+	}
+
+	custom_attributes = {
+		kob_expanded_increased_manpower_in_kobold_provinces = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = kobold
+				}
+				add_province_modifier = {
+					name = kob_expanded_reformed_ekaitzu_regiments
+					duration = -1
+				}
+			}
+		}
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = kob_expanded_reformed_ekaitzu_regiments
+				}
+				remove_province_modifier = kob_expanded_reformed_ekaitzu_regiments
+			}
+		}
+	}
+	
+	#Modifiers
+	modifiers = {
+		infantry_power = 0.1
+	}
+
+	ai = {
+		factor = 0
+	}
+}
+
+#Expand Artificiers
+kob_expanded_artificier_regiments = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	trigger = {
+		has_estate = estate_artificers
+	}
+
+	custom_attributes = {
+		kob_expanded_reinforced_artificiers_training = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_artificier_military_reform
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			remove_country_modifier = kob_expanded_artificier_military_reform
+		}
+	}
+	
+	#Modifiers
+	modifiers = {
+		allowed_rajput_fraction = 0.05
+	}
+
+	ai = {
+		factor = 0
+	}
+}
+
+##########
+# TIER 7 #
+##########
+
+#Bluescale admin
+kob_expanded_bluescale_administrators = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		culture_group = kobold
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	trigger = {
+	}
+
+	custom_attributes = {
+		
+	}
+	
+	#Modifiers
+	modifiers = {
+		possible_adm_policy = 1
+		adm_advisor_cost = -0.1
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+#Greenscale admin
+kob_expanded_greenscale_administrators = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		culture_group = kobold
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	trigger = {
+	}
+
+	custom_attributes = {
+		
+	}
+	
+	#Modifiers
+	modifiers = {
+		possible_dip_policy = 1
+		dip_advisor_cost = -0.1
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+#Redscale admin
+kob_expanded_redscale_administrators = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		culture_group = kobold
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	trigger = {
+	}
+
+	custom_attributes = {
+		
+	}
+	
+	#Modifiers
+	modifiers = {
+		possible_mil_policy = 1
+		mil_advisor_cost = -0.1
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+#Reform Administrators
+kob_expanded_reformed_administrators = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		culture_group = kobold
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy
+			has_reform = kob_expanded_kobold_monarchy_centralised_reform
+			has_reform = kob_expanded_kobold_monarchy_decentralised_reform
+		}
+	}
+
+	trigger = {
+	}
+
+	custom_attributes = {
+		
+	}
+	
+	#Modifiers
+	modifiers = {
+		establish_order_cost = -0.25
+		yearly_corruption = -0.15
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+#Kobidlzani Administration
+kob_expanded_kobildzani_adminsitration = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		culture_group = kobold
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy_centralised_reform
+			has_reform = kob_expanded_kobold_monarchy_decentralised_reform
+		}
+	}
+
+	trigger = {
+	}
+
+	custom_attributes = {
+		
+	}
+	
+	#Modifiers
+	modifiers = {
+		same_culture_advisor_cost = -0.1
+		free_policy = 1
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+##########
+# TIER 8 #
+##########
+
+#Mission reawrd - kobold crafters
+kob_expanded_kobold_craftmanship = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		culture_group = kobold
+		has_country_flag = kob_expanded_unlock_kob_craftmanship_flag
+	}
+
+	trigger = {
+	}
+
+	custom_attributes = {
+		
+	}
+	
+	#Modifiers
+	modifiers = {
+		burghers_influence_modifier = 0.05	
+		global_trade_goods_size_modifier = 0.05
+		global_trade_power = 0.15
+	}
+
+	ai = {
+		factor = 10000
+	}
+}
+
+#Mission reawrd - kobold ivnentors
+kob_expanded_kobold_innovation = {
+	# government mechanics flags go here
+	icon = "kobold_mad_science"
+
+	#You can get this gov reform ONLY if you have this
+	potential = {
+		culture_group = kobold
+		has_country_flag = kob_expanded_unlock_kob_innovation_flag
+	}
+
+	trigger = {
+	}
+
+	custom_attributes = {
+		
+	}
+	
+	#Modifiers
+	modifiers = {
+		artificers_influence_modifier = 0.05
+		embracement_cost = -0.1
+		innovativeness_gain = 0.25
 	}
 
 	ai = {
