@@ -34,7 +34,6 @@ kob_expanded_accident_damaged_equipment = {
 	trade_goods_size_modifier = -0.5
 }
 
-
 # Country modifiers
 
 kob_expanded_admin_breakthrough = {
@@ -54,4 +53,68 @@ kob_expanded_mil_breaktrhough = {
 
 kob_expanded_sponsored_research = {
 	advisor_cost = -0.1
+}
+
+## Disorder election shenanigans
+
+kob_expanded_redscale_kobold_ruler = {
+
+}
+
+kob_expanded_bluescale_kobold_ruler = {
+
+}
+
+kob_expanded_greenscale_kobold_ruler = {
+
+}
+
+kob_expanded_darkscale_kobold_ruler = {
+
+}
+
+kob_expanded_goldscale_kobold_ruler = {
+
+}
+
+kob_expanded_steelscale_kobold_ruler = {
+
+}
+
+## Disorder-related event modifiers
+
+kob_expanded_event_disorder_hoarding_good = {
+
+}
+
+kob_expanded_event_disorder_hoarding_bad = {
+
+}
+
+kob_expanded_event_disorder_admin_good = {
+
+}
+
+kob_expanded_event_disorder_admin_bad = {
+
+}
+
+kob_expanded_event_disorder_clans_good = {
+
+}
+
+kob_expanded_event_disorder_clans_bad = {
+
+}
+
+kob_expanded_event_disorder_great_scientist_good = {
+
+}
+
+kob_expanded_event_disorder_great_scientist_bad = {
+
+}
+
+kob_expanded_event_disorder_loyal_adminsitrators = {
+	local_tax_modifier = 0.15
 }

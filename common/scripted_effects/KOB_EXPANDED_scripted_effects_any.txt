@@ -219,3 +219,108 @@ kob_upgrade_cave_modifier_3 = {
 		}
 	}
 }
+
+# Effects to increase disorder based on the current age - the higher the age, the higher the disorder gain
+
+kob_expanded_increase_disorder_small_effect = {
+	if = {
+		limit = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		else = {
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 4
+			}
+		}
+	}
+	else = {
+		add_government_power = {
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = 2
+		}
+	}
+}
+
+kob_expanded_increase_disorder_big_effect = {
+	if = {
+		limit = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		else = {
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 5
+			}
+		}
+	}
+	else = {
+		add_government_power = {
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = 3
+		}
+	}
+}
+
+# Effects to increase disorder based on the current age - the higher the age, the lower the disorder gain
+
+kob_expanded_decrease_disorder_small_effect = {
+	if = {
+		limit = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		else = {
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = -1
+			}
+		}
+	}
+	else = {
+		add_government_power = {
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = -2
+		}
+	}
+}
+
+
+kob_expanded_decrease_disorder_big_effect = {
+	if = {
+		limit = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		else = {
+			add_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = -2
+			}
+		}
+	}
+	else = {
+		add_government_power = {
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = -4
+		}
+	}
+}

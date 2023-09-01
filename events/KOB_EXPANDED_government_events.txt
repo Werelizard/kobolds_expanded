@@ -31,11 +31,7 @@ country_event = {
 		name = kob_expanded_government_events.1001.g
 		custom_tooltip = kob_expanded_keepingRulerIncreasesDisorder.tooltip
 
-		add_government_power = {
-			mechanic_type = kob_expanded_interal_disorder
-			power_type = kob_expanded_disorder
-			value = 5
-		}
+		kob_expanded_increase_disorder_big_effect = yes
 		add_legitimacy = -15
 		if = {
 			limit = {
@@ -229,6 +225,27 @@ country_event = {
 				hidden = yes
 			}
 			set_ruler_culture = steelscale_kobold
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			random_list = {
+				75 = {
+					country_event = {
+						id = kob_expanded_government_events.1032
+						days = 30
+						random = 90
+					}
+				}
+				25 = {
+					country_event = {
+						id = kob_expanded_government_events.1043
+						days = 30
+						random = 90
+					}
+				}
+			}
 		}
 	}
 }
@@ -661,5 +678,1075 @@ country_event = {
 		clr_country_flag = kob_expanded_accident_medium_death_flag
 		clr_country_flag = kob_expanded_accident_large_boom_flag
 		clr_country_flag = kob_expanded_accident_large_accident_flag
+	}
+}
+
+###############################################
+# Disorder evenmts                            #
+###############################################
+
+# 
+# Scaled events - determined by your current disorder level
+# 
+
+country_event = { # "An Cohesive Society" - if Disorder is low
+	id = kob_expanded_government_events.1020
+	title = kob_expanded_government_events.1020.title
+	desc = kob_expanded_government_events.1020.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		NOT = {
+			has_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 15
+			}
+		}
+	}
+
+	option = { # Good! Keep at it!
+		name = kob_expanded_government_events.1020.a
+
+		kob_expanded_decrease_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # The Estates are to thank for this
+		name = kob_expanded_government_events.1020.b
+
+		add_estate_loyalty = {
+			estate = all
+			loyalty = 5
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {  # "An Troubled Society" - if Disorder is over 25 but not over 50
+	id = kob_expanded_government_events.1021
+	title = kob_expanded_government_events.1021.title
+	desc = kob_expanded_government_events.1021.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		has_government_power = {
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = 25
+		}
+		NOT = {
+			has_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 50
+			}
+		}
+	}
+
+	option = { # Nothing we can do...
+		name = kob_expanded_government_events.1021.a
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = { #Drastic measures must be taken
+		name = kob_expanded_government_events.1021.b
+
+		add_stability = -1
+
+		kob_expanded_decrease_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+
+country_event = { # "A Chaotic Society" - if Disorder is over 50 but not over 75
+	id = kob_expanded_government_events.1022
+	title = kob_expanded_government_events.1022.title
+	desc = kob_expanded_government_events.1022.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		has_government_power = {
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = 50
+		}
+		NOT = {
+			has_government_power = {
+				mechanic_type = kob_expanded_interal_disorder
+				power_type = kob_expanded_disorder
+				value = 75
+			}
+		}
+	}
+
+	option = { #Nothing we can do
+		name = kob_expanded_government_events.1022.a
+
+		kob_expanded_increase_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = { #Our ruler is to blame!
+		name = kob_expanded_government_events.1022.b
+
+		add_stability = -1
+		kob_expanded_decrease_disorder_big_effect = yes
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+country_event = { # "A Collapsing Society" - if Disorder is over 75
+	id = kob_expanded_government_events.1023
+	title = kob_expanded_government_events.1023.title
+	desc = kob_expanded_government_events.1023.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		has_government_power = {
+			mechanic_type = kob_expanded_interal_disorder
+			power_type = kob_expanded_disorder
+			value = 75
+		}
+	}
+
+	option = { #Nothing to be done
+		name = kob_expanded_government_events.1023.a
+
+		kob_expanded_increase_disorder_big_effect = yes
+	}
+
+	option = { # Our ruler is to blame!
+		name = kob_expanded_government_events.1024.b
+
+		add_stability = -1
+		kob_expanded_decrease_disorder_small_effect = yes
+	}
+
+	option = { # Mass repression is the answer
+		name = kob_expanded_government_events.1024.b
+
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -25
+		}
+		capital = {
+			spawn_rebels = {
+				size = 3
+				type = pretender_rebels
+			}
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+			}
+		}
+		kob_expanded_decrease_disorder_big_effect = yes
+	}
+}
+
+#
+# Positive events
+#
+
+country_event = { # "Succesful Taxation Policies" 
+	id = kob_expanded_government_events.1030
+	title = kob_expanded_government_events.1030.title
+	desc = kob_expanded_government_events.1030.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_hoarding_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_hoarding_bad
+		}
+	}
+
+	option = { # Excellent work!
+		name = kob_expanded_government_events.1030.a
+
+		add_years_of_income = 0.25
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { # Gift the money back to the admnistrators!
+		name = kob_expanded_government_events.1030.b
+
+		kob_expanded_decrease_disorder_big_effect = yes
+		
+		ai_chance = {
+			factor = 1000
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_event_disorder_hoarding_good
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+}
+
+country_event = { # "Loyal Admnistrators"
+	id = kob_expanded_government_events.1031
+	title = kob_expanded_government_events.1031.title
+	desc = kob_expanded_government_events.1031.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_admin_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_admin_bad
+		}
+		any_owned_province = {
+			OR = {
+				holy_order = kob_expanded_kobold_governor
+				holy_order = kob_expanded_kobold_governor_reformed
+			}
+		}
+	}
+
+	option = { # Reward these great statesmen!
+		name = kob_expanded_government_events.1031.a
+
+		custom_tooltip = kob_expanded_every_province_with_an_administrator_gains_fifteen_percent_tax.tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						holy_order = kob_expanded_kobold_governor
+						holy_order = kob_expanded_kobold_governor_reformed
+					}
+				}
+				add_province_modifier = {
+					name = kob_expanded_event_disorder_loyal_adminsitrators
+					duration = 1825
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = { # Thank them
+		name = kob_expanded_government_events.1031.a
+
+		kob_expanded_decrease_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # Take credit for their work
+		name = kob_expanded_government_events.1031.a
+
+		random_owned_province = {
+			limit = {
+				OR = {
+					holy_order = kob_expanded_kobold_governor
+					holy_order = kob_expanded_kobold_governor_reformed
+				}
+			}
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+		}
+
+		kob_expanded_decrease_disorder_big_effect = yes
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_event_disorder_admin_good
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+}
+
+country_event = { # "Clans swear loyalty" - only triggered on new ruler
+	id = kob_expanded_government_events.1032
+	title = kob_expanded_government_events.1032.title
+	desc = kob_expanded_government_events.1032.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	option = { #Great!
+		name = kob_expanded_government_events.1032.a
+
+		kob_expanded_decrease_disorder_small_effect = yes
+	}
+}
+
+country_event = { # "Clans Are Peaceful / Cohesive"
+	id = kob_expanded_government_events.1033
+	title = kob_expanded_government_events.1033.title
+	desc = kob_expanded_government_events.1033.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_clans_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_clans_bad
+		}
+		estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 30
+		}
+	}
+
+	option = { #Good
+		name = kob_expanded_government_events.1033.a
+
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+
+		kob_expanded_decrease_disorder_small_effect = yes
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_event_disorder_clans_good
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+}
+
+country_event = { # "Succesful Religious Celebrations"
+	id = kob_expanded_government_events.1034
+	title = kob_expanded_government_events.1034.title
+	desc = kob_expanded_government_events.1034.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		OR = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			AND = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 30
+				}
+				religious_unity = 0.9
+			}
+		}
+	}
+
+	option = { # Praise the gods!
+		name = kob_expanded_government_events.1034.a
+
+		kob_expanded_decrease_disorder_big_effect = yes
+
+		if = {
+			limit = {
+				uses_church_aspects = yes
+			}
+			add_church_power = 25
+		}
+		else = {
+			add_stability = 1
+		}
+	}
+}
+
+#
+# Negative events
+#
+
+country_event = { # "Hoarding Runs Rampant"
+	id = kob_expanded_government_events.1040
+	title = kob_expanded_government_events.1040.title
+	desc = kob_expanded_government_events.1040.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_hoarding_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_hoarding_bad
+		}
+		OR = {
+			is_in_deficit = yes
+			num_of_loans = 1
+			inflation = 5
+		}
+	}
+
+	option = { # Well...it's lost money
+		name = kob_expanded_government_events.1040.a
+
+		add_years_of_income = -1
+	}
+
+	option = { # Mint more coins to compensate for the loss
+		name = kob_expanded_government_events.1040.b
+
+		add_inflation = 5
+	}
+
+	option = { # This cannot be allowed to countinue!
+		name = kob_expanded_government_events.1040.c
+
+		kob_expanded_increase_disorder_small_effect = yes
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_event_disorder_hoarding_bad
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+}
+
+country_event = { # "Complacent Administrators"
+	id = kob_expanded_government_events.1041
+	title = kob_expanded_government_events.1041.title
+	desc = kob_expanded_government_events.1041.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_admin_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_admin_bad
+		}
+		OR = {
+			corruption = 1
+			governing_capacity_percentage = 1.0
+			average_autonomy_above_min = 20
+		}
+		any_owned_province = {
+			OR = {
+				holy_order = kob_expanded_kobold_governor
+				holy_order = kob_expanded_kobold_governor_reformed
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = kob_expanded_event_target_flag
+					}
+					OR = {
+						holy_order = kob_expanded_kobold_governor
+						holy_order = kob_expanded_kobold_governor_reformed
+					}
+				}
+				set_province_flag = kob_expanded_event_target_flag
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = kob_expanded_event_target_flag
+					}
+					OR = {
+						holy_order = kob_expanded_kobold_governor
+						holy_order = kob_expanded_kobold_governor_reformed
+					}
+				}
+				set_province_flag = kob_expanded_event_target_flag
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = kob_expanded_event_target_flag
+					}
+					OR = {
+						holy_order = kob_expanded_kobold_governor
+						holy_order = kob_expanded_kobold_governor_reformed
+					}
+				}
+				set_province_flag = kob_expanded_event_target_flag
+			}
+		}
+	}
+
+	option = { # Punish the traitors!
+		name = kob_expanded_government_events.1041.a
+
+		capital = {
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+			}
+		}
+		every_owned_province = {
+			limit = {
+				has_province_flag = kob_expanded_event_target_flag
+			}
+			clr_province_flag = kob_expanded_event_target_flag
+			spawn_rebels = {
+				size = 3
+				type = particularist_rebels
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = { # Turn a blind eye to their complacency
+		name = kob_expanded_government_events.1041.b
+
+		every_owned_province = {
+			limit = {
+				has_province_flag = kob_expanded_event_target_flag
+			}
+			clr_province_flag = kob_expanded_event_target_flag
+			add_local_autonomy = 50
+		}
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = { # it looks like the country is descending in chaos
+		name = kob_expanded_government_events.1041.c
+
+		kob_expanded_decrease_disorder_big_effect = yes
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_event_disorder_admin_bad
+				duration = 1825
+				hidden = yes
+			}
+		}
+	}
+}
+
+country_event = { # "OVerestension is unbearable"
+	id = kob_expanded_government_events.1042
+	title = kob_expanded_government_events.1042.title
+	desc = kob_expanded_government_events.1042.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		OR = {
+			overextension_percentage = 1.25
+			AND = {
+				overextension_percentage = 1
+				NOT = {
+					stability = 1
+				}
+			}
+		}
+	}
+
+	option = { #Allocate more ressources
+		name = kob_expanded_government_events.1042.a
+
+		add_adm_power = -100
+	}
+
+	option = { #What else can we do
+		name = kob_expanded_government_events.1042.b
+
+		kob_expanded_increase_disorder_small_effect = yes
+	}
+}
+
+country_event = { # "Clans defy ruler"
+	id = kob_expanded_government_events.1043
+	title = kob_expanded_government_events.1043.title
+	desc = kob_expanded_government_events.1043.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_overseas = no
+				}
+				save_event_target_as = koboldEventTarget
+			}
+		}
+	}
+
+	option = { # Force them to bend the knee
+		name = kob_expanded_government_events.1043.a
+
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -20
+			}
+		}
+		else = {
+			add_stability = -1
+		}
+
+		event_target:koboldEventTarget = {
+			spawn_rebels = {
+				size = 3
+				type = noble_rebels
+			}
+		}
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # Bribe them
+		name = kob_expanded_government_events.1043.b
+
+		add_corruption = 2
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = { # Accept the status quo
+		name = kob_expanded_government_events.1043.c
+
+		kob_expanded_increase_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { # "Clans are inifhgting"
+	id = kob_expanded_government_events.1044
+	title = kob_expanded_government_events.1044.title
+	desc = kob_expanded_government_events.1044.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_clans_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_clans_bad
+		}
+	}
+
+	option = { #Let them fight...
+		name = kob_expanded_government_events.1044.a
+
+		kob_expanded_increase_disorder_big_effect = yes
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = { # Use royal authority to demand they stand down
+		name = kob_expanded_government_events.1044.b
+		
+		add_legitimacy = -10
+
+		kob_expanded_increase_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # Arrest them!
+		name = kob_expanded_government_events.1044.b
+
+		capital = {
+			random_list = {
+				80 = {
+					spawn_rebels = {
+						size = 4
+						type = noble_rebels
+						win = yes
+					}
+				}
+				20 = {
+
+				}
+			}
+		}
+
+		kob_expanded_decrease_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_event_disorder_clans_bad
+				duration = 1825
+			}
+		}
+	}
+}
+
+#
+# Technocracy Events
+#
+
+country_event = { # "Ruler is a Good Scientist"
+	id = kob_expanded_government_events.1050
+	title = kob_expanded_government_events.1050.title
+	desc = kob_expanded_government_events.1050.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		has_reform = kob_expanded_kobold_mad_science
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_great_scientist_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_great_scientist_bad
+		}
+	}
+
+	option = { # Of course they are
+		name = kob_expanded_government_events.1050.a
+
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = { # They would be nothing without the elite of this country!
+		name = kob_expanded_government_events.1050.b
+
+		if = {
+			limit = {
+				has_estate = estate_artificers
+			}
+			add_estate_loyalty = {
+				estate = estate_artificers
+				loyalty = 10
+			}
+		}
+		else = {
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 5
+			}
+		}
+
+		kob_expanded_decrease_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+
+	after = {
+		add_country_modifier = {
+			name = kob_expanded_event_disorder_great_scientist_good
+			duration = 1825
+		}
+	}
+}
+
+country_event = { # "Ruler praised for supporting science"
+	id = kob_expanded_government_events.1051
+	title = kob_expanded_government_events.1051.title
+	desc = kob_expanded_government_events.10501.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		has_reform = kob_expanded_kobold_mad_science
+		OR = {
+			has_country_modifier = kob_expanded_admin_breakthrough
+			has_country_modifier = kob_expanded_dip_breakthrough
+			has_country_modifier = kob_expanded_mil_breaktrhough
+			has_country_modifier = kob_expanded_sponsored_research
+			any_owned_province = {
+				has_province_modifier = kob_expanded_sponsored_lectures
+			}
+		}
+	}
+
+	option = { # Our ruler is wise indeed
+		name = kob_expanded_government_events.1051.a
+
+		kob_expanded_decrease_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # But we could do better!
+		name = kob_expanded_government_events.1051.b
+
+		kob_expanded_decrease_disorder_big_effect = yes
+
+		add_government_power = {
+			mechanic_type = kob_expanded_mad_science
+			power_type = kob_expanded_recklessness
+			value = 5
+		}
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { # "Recklessness is conceraning"
+	id = kob_expanded_government_events.1052
+	title = kob_expanded_government_events.1052.title
+	desc = kob_expanded_government_events.1052.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		has_reform = kob_expanded_kobold_mad_science
+		has_government_power = {
+			mechanic_type = kob_expanded_mad_science
+			power_type = kob_expanded_recklessness
+			value = 33
+		}
+	}
+
+	option = { # They're right
+		name = kob_expanded_government_events.1052.a
+
+		change_innovativeness = -5
+		kob_expanded_decrease_disorder_small_effect = yes
+
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # No we must continue to push science further!
+		name = kob_expanded_government_events.1052.b
+
+		change_innovativeness = 5
+		add_government_power = {
+			mechanic_type = kob_expanded_mad_science
+			power_type = kob_expanded_recklessness
+			value = 10
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { # "Ruler Is a Poor Scientist"
+	id = kob_expanded_government_events.1053
+	title = kob_expanded_government_events.1053.title
+	desc = kob_expanded_government_events.1053.desc
+
+	picture = kob_expanded_event_kobold_cave
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kob_expanded_kobold_monarchy
+		has_reform = kob_expanded_kobold_mad_science
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_great_scientist_good
+		}
+		NOT = {
+			has_country_modifier = kob_expanded_event_disorder_great_scientist_bad
+		}
+		AND = {
+			NOT = {
+				has_country_modifier = kob_expanded_admin_breakthrough
+			}
+			NOT = {
+				has_country_modifier = kob_expanded_dip_breakthrough
+			}
+			NOT = {
+				has_country_modifier = kob_expanded_mil_breaktrhough
+			}
+			NOT = {
+				has_country_modifier = kob_expanded_sponsored_research
+			}
+			NOT = {
+				any_owned_province = {
+					has_province_modifier = kob_expanded_sponsored_lectures
+				}
+			}
+		}
+	}
+
+	option = { #We must double our efforts...
+		name = kob_expanded_government_events.1053.a
+
+		add_adm_power = -30
+		add_mil_power = -30
+		add_dip_power = -30
+	}
+
+	option = { #No! I will show you all!
+		name = kob_expanded_government_events.1053.b
+		
+		add_government_power = {
+			mechanic_type = kob_expanded_mad_science
+			power_type = kob_expanded_recklessness
+			value = 10
+		}
+	}
+
+	option = { #Who cares
+		name = kob_expanded_government_events.1053.c
+		
+		kob_expanded_increase_disorder_big_effect = yes
+	}
+
+	after = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = kob_expanded_event_disorder_great_scientist_bad
+				duration = 1825
+				hidden = yes
+			}
+		}
 	}
 }
