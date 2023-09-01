@@ -36,6 +36,10 @@ kob_expanded_accident_damaged_equipment = {
 
 # Country modifiers
 
+kob_expanded_ascent_kobildzan = {
+	monthly_kob_expanded_disorder = -0.25
+}
+
 kob_expanded_admin_breakthrough = {
 	adm_tech_cost_modifier = -0.1
 	idea_cost = -0.1

@@ -39,6 +39,11 @@ country_event = {
 		custom_tooltip = empty_line_tt
 		custom_tooltip = kob_expanded_KobildzanMechanics.tooltip
 
+		add_country_modifier = {
+			name = kob_expanded_ascent_kobildzan
+			duration = 9125
+		}
+
 		if = {
 			limit = {
 				NOT = {
@@ -54,16 +59,6 @@ country_event = {
 			swap_non_generic_missions = yes
 			set_country_flag = formed_kobildzan_flag
 			kob_expanded_set_kobold_ruler_modifier = yes
-		}
-	}
-
-	after = {
-		hidden_effect = {
-			country_event = {
-				id = kob_expanded_mission_events.1009
-				days = 365
-				random = 365
-			}
 		}
 	}
 }
