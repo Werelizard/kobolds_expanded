@@ -7902,6 +7902,26 @@ on_four_year_pulse = {
 		50 = tribal_federation_events.8
 		50 = tribal_federation_events.10
 
+		#Kobolds Expanded - Disorder events
+		50 = kob_expanded_government_events.1020
+		25 = kob_expanded_government_events.1021
+		25 = kob_expanded_government_events.1022
+		25 = kob_expanded_government_events.1023
+		50 = kob_expanded_government_events.1030
+		50 = kob_expanded_government_events.1031
+		# 50 = kob_expanded_government_events.1032
+		50 = kob_expanded_government_events.1033
+		50 = kob_expanded_government_events.1034
+		100 = kob_expanded_government_events.1040
+		100 = kob_expanded_government_events.1041
+		100 = kob_expanded_government_events.1042
+		# 100 = kob_expanded_government_events.1043
+		100 = kob_expanded_government_events.1044
+		100 = kob_expanded_government_events.1050
+		100 = kob_expanded_government_events.1051
+		100 = kob_expanded_government_events.1052
+		100 = kob_expanded_government_events.1053
+
 		#Empire of China
 		# 100 = china_events.1
 		# 100 = china_events.2
