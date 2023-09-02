@@ -1,10 +1,13 @@
 spriteTypes = {
-	spriteType = { #Forgotten realms
+
+	#Tier 1
+
+	spriteType = { 
 		name = "government_reform_kobold_absolute_rule"
 		texturefile = "gfx//interface//government_reform_icons//kobold_absolute_rule.dds"
 	}
 
-	spriteType = { #Forgotten realms
+	spriteType = { 
 		name = "government_reform_kobold_reformed_rule"
 		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_reformed_rule.dds"
 	}
@@ -14,8 +17,68 @@ spriteTypes = {
 		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_kingdom.dds"
 	}
 
-	spriteType = { #The Order 1886
+	# Tier 2
+
+	spriteType = {
+		name = "government_reform_kobold_shared_power"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_shared_power.dds"
+	}
+
+	# Tier 3
+
+	spriteType = {
 		name = "government_reform_kobold_mad_science"
 		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_mad_science.dds"
+	}
+
+	# Tier 5
+
+	spriteType = {
+		name = "government_reform_kobold_ekaitzu_regiments"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_ekaitzu_regiments.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_kobold_artificer_military"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_artificer_military.dds"
+	}
+
+	# Tier 7
+
+	spriteType = {
+		name = "government_reform_kobold_bluescale_administration"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_bluescale_administration.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_kobold_greenscale_administration"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_greenscale_administration.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_kobold_redscale_administration"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_redscale_administration.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_kobold_kobildzani_administration"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_kobildzani_administration.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_kobold_reformed_izendatua"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_reformed_izendatua.dds"
+	}
+
+	# Tier 8
+
+	spriteType = {
+		name = "government_reform_kobold_artisan_economy"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_artisan_economy.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_kobold_artificer_economy"
+		texturefile = "gfx//interface//government_reform_icons//government_reform_kobold_artificer_economy.dds"
 	}
 }

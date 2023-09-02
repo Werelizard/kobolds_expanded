@@ -48,7 +48,7 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_kob_starter_conquer_pass.dds"
 	}
 
-	spriteType = { # From The Witcher 2's Concept Art
+	spriteType = { # From ParadoxInteractive
 		name = "mission_kob_starter_push_to_the_hills"
 		texturefile = "gfx//interface//missions//mission_kob_starter_push_to_the_hills.dds"
 	}
@@ -73,7 +73,7 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_kob_starter_unify_kobolds.dds"
 	}
 
-	spriteType = { # From ParadoxInteractive - Customised
+	spriteType = { # From ParadoxInteractive
 		name = "mission_kob_starter_honour_forefathers"
 		texturefile = "gfx//interface//missions//mission_kob_starter_honour_forefathers.dds"
 	}
@@ -83,12 +83,12 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_kob_starter_kobold_coast.dds"
 	}
 
-	spriteType = { # By JJ Canvas
+	spriteType = { # From Paizo Interactive
 		name = "mission_kob_conquer_blue_scales"
 		texturefile = "gfx//interface//missions//mission_kob_conquer_blue_scales.dds"
 	}
 
-	spriteType = { # From creativeuncut.com
+	spriteType = { # From Crusader Kings 3
 		name = "mission_kob_starter_control_north_pass"
 		texturefile = "gfx//interface//missions//mission_kob_starter_control_north_pass.dds"
 	}
@@ -103,7 +103,7 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_kob_starter_skewer_eagle.dds"
 	}
 
-	spriteType = { # From Anbennar
+	spriteType = { # From Paizo Interactive
 		name = "mission_kob_conquer_green_scales"
 		texturefile = "gfx//interface//missions//mission_kob_conquer_green_scales.dds"
 	}
@@ -259,7 +259,7 @@ spriteTypes = {
 		texturefile = "gfx//interface//missions//mission_great_yappering_hoarding_2.dds"
 	}
 
-	spriteType = { # From WOTC
+	spriteType = { # From Wizards of the Coast
 		name = "mission_great_yappering_end_the_crisis"
 		texturefile = "gfx//interface//missions//mission_great_yappering_end_the_crisis.dds"
 	}

@@ -275,6 +275,9 @@ monarchy = {
 				powerful_clan_bosses
 				orldhum_vainglorious_nobility
 				appease_khet
+
+				#Kobolds Expanded
+				kob_expanded_shared_power
 			}
 		}
 		bureaucracy = { #Tier 3
@@ -431,6 +434,10 @@ monarchy = {
 
 				#Anbennar
 				seghdihr_segbandalic_military
+
+				#Kobolds expanded
+				kob_expanded_ekaitzu_regiments
+				kob_expanded_artificier_regiments
 			}
 		}
 		deliberative_assembly = { #Tier 6
@@ -516,6 +523,12 @@ monarchy = {
 				direct_royal_administration_reform
 				administration_of_the_parliament_reform
 				strengthened_parliament_reform
+				#Kobolds expanded
+				kob_expanded_bluescale_administrators
+				kob_expanded_greenscale_administrators
+				kob_expanded_redscale_administrators
+				kob_expanded_reformed_administrators
+				kob_expanded_kobildzani_adminsitration
 			}
 		}
 		economical_matters = { #Tier 8
@@ -546,6 +559,10 @@ monarchy = {
 				barumand_grain_lords_reform
 				blorc_prosperity_through_conflict
 				orldhum_perfected_exploitation
+
+				#Kobolds expanded
+				kob_expanded_kobold_craftmanship
+				kob_expanded_kobold_innovation
 			}
 		}
 		legitimation_of_power = { #Tier 9

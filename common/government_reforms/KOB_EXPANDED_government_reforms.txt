@@ -163,7 +163,7 @@ kob_expanded_kobold_monarchy_decentralised_reform = {
 #Shared Power with the clans
 kob_expanded_shared_power = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_shared_power"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -237,11 +237,14 @@ kob_expanded_kobold_mad_science = {
 #Reform Tribal Regiments
 kob_expanded_ekaitzu_regiments = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_ekaitzu_regiments"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
-		has_reform = kob_expanded_kobold_monarchy
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy
+			culture_group = kobold
+		}
 	}
 
 	trigger = {
@@ -290,11 +293,14 @@ kob_expanded_ekaitzu_regiments = {
 #Expand Artificiers
 kob_expanded_artificier_regiments = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_artificer_military"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
-		has_reform = kob_expanded_kobold_monarchy
+		OR = {
+			has_reform = kob_expanded_kobold_monarchy
+			culture_group = kobold
+		}
 	}
 
 	trigger = {
@@ -338,7 +344,7 @@ kob_expanded_artificier_regiments = {
 #Bluescale admin
 kob_expanded_bluescale_administrators = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_bluescale_administration"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -367,7 +373,7 @@ kob_expanded_bluescale_administrators = {
 #Greenscale admin
 kob_expanded_greenscale_administrators = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_greenscale_administration"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -396,7 +402,7 @@ kob_expanded_greenscale_administrators = {
 #Redscale admin
 kob_expanded_redscale_administrators = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_redscale_administration"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -425,7 +431,7 @@ kob_expanded_redscale_administrators = {
 #Reform Administrators
 kob_expanded_reformed_administrators = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_kobildzani_administration"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -458,7 +464,7 @@ kob_expanded_reformed_administrators = {
 #Kobidlzani Administration
 kob_expanded_kobildzani_adminsitration = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_reformed_izendatua"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -494,7 +500,7 @@ kob_expanded_kobildzani_adminsitration = {
 #Mission reawrd - kobold crafters
 kob_expanded_kobold_craftmanship = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_artisan_economy"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -524,7 +530,7 @@ kob_expanded_kobold_craftmanship = {
 #Mission reawrd - kobold ivnentors
 kob_expanded_kobold_innovation = {
 	# government mechanics flags go here
-	icon = "kobold_mad_science"
+	icon = "kobold_artificer_economy"
 
 	#You can get this gov reform ONLY if you have this
 	potential = {
@@ -542,8 +548,8 @@ kob_expanded_kobold_innovation = {
 	#Modifiers
 	modifiers = {
 		artificers_influence_modifier = 0.05
-		embracement_cost = -0.1
-		innovativeness_gain = 0.25
+		embracement_cost = -0.25
+		innovativeness_gain = 0.33
 	}
 
 	ai = {
